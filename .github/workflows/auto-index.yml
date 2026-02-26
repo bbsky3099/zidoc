@@ -1,0 +1,33 @@
+name: Generate Auto Index
+
+on:
+  push:
+    paths:
+      - "*.html" # 当任何 html 文件变动时触发
+    branches:
+      - main # 或者你的默认分支名，如 master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Generate Index HTML
+        run: |
+          python generate_index.py
+
+      - name: Commit and Push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update index.html" && git push)
