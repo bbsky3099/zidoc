@@ -30,7 +30,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            user-select: none; /* 可选：禁止文字选中，增强保护感 */
+            user-select: none;
         }
 
         .container {
@@ -79,7 +79,7 @@
             position: relative;
             overflow: hidden;
             animation: fadeInUp 0.6s ease-out backwards;
-            cursor: default; /* 改变光标样式 */
+            cursor: default;
         }
 
         .card:hover {
@@ -115,7 +115,7 @@
             justify-content: center;
             border-radius: 12px;
             transition: transform 0.3s;
-            pointer-events: none; /* 防止图标单独触发事件 */
+            pointer-events: none;
         }
 
         .card:hover .icon-wrapper {
@@ -220,14 +220,30 @@
             </a>
         </div>
 
+        <!-- 🔒 修改部分：使用 span 占位符等待 JS 填充日期 -->
         <footer>
-            <p>✨ 自动导航页 · 最后更新：2026-02-25</p>
+            <p>✨ 自动导航页 · 最后更新：<span id="update-date">加载中...</span></p>
             <p style="margin-top:8px; font-size: 0.8em; opacity: 0.7;">Powered by GitHub Actions & Python Logic</p>
         </footer>
     </div>
 
-    <!-- 🔒 安全保护脚本 -->
+    <!-- 🔒 安全保护与功能脚本 -->
     <script>
+        // ================= 功能初始化：自动更新日期 =================
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const day = now.getDate().toString().padStart(2, '0');
+            
+            const dateElement = document.getElementById('update-date');
+            if (dateElement) {
+                dateElement.textContent = `${year}-${month}-${day}`;
+            }
+        });
+
+        // ================= 安全保护逻辑 =================
+        
         // 禁用右键菜单
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
@@ -247,7 +263,7 @@
             return false;
         });
 
-        // 禁用所有查看源码的快捷键和方式
+        // 禁用所有查看源码的快捷键
         document.addEventListener('keydown', function(e) {
             let shouldPrevent = false;
             let message = "";
@@ -302,7 +318,7 @@
             }
         });
 
-        // 防止通过地址栏输入 view-source: 访问
+        // 防止通过地址栏输入 view-source:
         try {
             const hrefDescriptor = Object.getOwnPropertyDescriptor(Location.prototype, 'href');
             if (hrefDescriptor && hrefDescriptor.set) {
@@ -318,18 +334,9 @@
                     }
                 });
             }
-        } catch (e) {
-            // 某些浏览器可能不允许修改 Location 原型，忽略错误
-        }
+        } catch (e) { /* 忽略错误 */ }
 
-        // 防止通过书签打开 view-source
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.location.protocol === 'view-source:') {
-                window.location.href = '/';
-            }
-        });
-
-        // 简单的开发者工具检测 (基于窗口尺寸变化)
+        // 简单的开发者工具检测
         let devToolsOpen = false;
         function checkDevTools() {
             const widthThreshold = window.outerWidth - window.innerWidth > 200;
@@ -350,7 +357,7 @@
         }
         setInterval(checkDevTools, 1000);
 
-        // 显示提示框的函数
+        // 显示提示框函数
         function showTooltip(message, x, y) {
             const tooltip = document.createElement('div');
             tooltip.id = 'friendly-tooltip';
