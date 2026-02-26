@@ -198,7 +198,8 @@
         // 页面加载完成后的初始化
         window.addEventListener('load', function() {
             console.log("🔒 创意保护模式已激活 - 享受安全浏览体验！");
-            
+
+            //  创建“安全浏览模式”提示文字           
             const footerNote = document.createElement('div');
             footerNote.style.cssText = `
                 position: fixed;

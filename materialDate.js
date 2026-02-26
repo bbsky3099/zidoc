@@ -1,3 +1,55 @@
+// ================= 添加返回首页按钮 (适用于 gaugeData.js / materialDate.js) =================
+(function() {
+    // 防止重复添加
+    if (document.getElementById('home-nav-btn')) return;
+
+    const btn = document.createElement('button');
+    btn.id = 'home-nav-btn';
+    btn.innerHTML = '🏠 返回首页';
+    
+    // 样式设置
+    btn.style.cssText = `
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        z-index: 9999;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    `;
+
+    // 悬停效果
+    btn.onmouseover = () => {
+        btn.style.background = '#1d4ed8';
+        btn.style.transform = 'translateY(-3px)';
+        btn.style.boxShadow = '0 6px 16px rgba(37, 99, 235, 0.4)';
+    };
+    btn.onmouseout = () => {
+        btn.style.background = '#2563eb';
+        btn.style.transform = 'translateY(0)';
+        btn.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.3)';
+    };
+
+    // 点击事件：跳转到 index.html
+    btn.onclick = () => {
+        // 尝试多种路径以确保能找到 index.html
+        const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+        window.location.href = basePath + 'index.html';
+    };
+
+    document.body.appendChild(btn);
+})();
 // 禁用右键菜单
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
@@ -255,7 +307,55 @@ function removeExistingTooltip() {
 // 可选：添加一个友好的提示，说明页面有保护
 window.addEventListener('load', function() {
     console.log("🔒 创意保护模式已激活 - 享受安全浏览体验！");
-    
+            // 1. 创建“返回首页”按钮容器
+            const homeBtnContainer = document.createElement('div');
+            homeBtnContainer.style.cssText = `
+                position: fixed;
+                bottom: 50px;
+                right: 10px;
+                z-index: 10001;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 8px;
+            `;
+
+            // 2. 创建“返回首页”按钮
+            const homeBtn = document.createElement('button');
+            homeBtn.textContent = "🏠 返回首页";
+            homeBtn.style.cssText = `
+                background: var(--primary-color, #2563eb);
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+                transition: all 0.2s ease;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                outline: none;
+                user-select: none;
+            `;
+            
+            // 按钮悬停效果
+            homeBtn.onmouseover = function() {
+                this.style.background = 'var(--primary-hover, #1d4ed8)';
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 6px 8px rgba(0,0,0,0.25)';
+            };
+            homeBtn.onmouseout = function() {
+                this.style.background = 'var(--primary-color, #2563eb)';
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.2)';
+            };
+
+            // 按钮点击事件：刷新页面（即回到首页状态）
+            homeBtn.onclick = function() {
+                window.location.reload();
+            };
+            // 3. 创建“安全浏览模式”提示文字       
     // 在页面底部添加一个友好的提示
     const footerNote = document.createElement('div');
     footerNote.style.cssText = `
