@@ -2,8 +2,6 @@ name: Generate Auto Index
 
 on:
   push:
-    paths:
-      - "*.html" # 当任何 html 文件变动时触发
     branches:
       - main # 或者你的默认分支名，如 master
 
