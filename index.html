@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 内部资源一键访问</title>
+    <title>🚀 内部资源一键访问 (Internal Resources One Click Access)</title>
     <style>
         /* ================= 核心变量 ================= */
         :root {
@@ -50,12 +50,13 @@
             color: var(--text-main);
             margin-bottom: 10px;
             letter-spacing: -0.025em;
+            line-height: 1.3;
         }
-
-        p.subtitle {
-            font-size: 1.125rem;
-            color: var(--text-sub);
+        h1 span:last-child {
+            font-size: 1.2rem;
             font-weight: 400;
+            color: var(--text-sub);
+            display: block;
         }
 
         .grid {
@@ -136,6 +137,13 @@
             margin-bottom: 8px;
             line-height: 1.4;
         }
+        .card-title span {
+            display: block;
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--text-sub);
+            margin-top: 4px;
+        }
 
         .card-desc {
             font-size: 0.95rem;
@@ -143,6 +151,11 @@
             margin-bottom: 16px;
             line-height: 1.5;
             flex-grow: 1;
+        }
+        .card-desc span {
+            display: block;
+            margin-top: 6px;
+            color: #4b5563;
         }
 
         .card-footer {
@@ -178,6 +191,13 @@
             padding-top: 20px;
             width: 100%;
         }
+        footer p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        footer p span {
+            display: inline;
+        }
 
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
@@ -194,15 +214,23 @@
 
     <div class="container">
         <header>
-            <h1>🚀 内部资源一键访问</h1>
-            <p class="subtitle">Internal Resources One Click Access</p>
+            <h1>
+                <span>🚀 内部资源一键访问</span>
+                <span>Internal Resources One Click Access</span>
+            </h1>
         </header>
 
         <div class="grid">
             <a href="螺纹检具管理系统1.0.html" class="card gauge" target="_blank" style="animation-delay: 0.1s">
                 <div class="icon-wrapper">📏</div>
-                <div class="card-title">螺纹检具管理系统</div>
-                <div class="card-desc">用于螺纹量规的库存管理、借用记录及生命周期追踪。</div>
+                <div class="card-title">
+                    螺纹检具管理系统
+                    <span>Thread Gauge Management System</span>
+                </div>
+                <div class="card-desc">
+                    用于螺纹量规的库存管理、借用记录及生命周期追踪。
+                    <span>Manage thread gauge inventory, borrowing records, and lifecycle tracking.</span>
+                </div>
                 <div class="card-footer">
                     <span class="version-tag">V1.0</span>
                     <span class="file-name">螺纹检具管理系统1.0</span>
@@ -211,8 +239,14 @@
 
             <a href="材质报告文件管理系统 V1.0.html" class="card material" target="_blank" style="animation-delay: 0.2s">
                 <div class="icon-wrapper">📑</div>
-                <div class="card-title">材质报告文件管理</div>
-                <div class="card-desc">集中管理原材料材质证明书，支持快速检索与归档。</div>
+                <div class="card-title">
+                    材质报告文件管理
+                    <span>Material Report Management</span>
+                </div>
+                <div class="card-desc">
+                    集中管理原材料材质证明书，支持快速检索与归档。
+                    <span>Centralized management of raw material certificates, with quick search and archiving.</span>
+                </div>
                 <div class="card-footer">
                     <span class="version-tag">V1.0</span>
                     <span class="file-name">材质报告文件管理系统 V1.0</span>
@@ -220,10 +254,11 @@
             </a>
         </div>
 
-        <!-- 🔒 修改部分：使用 span 占位符等待 JS 填充日期 -->
         <footer>
-            <p>© 2025 Shenzhen Teng Sheng Hui Technology Co. Ltd | ✨ Auto Nav · Last updated:: <span id="update-date"></span></p>
-            <p>Address: Building 4, Fu'an Third Industrial Park, Fuhai Street, Bao'an District, Shenzhen, Guangdong Province, China | Tel: +86-0755-**** ****</p>
+            <p>© 2025 深圳市腾盛辉科技有限公司 | ✨ 自动导航 · 最后更新：<span id="update-date-zh"></span></p>
+            <p>© 2025 Shenzhen Teng Sheng Hui Technology Co. Ltd | ✨ Auto Nav · Last updated: <span id="update-date-en"></span></p>
+            <p>地址：广东省深圳市宝安区福海街道福安第三工业区4栋<br>Address: Building 4, Fu'an Third Industrial Park, Fuhai Street, Bao'an District, Shenzhen, Guangdong Province, China</p>
+            <p>电话：+86-0755-**** ****<br>Tel: +86-0755-**** ****</p>
         </footer>
     </div>
 
@@ -235,12 +270,23 @@
             const year = now.getFullYear();
             const month = (now.getMonth() + 1).toString().padStart(2, '0');
             const day = now.getDate().toString().padStart(2, '0');
+            const dateStr = `${year}-${month}-${day}`;
             
-            const dateElement = document.getElementById('update-date');
-            if (dateElement) {
-                dateElement.textContent = `${year}-${month}-${day}`;
-            }
+            const zhSpan = document.getElementById('update-date-zh');
+            const enSpan = document.getElementById('update-date-en');
+            if (zhSpan) zhSpan.textContent = dateStr;
+            if (enSpan) enSpan.textContent = dateStr;
         });
+
+        // ================= 中英文提示消息定义 =================
+        const rightClickMessages = [
+            { zh: "👋 嘿，这里没有隐藏菜单哦！", en: "👋 Hey, there's no hidden menu here!" },
+            { zh: "✨ 这个区域有点害羞，不喜欢被右键点击呢~", en: "✨ This area is a bit shy and doesn't like right-clicks~" },
+            { zh: "🎯 哎呀，这个操作在这里不适用哦！", en: "🎯 Oops, this operation doesn't apply here!" },
+            { zh: "💫 这里没有什么特别的，继续浏览吧！", en: "💫 Nothing special here, feel free to continue browsing!" },
+            { zh: "🌸 好奇的探索者，试试其他操作吧！", en: "🌸 Curious explorer, try other actions!" },
+            { zh: "🎨 创意保护模式已开启，无法使用右键~", en: "🎨 Creative protection mode is enabled, right-click is disabled~" }
+        ];
 
         // ================= 安全保护逻辑 =================
         
@@ -249,71 +295,76 @@
             e.preventDefault();
             removeExistingTooltip();
             
-            const rightClickMessages = [
-                "👋 嘿，这里没有隐藏菜单哦！",
-                "✨ 这个区域有点害羞，不喜欢被右键点击呢~",
-                "🎯 哎呀，这个操作在这里不适用哦！",
-                "💫 这里没有什么特别的，继续浏览吧！",
-                "🌸 好奇的探索者，试试其他操作吧！",
-                "🎨 创意保护模式已开启，无法使用右键~"
-            ];
-            
-            const randomMsg = rightClickMessages[Math.floor(Math.random() * rightClickMessages.length)];
-            showTooltip(randomMsg, e.clientX, e.clientY);
+            const randomIndex = Math.floor(Math.random() * rightClickMessages.length);
+            const msg = rightClickMessages[randomIndex];
+            const fullMessage = msg.zh + "<br>" + msg.en;
+            showTooltip(fullMessage, e.clientX, e.clientY);
             return false;
         });
 
         // 禁用所有查看源码的快捷键
         document.addEventListener('keydown', function(e) {
             let shouldPrevent = false;
-            let message = "";
+            let zhMsg = "", enMsg = "";
             
+            // 定义各快捷键的中英文提示
             if (e.key === 'F12') {
                 shouldPrevent = true;
-                message = "🔍 这个按键在这里有其他用途哦！";
+                zhMsg = "🔍 这个按键在这里有其他用途哦！";
+                enMsg = "🔍 This key has other uses here!";
             }
-            if (e.ctrlKey && e.key === 'u') {
+            else if (e.ctrlKey && e.key === 'u') {
                 shouldPrevent = true;
-                message = "🔮 源代码是魔法师的秘密，暂时不能公开哦！";
+                zhMsg = "🔮 源代码是魔法师的秘密，暂时不能公开哦！";
+                enMsg = "🔮 The source code is a magician's secret, not for now!";
             }
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            else if (e.ctrlKey && e.shiftKey && e.key === 'I') {
                 shouldPrevent = true;
-                message = "🎪 这个组合键会召唤小精灵，但今天它们休息了~";
+                zhMsg = "🎪 这个组合键会召唤小精灵，但今天它们休息了~";
+                enMsg = "🎪 This combo summons elves, but they're off today~";
             }
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            else if (e.ctrlKey && e.shiftKey && e.key === 'J') {
                 shouldPrevent = true;
-                message = "📝 这个快捷键正在参加茶话会，晚点再来试试~";
+                zhMsg = "📝 这个快捷键正在参加茶话会，晚点再来试试~";
+                enMsg = "📝 This shortcut is at a tea party, try later~";
             }
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+            else if (e.ctrlKey && e.shiftKey && e.key === 'C') {
                 shouldPrevent = true;
-                message = "🎨 这个功能正在创作新作品，稍后再来查看~";
+                zhMsg = "🎨 这个功能正在创作新作品，稍后再来查看~";
+                enMsg = "🎨 This feature is creating something new, check back later~";
             }
-            if ((e.metaKey || e.ctrlKey) && e.altKey && e.key === 'U') {
+            else if ((e.metaKey || e.ctrlKey) && e.altKey && e.key === 'U') {
                 shouldPrevent = true;
-                message = "🔮 源代码是魔法师的秘密，暂时不能公开哦！";
+                zhMsg = "🔮 源代码是魔法师的秘密，暂时不能公开哦！";
+                enMsg = "🔮 The source code is a magician's secret, not for now!";
             }
-            if ((e.metaKey || e.ctrlKey) && e.altKey && e.key === 'I') {
+            else if ((e.metaKey || e.ctrlKey) && e.altKey && e.key === 'I') {
                 shouldPrevent = true;
-                message = "🎪 这个组合键会召唤小精灵，但今天它们休息了~";
+                zhMsg = "🎪 这个组合键会召唤小精灵，但今天它们休息了~";
+                enMsg = "🎪 This combo summons elves, but they're off today~";
             }
-            if ((e.metaKey || e.ctrlKey) && e.altKey && e.key === 'C') {
+            else if ((e.metaKey || e.ctrlKey) && e.altKey && e.key === 'C') {
                 shouldPrevent = true;
-                message = "🎨 这个功能正在创作新作品，稍后再来查看~";
+                zhMsg = "🎨 这个功能正在创作新作品，稍后再来查看~";
+                enMsg = "🎨 This feature is creating something new, check back later~";
             }
-            if ((e.metaKey || e.ctrlKey) && e.key === 'u') {
+            else if ((e.metaKey || e.ctrlKey) && e.key === 'u') {
                 shouldPrevent = true;
-                message = "🔮 源代码是魔法师的秘密，暂时不能公开哦！";
+                zhMsg = "🔮 源代码是魔法师的秘密，暂时不能公开哦！";
+                enMsg = "🔮 The source code is a magician's secret, not for now!";
             }
-            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+            else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
                 shouldPrevent = true;
-                message = "🔎 搜索功能暂时无法使用，请稍后再试~";
+                zhMsg = "🔎 搜索功能暂时无法使用，请稍后再试~";
+                enMsg = "🔎 Search is temporarily unavailable, try again later~";
             }
             
             if (shouldPrevent) {
                 e.preventDefault();
                 e.stopPropagation();
                 removeExistingTooltip();
-                showTooltip(message, window.innerWidth / 2, window.innerHeight / 3);
+                const fullMessage = zhMsg + "<br>" + enMsg;
+                showTooltip(fullMessage, window.innerWidth / 2, window.innerHeight / 3);
                 return false;
             }
         });
@@ -327,7 +378,8 @@
                     set: function(value) {
                         if (value && value.toString().startsWith('view-source:')) {
                             removeExistingTooltip();
-                            showTooltip("🔮 源代码是魔法师的秘密，暂时不能公开哦！", window.innerWidth / 2, window.innerHeight / 3);
+                            const msg = "🔮 源代码是魔法师的秘密，暂时不能公开哦！<br>🔮 The source code is a magician's secret, not for now!";
+                            showTooltip(msg, window.innerWidth / 2, window.innerHeight / 3);
                             return;
                         }
                         originalHrefSetter.call(this, value);
@@ -346,7 +398,8 @@
                 if (!devToolsOpen) {
                     devToolsOpen = true;
                     removeExistingTooltip();
-                    showTooltip("🔄 页面需要刷新以保持最佳体验~", window.innerWidth / 2, window.innerHeight / 3);
+                    const msg = "🔄 页面需要刷新以保持最佳体验~<br>🔄 Page refresh recommended for best experience~";
+                    showTooltip(msg, window.innerWidth / 2, window.innerHeight / 3);
                     setTimeout(() => {
                         window.location.reload();
                     }, 1500);
@@ -367,18 +420,19 @@
                 top: ${y}px;
                 background: rgba(0, 0, 0, 0.85);
                 color: white;
-                padding: 12px 16px;
+                padding: 14px 18px;
                 border-radius: 8px;
                 font-size: 14px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
                 z-index: 10000;
-                max-width: 280px;
+                max-width: 300px;
                 text-align: center;
                 animation: fadeInOut 3s ease-in-out forwards;
                 transform: translate(-50%, -100%);
                 margin-top: -10px;
                 pointer-events: none;
+                line-height: 1.5;
             `;
             
             tooltip.innerHTML = `
@@ -437,13 +491,15 @@
                 right: 10px;
                 background: rgba(0,0,0,0.7);
                 color: white;
-                padding: 5px 10px;
+                padding: 8px 12px;
                 border-radius: 5px;
                 font-size: 12px;
                 z-index: 10000;
                 pointer-events: none;
+                line-height: 1.5;
+                text-align: center;
             `;
-            footerNote.textContent = "🔒 安全浏览模式";
+            footerNote.innerHTML = "🔒 安全浏览模式<br>Secure Browsing Mode";
             document.body.appendChild(footerNote);
         });
     </script>
