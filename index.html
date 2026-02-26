@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 内部资源一键访问</title>
+    <style>
+        /* ================= 核心变量 (基于 Python 脚本的高级配色) ================= */
+        :root {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --primary-color: #2563eb;       /* 更现代的蓝色 */
+            --primary-hover: #1d4ed8;
+            --text-main: #1f2937;
+            --text-sub: #6b7280;
+            
+            /* 阴影层级 */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            
+            --radius: 16px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* ================= 头部样式 ================= */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            letter-spacing: -0.025em;
+        }
+
+        p.subtitle {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+
+        /* ================= 网格布局 ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        /* ================= 卡片核心样式 (结合 Python 逻辑) ================= */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* 左对齐，更像现代 Dashboard */
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        /* 悬停效果 */
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+
+        /* 左侧彩色装饰条 (Python 脚本特色) */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        /* 图标容器 */
+        .icon-wrapper {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            background: #eff6ff; /* 淡蓝色背景 */
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        /* 图标悬停旋转特效 */
+        .card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+            background: #dbeafe;
+        }
+
+        /* 针对不同卡片的图标背景色微调 (保留你原有的逻辑) */
+        .card.gauge .icon-wrapper { background: #e3fcef; color: #1a7f37; } /* 绿色系 - 螺纹 */
+        .card.gauge:hover .icon-wrapper { background: #dcfce7; }
+        
+        .card.material .icon-wrapper { background: #fff8c5; color: #9a6700; } /* 黄色系 - 材质 */
+        .card.material:hover .icon-wrapper { background: #fef08a; }
+
+        /* 标题 */
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        /* 描述文本 */
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin-bottom: 16px;
+            line-height: 1.5;
+            flex-grow: 1; /* 让描述占据剩余空间，把版本号挤到底部 */
+        }
+
+        /* 底部标签区域 */
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: #ddf4ff;
+            color: #0969da;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .file-name {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            font-family: "SFMono-Regular", Consolas, monospace;
+        }
+
+        /* ================= 页脚 ================= */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        /* ================= 动画定义 ================= */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🚀 内部资源一键访问</h1>
+            <p class="subtitle">Internal Resources One Click Access</p>
+        </header>
+
+        <div class="grid">
+            
+            <!-- 卡片 1: 螺纹检具 (应用了 gauge 类以获取绿色图标背景) -->
+            <!-- 注意：style="animation-delay: 0s" 模拟 Python 的循环延迟 -->
+            <a href="螺纹检具管理系统1.0.html" class="card gauge" target="_blank" style="animation-delay: 0.1s">
+                <div class="icon-wrapper">📏</div>
+                <div class="card-title">螺纹检具管理系统</div>
+                <div class="card-desc">用于螺纹量规的库存管理、借用记录及生命周期追踪。</div>
+                <div class="card-footer">
+                    <span class="version-tag">V1.0</span>
+                    <span class="file-name">螺纹检具管理系统1.0.html</span>
+                </div>
+            </a>
+
+            <!-- 卡片 2: 材质报告 (应用了 material 类以获取黄色图标背景) -->
+            <a href="材质报告文件管理系统 V1.0.html" class="card material" target="_blank" style="animation-delay: 0.2s">
+                <div class="icon-wrapper">📑</div>
+                <div class="card-title">材质报告文件管理</div>
+                <div class="card-desc">集中管理原材料材质证明书（MTC），支持快速检索与归档。</div>
+                <div class="card-footer">
+                    <span class="version-tag">V1.0</span>
+                    <span class="file-name">材质报告文件管理系统 V1.0.html</span>
+                </div>
+            </a>
+
+            <!-- 
+               💡 未来如果需要手动添加新系统，只需复制上面的 <a>...</a> 块，
+               修改 href, 标题，描述和图标即可。
+               记得修改 animation-delay (0.3s, 0.4s...) 以实现依次入场效果。
+            -->
+
+        </div>
+
+        <footer>
+            <p>✨ 自动导航页 · 最后更新：2026-02-25</p>
+            <p style="margin-top:8px; font-size: 0.8em; opacity: 0.7;">Powered by GitHub Actions & Python Logic</p>
+        </footer>
+    </div>
+
+</body>
+</html>
