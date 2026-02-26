@@ -1,4 +1,4 @@
-// ================= 添加返回首页按钮 (适用于 gaugeData.js / materialDate.js) =================
+// ================= 添加返回首页按钮 (强制当前窗口跳转) =================
 (function() {
     // 防止重复添加
     if (document.getElementById('home-nav-btn')) return;
@@ -27,6 +27,8 @@
         display: flex;
         align-items: center;
         gap: 6px;
+        user-select: none; /* 防止文字被选中 */
+        -webkit-user-select: none;
     `;
 
     // 悬停效果
@@ -41,11 +43,20 @@
         btn.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.3)';
     };
 
-    // 点击事件：跳转到 index.html
+    // 点击事件：强制在当前窗口跳转
     btn.onclick = () => {
-        // 尝试多种路径以确保能找到 index.html
-        const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-        window.location.href = basePath + 'index.html';
+        // 计算 index.html 的路径
+        const path = window.location.pathname;
+        const lastSlashIndex = path.lastIndexOf('/');
+        // 如果在根目录，直接去 index.html；如果在子目录，去上一级的 index.html
+        const basePath = lastSlashIndex > 0 ? path.substring(0, lastSlashIndex + 1) : '';
+        
+        // 使用 replace 方法：在当前窗口跳转，且不保留历史记录（体验更流畅）
+        // 如果希望保留历史记录（允许用户点后退回来），可以改回 window.location.href
+        const targetUrl = basePath + 'index.html';
+        
+        console.log("正在跳转至:", targetUrl);
+        window.location.replace(targetUrl); 
     };
 
     document.body.appendChild(btn);
