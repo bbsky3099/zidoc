@@ -1,66 +1,3 @@
-// ================= 添加返回首页按钮 (强制当前窗口跳转) =================
-(function() {
-    // 防止重复添加
-    if (document.getElementById('home-nav-btn')) return;
-
-    const btn = document.createElement('button');
-    btn.id = 'home-nav-btn';
-    btn.innerHTML = '🏠 返回首页';
-    
-    // 样式设置
-    btn.style.cssText = `
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-        background: #2563eb;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        z-index: 9999;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        user-select: none; /* 防止文字被选中 */
-        -webkit-user-select: none;
-    `;
-
-    // 悬停效果
-    btn.onmouseover = () => {
-        btn.style.background = '#1d4ed8';
-        btn.style.transform = 'translateY(-3px)';
-        btn.style.boxShadow = '0 6px 16px rgba(37, 99, 235, 0.4)';
-    };
-    btn.onmouseout = () => {
-        btn.style.background = '#2563eb';
-        btn.style.transform = 'translateY(0)';
-        btn.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.3)';
-    };
-
-    // 点击事件：强制在当前窗口跳转
-    btn.onclick = () => {
-        // 计算 index.html 的路径
-        const path = window.location.pathname;
-        const lastSlashIndex = path.lastIndexOf('/');
-        // 如果在根目录，直接去 index.html；如果在子目录，去上一级的 index.html
-        const basePath = lastSlashIndex > 0 ? path.substring(0, lastSlashIndex + 1) : '';
-        
-        // 使用 replace 方法：在当前窗口跳转，且不保留历史记录（体验更流畅）
-        // 如果希望保留历史记录（允许用户点后退回来），可以改回 window.location.href
-        const targetUrl = basePath + 'index.html';
-        
-        console.log("正在跳转至:", targetUrl);
-        window.location.replace(targetUrl); 
-    };
-
-    document.body.appendChild(btn);
-})();
 // 禁用右键菜单
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
@@ -318,54 +255,7 @@ function removeExistingTooltip() {
 // 可选：添加一个友好的提示，说明页面有保护
 window.addEventListener('load', function() {
     console.log("🔒 创意保护模式已激活 - 享受安全浏览体验！");
-            // 1. 创建“返回首页”按钮容器
-            const homeBtnContainer = document.createElement('div');
-            homeBtnContainer.style.cssText = `
-                position: fixed;
-                bottom: 50px;
-                right: 10px;
-                z-index: 10001;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 8px;
-            `;
-
-            // 2. 创建“返回首页”按钮
-            const homeBtn = document.createElement('button');
-            homeBtn.textContent = "🏠 返回首页";
-            homeBtn.style.cssText = `
-                background: var(--primary-color, #2563eb);
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 6px;
-                font-size: 13px;
-                font-weight: 600;
-                cursor: pointer;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-                transition: all 0.2s ease;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-                outline: none;
-                user-select: none;
-            `;
-            
-            // 按钮悬停效果
-            homeBtn.onmouseover = function() {
-                this.style.background = 'var(--primary-hover, #1d4ed8)';
-                this.style.transform = 'translateY(-2px)';
-                this.style.boxShadow = '0 6px 8px rgba(0,0,0,0.25)';
-            };
-            homeBtn.onmouseout = function() {
-                this.style.background = 'var(--primary-color, #2563eb)';
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.2)';
-            };
-
-            // 按钮点击事件：刷新页面（即回到首页状态）
-            homeBtn.onclick = function() {
-                window.location.reload();
-            }; 
+    
     // 在页面底部添加一个友好的提示
     const footerNote = document.createElement('div');
     footerNote.style.cssText = `
@@ -419,78 +309,79 @@ const gaugeData = [
 { type: "非公制内螺纹牙规", fileName: "12-32 UNEF 2B", instrumentNumber: "TSH_GZ_TG-【12-32 UNEF 2B】-024", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/12-32 UNEF 2B.jpg" },
 { type: "非公制内螺纹牙规", fileName: "13.5 PG", instrumentNumber: "TSH_GZ_TG-【13.5 PG】-025", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/13.5 PG.jpg" },
 { type: "非公制内螺纹牙规", fileName: "15/16-16 UN 2B", instrumentNumber: "TSH_GZ_TG-【15/16-16 UN 2B】-026", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/15”16-16 UN 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/16-27 NPT", instrumentNumber: "TSH_GZ_TG-【1/16-27 NPT】-027", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”16-27 NPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-13 UNC 2B", instrumentNumber: "TSH_GZ_TG-【1/2-13 UNC 2B】-028", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-13 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-14 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/2-14 G (BSPP)】-029", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-14 G (BSPP).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-14 NPT", instrumentNumber: "TSH_GZ_TG-【1/2-14 NPT】-030", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-14 NPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-14 NPTF", instrumentNumber: "TSH_GZ_TG-【1/2-14 NPTF】-031", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-14 NPTF.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-20 UNF 2B", instrumentNumber: "TSH_GZ_TG-【1/2-20 UNF 2B】-032", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-20 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-20 UNF 3B", instrumentNumber: "TSH_GZ_TG-【1/2-20 UNF 3B】-033", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-20 UNF 3B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/2-28 UNEF 3B", instrumentNumber: "TSH_GZ_TG-【1/2-28 UNEF 3B】-034", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-28 UNEF 3B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-18 NPT", instrumentNumber: "TSH_GZ_TG-【1/4-18 NPT】-035", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-18 NPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-19 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/4-19 G (BSPP)】-036", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-19 G (BSPP).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-19 RC(PT)", instrumentNumber: "TSH_GZ_TG-【1/4-19 RC(PT)】-037", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-19 RC(PT).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-20 UNC 2B", instrumentNumber: "TSH_GZ_TG-【1/4-20 UNC 2B】-038", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-20 UNC 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-20 UNC 2B", instrumentNumber: "TSH_GZ_TG-【1/4-20 UNC 2B】-039", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-20 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-28 UNF 2B", instrumentNumber: "TSH_GZ_TG-【1/4-28 UNF 2B】-040", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-28 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-28UNF 2B", instrumentNumber: "TSH_GZ_TG-【1/4-28UNF 2B】-041", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-28UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-32UNEF 2B", instrumentNumber: "TSH_GZ_TG-【1/4-32UNEF 2B】-042", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-32UNEF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/4-36 UNS 2B", instrumentNumber: "TSH_GZ_TG-【1/4-36 UNS 2B】-043", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-36 UNS 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/8 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/8 G (BSPP)】-044", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8 G (BSPP).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/8-27 NPT", instrumentNumber: "TSH_GZ_TG-【1/8-27 NPT】-045", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8-27 NPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/8-28 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/8-28 G (BSPP)】-046", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8-28 G (BSPP).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "1/8-28 RC(PT) 2B", instrumentNumber: "TSH_GZ_TG-【1/8-28 RC(PT) 2B】-047", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8-28 RC(PT) 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-11 G(BSPP)", instrumentNumber: "TSH_GZ_TG-【2-11 G(BSPP)】-048", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-11 G(BSPP)(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-11 G(BSPP)", instrumentNumber: "TSH_GZ_TG-【2-11 G(BSPP)】-049", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-11 G(BSPP).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-12 UN 2B", instrumentNumber: "TSH_GZ_TG-【2-12 UN 2B】-050", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-12 UN 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-3/4(2.75)-12 UN 2B", instrumentNumber: "TSH_GZ_TG-【2-3/4(2.75)-12 UN 2B】-051", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-3“4(2.75)-12 UN 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-3/8-16 UN 2B", instrumentNumber: "TSH_GZ_TG-【2-3/8-16 UN 2B】-052", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-3”8-16 UN 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-56 UNC 2B", instrumentNumber: "TSH_GZ_TG-【2-56 UNC 2B】-053", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-56 UNC 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-56 UNC 2B", instrumentNumber: "TSH_GZ_TG-【2-56 UNC 2B】-054", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-56 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "2-64 UNF 2B", instrumentNumber: "TSH_GZ_TG-【2-64 UNF 2B】-055", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-64 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-16 UNF LH", instrumentNumber: "TSH_GZ_TG-【3/4-16 UNF LH】-056", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3“4-16 UNF LH.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-10 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/4-10 UNC 2B】-057", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-10 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-14 G(BSPP) B", instrumentNumber: "TSH_GZ_TG-【3/4-14 G(BSPP) B】-058", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-14 G(BSPP)  B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-14 NPT", instrumentNumber: "TSH_GZ_TG-【3/4-14 NPT】-059", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-14 NPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-14 PT(RC)", instrumentNumber: "TSH_GZ_TG-【3/4-14 PT(RC)】-060", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-14 PT（RC）.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-16 UNF 2B", instrumentNumber: "TSH_GZ_TG-【3/4-16 UNF 2B】-061", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-16 UNF 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-16 UNF 2B", instrumentNumber: "TSH_GZ_TG-【3/4-16 UNF 2B】-062", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-16 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-19 PT(RC)", instrumentNumber: "TSH_GZ_TG-【3/4-19 PT(RC)】-063", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-19 PT（RC）.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/4-32 UN 2B", instrumentNumber: "TSH_GZ_TG-【3/4-32 UN 2B】-064", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-32 UN 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【3/8 G (BSPP)】-065", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8 G (BSPP).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8-16 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/8-16 UNC 2B】-066", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-16 UNC 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8-16 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/8-16 UNC 2B】-067", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-16 UNC 2B(2).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8-16 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/8-16 UNC 2B】-068", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-16 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8-18 NPT", instrumentNumber: "TSH_GZ_TG-【3/8-18 NPT】-069", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-18 NPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8-19 BSPT", instrumentNumber: "TSH_GZ_TG-【3/8-19 BSPT】-070", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-19 BSPT.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "3/8-24 UNF 2B", instrumentNumber: "TSH_GZ_TG-【3/8-24 UNF 2B】-071", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-24 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-072", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-073", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B(2).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-074", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B(3).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-075", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "4-40UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40UNC 2B】-076", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "4-48 UNF 2B", instrumentNumber: "TSH_GZ_TG-【4-48 UNF 2B】-077", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-48 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "5-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【5-40 UNC 2B】-078", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5-40 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "5/8-18 UNF 2B", instrumentNumber: "TSH_GZ_TG-【5/8-18 UNF 2B】-079", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5“8-18 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "5/16-18 UNC 2B", instrumentNumber: "TSH_GZ_TG-【5/16-18 UNC 2B】-080", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5”16-18 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "5/16-24 UNF 2B", instrumentNumber: "TSH_GZ_TG-【5/16-24 UNF 2B】-081", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5”16-24 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "5/16-32 UNEF 2B", instrumentNumber: "TSH_GZ_TG-【5/16-32 UNEF 2B】-082", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5”16-32 UNEF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "6-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【6-32 UNC 2B】-083", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-32 UNC 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "6-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【6-32 UNC 2B】-084", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-32 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "6-40 UNF 2B", instrumentNumber: "TSH_GZ_TG-【6-40 UNF 2B】-085", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-40 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "6-40UNF 2B", instrumentNumber: "TSH_GZ_TG-【6-40UNF 2B】-086", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-40UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "6-48 UNS 3B", instrumentNumber: "TSH_GZ_TG-【6-48 UNS 3B】-087", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-48 UNS 3B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "7 PG", instrumentNumber: "TSH_GZ_TG-【7 PG】-088", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7 PG.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "7/16-14 UNC 2B", instrumentNumber: "TSH_GZ_TG-【7/16-14 UNC 2B】-089", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”16-14 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "7/16-20 UNF 2B", instrumentNumber: "TSH_GZ_TG-【7/16-20 UNF 2B】-090", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”16-20 UNF 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "7/16-20 UNF 2B", instrumentNumber: "TSH_GZ_TG-【7/16-20 UNF 2B】-091", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”16-20 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "7/8-14 UNF 2B", instrumentNumber: "TSH_GZ_TG-【7/8-14 UNF 2B】-092", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”8-14 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "7/8-20 UNEF 2B", instrumentNumber: "TSH_GZ_TG-【7/8-20 UNEF 2B】-093", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”8-20 UNEF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "8-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【8-32 UNC 2B】-094", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/8-32 UNC 2B(1).jpg" },
-{ type: "非公制内螺纹牙规", fileName: "8-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【8-32 UNC 2B】-095", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/8-32 UNC 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "8-36 UNF 2B", instrumentNumber: "TSH_GZ_TG-【8-36 UNF 2B】-096", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/8-36 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "9/16-18 UNF 2B", instrumentNumber: "TSH_GZ_TG-【9/16-18 UNF 2B】-097", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/9”16-18 UNF 2B.jpg" },
-{ type: "非公制内螺纹牙规", fileName: "9/16-18 UNJF 3B", instrumentNumber: "TSH_GZ_TG-【9/16-18 UNJF 3B】-098", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/9”16-18 UNJF 3B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-14 NPSM 2B", instrumentNumber: "TSH_GZ_TG-【1/2-14 NPSM 2B】-027", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1“2-14 NPSM 2B.png" },
+{ type: "非公制内螺纹牙规", fileName: "1/16-27 NPT", instrumentNumber: "TSH_GZ_TG-【1/16-27 NPT】-028", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”16-27 NPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-13 UNC 2B", instrumentNumber: "TSH_GZ_TG-【1/2-13 UNC 2B】-029", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-13 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-14 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/2-14 G (BSPP)】-030", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-14 G (BSPP).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-14 NPT", instrumentNumber: "TSH_GZ_TG-【1/2-14 NPT】-031", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-14 NPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-14 NPTF", instrumentNumber: "TSH_GZ_TG-【1/2-14 NPTF】-032", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-14 NPTF.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-20 UNF 2B", instrumentNumber: "TSH_GZ_TG-【1/2-20 UNF 2B】-033", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-20 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-20 UNF 3B", instrumentNumber: "TSH_GZ_TG-【1/2-20 UNF 3B】-034", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-20 UNF 3B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/2-28 UNEF 3B", instrumentNumber: "TSH_GZ_TG-【1/2-28 UNEF 3B】-035", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”2-28 UNEF 3B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-18 NPT", instrumentNumber: "TSH_GZ_TG-【1/4-18 NPT】-036", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-18 NPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-19 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/4-19 G (BSPP)】-037", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-19 G (BSPP).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-19 RC(PT)", instrumentNumber: "TSH_GZ_TG-【1/4-19 RC(PT)】-038", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-19 RC(PT).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-20 UNC 2B", instrumentNumber: "TSH_GZ_TG-【1/4-20 UNC 2B】-039", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-20 UNC 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-20 UNC 2B", instrumentNumber: "TSH_GZ_TG-【1/4-20 UNC 2B】-040", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-20 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-28 UNF 2B", instrumentNumber: "TSH_GZ_TG-【1/4-28 UNF 2B】-041", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-28 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-28UNF 2B", instrumentNumber: "TSH_GZ_TG-【1/4-28UNF 2B】-042", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-28UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-32UNEF 2B", instrumentNumber: "TSH_GZ_TG-【1/4-32UNEF 2B】-043", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-32UNEF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/4-36 UNS 2B", instrumentNumber: "TSH_GZ_TG-【1/4-36 UNS 2B】-044", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”4-36 UNS 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/8 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/8 G (BSPP)】-045", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8 G (BSPP).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/8-27 NPT", instrumentNumber: "TSH_GZ_TG-【1/8-27 NPT】-046", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8-27 NPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/8-28 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【1/8-28 G (BSPP)】-047", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8-28 G (BSPP).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "1/8-28 RC(PT) 2B", instrumentNumber: "TSH_GZ_TG-【1/8-28 RC(PT) 2B】-048", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/1”8-28 RC(PT) 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-11 G(BSPP)", instrumentNumber: "TSH_GZ_TG-【2-11 G(BSPP)】-049", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-11 G(BSPP)(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-11 G(BSPP)", instrumentNumber: "TSH_GZ_TG-【2-11 G(BSPP)】-050", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-11 G(BSPP).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-12 UN 2B", instrumentNumber: "TSH_GZ_TG-【2-12 UN 2B】-051", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-12 UN 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-3/4(2.75)-12 UN 2B", instrumentNumber: "TSH_GZ_TG-【2-3/4(2.75)-12 UN 2B】-052", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-3“4(2.75)-12 UN 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-3/8-16 UN 2B", instrumentNumber: "TSH_GZ_TG-【2-3/8-16 UN 2B】-053", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-3”8-16 UN 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-56 UNC 2B", instrumentNumber: "TSH_GZ_TG-【2-56 UNC 2B】-054", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-56 UNC 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-56 UNC 2B", instrumentNumber: "TSH_GZ_TG-【2-56 UNC 2B】-055", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-56 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "2-64 UNF 2B", instrumentNumber: "TSH_GZ_TG-【2-64 UNF 2B】-056", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/2-64 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-16 UNF LH", instrumentNumber: "TSH_GZ_TG-【3/4-16 UNF LH】-057", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3“4-16 UNF LH.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-10 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/4-10 UNC 2B】-058", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-10 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-14 G(BSPP) B", instrumentNumber: "TSH_GZ_TG-【3/4-14 G(BSPP) B】-059", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-14 G(BSPP)  B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-14 NPT", instrumentNumber: "TSH_GZ_TG-【3/4-14 NPT】-060", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-14 NPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-14 PT(RC)", instrumentNumber: "TSH_GZ_TG-【3/4-14 PT(RC)】-061", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-14 PT（RC）.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-16 UNF 2B", instrumentNumber: "TSH_GZ_TG-【3/4-16 UNF 2B】-062", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-16 UNF 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-16 UNF 2B", instrumentNumber: "TSH_GZ_TG-【3/4-16 UNF 2B】-063", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-16 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-19 PT(RC)", instrumentNumber: "TSH_GZ_TG-【3/4-19 PT(RC)】-064", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-19 PT（RC）.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/4-32 UN 2B", instrumentNumber: "TSH_GZ_TG-【3/4-32 UN 2B】-065", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”4-32 UN 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8 G (BSPP)", instrumentNumber: "TSH_GZ_TG-【3/8 G (BSPP)】-066", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8 G (BSPP).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8-16 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/8-16 UNC 2B】-067", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-16 UNC 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8-16 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/8-16 UNC 2B】-068", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-16 UNC 2B(2).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8-16 UNC 2B", instrumentNumber: "TSH_GZ_TG-【3/8-16 UNC 2B】-069", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-16 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8-18 NPT", instrumentNumber: "TSH_GZ_TG-【3/8-18 NPT】-070", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-18 NPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8-19 BSPT", instrumentNumber: "TSH_GZ_TG-【3/8-19 BSPT】-071", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-19 BSPT.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "3/8-24 UNF 2B", instrumentNumber: "TSH_GZ_TG-【3/8-24 UNF 2B】-072", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/3”8-24 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-073", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-074", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B(2).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-075", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B(3).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "4-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40 UNC 2B】-076", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "4-40UNC 2B", instrumentNumber: "TSH_GZ_TG-【4-40UNC 2B】-077", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-40UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "4-48 UNF 2B", instrumentNumber: "TSH_GZ_TG-【4-48 UNF 2B】-078", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/4-48 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "5-40 UNC 2B", instrumentNumber: "TSH_GZ_TG-【5-40 UNC 2B】-079", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5-40 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "5/8-18 UNF 2B", instrumentNumber: "TSH_GZ_TG-【5/8-18 UNF 2B】-080", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5“8-18 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "5/16-18 UNC 2B", instrumentNumber: "TSH_GZ_TG-【5/16-18 UNC 2B】-081", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5”16-18 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "5/16-24 UNF 2B", instrumentNumber: "TSH_GZ_TG-【5/16-24 UNF 2B】-082", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5”16-24 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "5/16-32 UNEF 2B", instrumentNumber: "TSH_GZ_TG-【5/16-32 UNEF 2B】-083", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/5”16-32 UNEF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "6-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【6-32 UNC 2B】-084", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-32 UNC 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "6-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【6-32 UNC 2B】-085", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-32 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "6-40 UNF 2B", instrumentNumber: "TSH_GZ_TG-【6-40 UNF 2B】-086", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-40 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "6-40UNF 2B", instrumentNumber: "TSH_GZ_TG-【6-40UNF 2B】-087", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-40UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "6-48 UNS 3B", instrumentNumber: "TSH_GZ_TG-【6-48 UNS 3B】-088", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/6-48 UNS 3B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "7 PG", instrumentNumber: "TSH_GZ_TG-【7 PG】-089", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7 PG.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "7/16-14 UNC 2B", instrumentNumber: "TSH_GZ_TG-【7/16-14 UNC 2B】-090", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”16-14 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "7/16-20 UNF 2B", instrumentNumber: "TSH_GZ_TG-【7/16-20 UNF 2B】-091", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”16-20 UNF 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "7/16-20 UNF 2B", instrumentNumber: "TSH_GZ_TG-【7/16-20 UNF 2B】-092", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”16-20 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "7/8-14 UNF 2B", instrumentNumber: "TSH_GZ_TG-【7/8-14 UNF 2B】-093", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”8-14 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "7/8-20 UNEF 2B", instrumentNumber: "TSH_GZ_TG-【7/8-20 UNEF 2B】-094", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/7”8-20 UNEF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "8-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【8-32 UNC 2B】-095", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/8-32 UNC 2B(1).jpg" },
+{ type: "非公制内螺纹牙规", fileName: "8-32 UNC 2B", instrumentNumber: "TSH_GZ_TG-【8-32 UNC 2B】-096", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/8-32 UNC 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "8-36 UNF 2B", instrumentNumber: "TSH_GZ_TG-【8-36 UNF 2B】-097", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/8-36 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "9/16-18 UNF 2B", instrumentNumber: "TSH_GZ_TG-【9/16-18 UNF 2B】-098", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/9”16-18 UNF 2B.jpg" },
+{ type: "非公制内螺纹牙规", fileName: "9/16-18 UNJF 3B", instrumentNumber: "TSH_GZ_TG-【9/16-18 UNJF 3B】-099", imagePath: "螺纹规清单/非公制内螺纹牙规清单表/9”16-18 UNJF 3B.jpg" },
 { type: "非公制外螺纹环规", fileName: "0.305-32(8V1)", instrumentNumber: "TSH_GZ_TR-【0.305-32(8V1)】-001", imagePath: "螺纹规清单/非公制外螺纹环规清单表/0.305-32（8V1）.jpg" },
 { type: "非公制外螺纹环规", fileName: "1-1/16 - 16(1.0625-16) UN(UNEF) 3A", instrumentNumber: "TSH_GZ_TR-【1-1/16 - 16(1.0625-16) UN(UNEF) 3A】-002", imagePath: "螺纹规清单/非公制外螺纹环规清单表/1-1“16 - 16(1.0625-16) UN(UNEF) 3A.jpg" },
 { type: "非公制外螺纹环规", fileName: "1-1/2-16(1.5-16) UNEF(UN) 2A", instrumentNumber: "TSH_GZ_TR-【1-1/2-16(1.5-16) UNEF(UN) 2A】-003", imagePath: "螺纹规清单/非公制外螺纹环规清单表/1-1“2-16(1.5-16) UNEF(UN) 2A.jpg" },

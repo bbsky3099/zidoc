@@ -1,66 +1,3 @@
-// ================= 添加返回首页按钮 (强制当前窗口跳转) =================
-(function() {
-    // 防止重复添加
-    if (document.getElementById('home-nav-btn')) return;
-
-    const btn = document.createElement('button');
-    btn.id = 'home-nav-btn';
-    btn.innerHTML = '🏠 返回首页';
-    
-    // 样式设置
-    btn.style.cssText = `
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-        background: #2563eb;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        z-index: 9999;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        user-select: none; /* 防止文字被选中 */
-        -webkit-user-select: none;
-    `;
-
-    // 悬停效果
-    btn.onmouseover = () => {
-        btn.style.background = '#1d4ed8';
-        btn.style.transform = 'translateY(-3px)';
-        btn.style.boxShadow = '0 6px 16px rgba(37, 99, 235, 0.4)';
-    };
-    btn.onmouseout = () => {
-        btn.style.background = '#2563eb';
-        btn.style.transform = 'translateY(0)';
-        btn.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.3)';
-    };
-
-    // 点击事件：强制在当前窗口跳转
-    btn.onclick = () => {
-        // 计算 index.html 的路径
-        const path = window.location.pathname;
-        const lastSlashIndex = path.lastIndexOf('/');
-        // 如果在根目录，直接去 index.html；如果在子目录，去上一级的 index.html
-        const basePath = lastSlashIndex > 0 ? path.substring(0, lastSlashIndex + 1) : '';
-        
-        // 使用 replace 方法：在当前窗口跳转，且不保留历史记录（体验更流畅）
-        // 如果希望保留历史记录（允许用户点后退回来），可以改回 window.location.href
-        const targetUrl = basePath + 'index.html';
-        
-        console.log("正在跳转至:", targetUrl);
-        window.location.replace(targetUrl); 
-    };
-
-    document.body.appendChild(btn);
-})();
 // 禁用右键菜单
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
@@ -318,55 +255,7 @@ function removeExistingTooltip() {
 // 可选：添加一个友好的提示，说明页面有保护
 window.addEventListener('load', function() {
     console.log("🔒 创意保护模式已激活 - 享受安全浏览体验！");
-            // 1. 创建“返回首页”按钮容器
-            const homeBtnContainer = document.createElement('div');
-            homeBtnContainer.style.cssText = `
-                position: fixed;
-                bottom: 50px;
-                right: 10px;
-                z-index: 10001;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 8px;
-            `;
-
-            // 2. 创建“返回首页”按钮
-            const homeBtn = document.createElement('button');
-            homeBtn.textContent = "🏠 返回首页";
-            homeBtn.style.cssText = `
-                background: var(--primary-color, #2563eb);
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 6px;
-                font-size: 13px;
-                font-weight: 600;
-                cursor: pointer;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-                transition: all 0.2s ease;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-                outline: none;
-                user-select: none;
-            `;
-            
-            // 按钮悬停效果
-            homeBtn.onmouseover = function() {
-                this.style.background = 'var(--primary-hover, #1d4ed8)';
-                this.style.transform = 'translateY(-2px)';
-                this.style.boxShadow = '0 6px 8px rgba(0,0,0,0.25)';
-            };
-            homeBtn.onmouseout = function() {
-                this.style.background = 'var(--primary-color, #2563eb)';
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.2)';
-            };
-
-            // 按钮点击事件：刷新页面（即回到首页状态）
-            homeBtn.onclick = function() {
-                window.location.reload();
-            };
-            // 3. 创建“安全浏览模式”提示文字       
+    
     // 在页面底部添加一个友好的提示
     const footerNote = document.createElement('div');
     footerNote.style.cssText = `
@@ -709,6 +598,7 @@ const reportData = [
 { fileName: "PEI_性能参数表 QUADRANT_U1000_.pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/PEI_性能参数表 QUADRANT_U1000_.pdf" },
 { fileName: "PET板物性表 (1).pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/PET板物性表 (1).pdf" },
 { fileName: "PET板物性表 .pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/PET板物性表 .pdf" },
+{ fileName: "PE食品级英文.pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/PE食品级英文.pdf" },
 { fileName: "POM 物性表(1).pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/POM 物性表(1).pdf" },
 { fileName: "POM 物性表.pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/POM 物性表.pdf" },
 { fileName: "PP(1).pdf", year: "2025", type: "PDF", filePath: "材质报告/2025/PP(1).pdf" },
@@ -768,11 +658,13 @@ const reportData = [
 { fileName: "304盖章.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/304盖章.pdf" },
 { fileName: "316L盖章.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/316L盖章.pdf" },
 { fileName: "316盖章.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/316盖章.pdf" },
+{ fileName: "420光谱.jpg", year: "2026", type: "图片", filePath: "材质报告/2026/420光谱.jpg" },
 { fileName: "42CRMO4盖章01.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/42CRMO4盖章01.pdf" },
 { fileName: "42CrMo4.jpg", year: "2026", type: "图片", filePath: "材质报告/2026/42CrMo4.jpg" },
 { fileName: "42CrMo4.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/42CrMo4.pdf" },
 { fileName: "42CrMo4光谱.jpg", year: "2026", type: "图片", filePath: "材质报告/2026/42CrMo4光谱.jpg" },
 { fileName: "4340.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/4340.pdf" },
+{ fileName: "6061T6  材质证明 (3)(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/6061T6  材质证明 (3)(1).pdf" },
 { fileName: "6063-T5.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/6063-T5.pdf" },
 { fileName: "6063.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/6063.pdf" },
 { fileName: "65MN光谱.jpg", year: "2026", type: "图片", filePath: "材质报告/2026/65MN光谱.jpg" },
@@ -787,12 +679,16 @@ const reportData = [
 { fileName: "FR-4技术参数表(3)(2).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/FR-4技术参数表(3)(2).pdf" },
 { fileName: "G-11 中文(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/G-11 中文(1).pdf" },
 { fileName: "H13电子章.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/H13电子章.pdf" },
+{ fileName: "Product_handling_PVDF.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/Product_handling_PVDF.pdf" },
+{ fileName: "SUS420盖章(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/SUS420盖章(1).pdf" },
 { fileName: "Ti-6Al-4v盖章.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/Ti-6Al-4v盖章.pdf" },
+{ fileName: "Ti6A-4V盖章(2).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/Ti6A-4V盖章(2).pdf" },
 { fileName: "ZL104.jpg", year: "2026", type: "图片", filePath: "材质报告/2026/ZL104.jpg" },
 { fileName: "ZL104.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/ZL104.pdf" },
 { fileName: "ZL111.png", year: "2026", type: "图片", filePath: "材质报告/2026/ZL111.png" },
 { fileName: "pvc（中）.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/pvc（中）.pdf" },
 { fileName: "美国杜邦Delrin 物性数据表.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/美国杜邦Delrin 物性数据表.pdf" },
+{ fileName: "铝板6061(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/铝板6061(1).pdf" },
 { fileName: "防静电玻纤板.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/防静电玻纤板.pdf" }
 ];
 
