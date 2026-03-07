@@ -255,7 +255,54 @@ function removeExistingTooltip() {
 // 可选：添加一个友好的提示，说明页面有保护
 window.addEventListener('load', function() {
     console.log("🔒 创意保护模式已激活 - 享受安全浏览体验！");
-    
+            // 1. 创建“返回首页”按钮容器
+            const homeBtnContainer = document.createElement('div');
+            homeBtnContainer.style.cssText = `
+                position: fixed;
+                bottom: 50px;
+                right: 10px;
+                z-index: 10001;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 8px;
+            `;
+
+            // 2. 创建“返回首页”按钮
+            const homeBtn = document.createElement('button');
+            homeBtn.textContent = "🏠 返回首页";
+            homeBtn.style.cssText = `
+                background: var(--primary-color, #2563eb);
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+                transition: all 0.2s ease;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                outline: none;
+                user-select: none;
+            `;
+            
+            // 按钮悬停效果
+            homeBtn.onmouseover = function() {
+                this.style.background = 'var(--primary-hover, #1d4ed8)';
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 6px 8px rgba(0,0,0,0.25)';
+            };
+            homeBtn.onmouseout = function() {
+                this.style.background = 'var(--primary-color, #2563eb)';
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.2)';
+            };
+
+            // 按钮点击事件：刷新页面（即回到首页状态）
+            homeBtn.onclick = function() {
+                window.location.reload();
+            }; 
     // 在页面底部添加一个友好的提示
     const footerNote = document.createElement('div');
     footerNote.style.cssText = `
