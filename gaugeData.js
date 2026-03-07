@@ -1,3 +1,66 @@
+// ================= 添加返回首页按钮 (强制当前窗口跳转) =================
+(function() {
+    // 防止重复添加
+    if (document.getElementById('home-nav-btn')) return;
+
+    const btn = document.createElement('button');
+    btn.id = 'home-nav-btn';
+    btn.innerHTML = '🏠 返回首页';
+    
+    // 样式设置
+    btn.style.cssText = `
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        z-index: 9999;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        user-select: none; /* 防止文字被选中 */
+        -webkit-user-select: none;
+    `;
+
+    // 悬停效果
+    btn.onmouseover = () => {
+        btn.style.background = '#1d4ed8';
+        btn.style.transform = 'translateY(-3px)';
+        btn.style.boxShadow = '0 6px 16px rgba(37, 99, 235, 0.4)';
+    };
+    btn.onmouseout = () => {
+        btn.style.background = '#2563eb';
+        btn.style.transform = 'translateY(0)';
+        btn.style.boxShadow = '0 4px 12px rgba(37, 99, 235, 0.3)';
+    };
+
+    // 点击事件：强制在当前窗口跳转
+    btn.onclick = () => {
+        // 计算 index.html 的路径
+        const path = window.location.pathname;
+        const lastSlashIndex = path.lastIndexOf('/');
+        // 如果在根目录，直接去 index.html；如果在子目录，去上一级的 index.html
+        const basePath = lastSlashIndex > 0 ? path.substring(0, lastSlashIndex + 1) : '';
+        
+        // 使用 replace 方法：在当前窗口跳转，且不保留历史记录（体验更流畅）
+        // 如果希望保留历史记录（允许用户点后退回来），可以改回 window.location.href
+        const targetUrl = basePath + 'index.html';
+        
+        console.log("正在跳转至:", targetUrl);
+        window.location.replace(targetUrl); 
+    };
+
+    document.body.appendChild(btn);
+})();
 // 禁用右键菜单
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
