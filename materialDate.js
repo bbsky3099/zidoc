@@ -831,6 +831,7 @@ const reportData = [
 { fileName: "nitronic60.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/nitronic60.pdf" },
 { fileName: "nitronic60盖章.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/nitronic60盖章.pdf" },
 { fileName: "pvc（中）.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/pvc（中）.pdf" },
+{ fileName: "大金PFA(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/大金PFA(1).pdf" },
 { fileName: "美国杜邦Delrin 物性数据表.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/美国杜邦Delrin 物性数据表.pdf" },
 { fileName: "铝板6061(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/铝板6061(1).pdf" },
 { fileName: "防静电玻纤板.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/防静电玻纤板.pdf" }
