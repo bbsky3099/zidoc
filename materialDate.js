@@ -808,6 +808,7 @@ const reportData = [
 { fileName: "C1100-T2_成分检测(英文).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/C1100-T2_成分检测(英文).pdf" },
 { fileName: "C1100-T2_环保检测(中文).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/C1100-T2_环保检测(中文).pdf" },
 { fileName: "C1100-T2_环保检测(英文).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/C1100-T2_环保检测(英文).pdf" },
+{ fileName: "C63000.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/C63000.pdf" },
 { fileName: "CDA360.pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/CDA360.pdf" },
 { fileName: "FR-4技术参数表(3)(2).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/FR-4技术参数表(3)(2).pdf" },
 { fileName: "G-11 中文(1).pdf", year: "2026", type: "PDF", filePath: "材质报告/2026/G-11 中文(1).pdf" },
