@@ -1,0 +1,2692 @@
+{
+  "file_map": {
+    "非公制内螺纹牙规清单表/0-80 UNF 2B.jpg": {
+      "numeric": 1,
+      "instrumentNumber": "TSH_GZ_TG-【0-80 UNF 2B】-001",
+      "type": "非公制内螺纹牙规",
+      "fileName": "0-80 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/0.210-36(5V1).jpg": {
+      "numeric": 2,
+      "instrumentNumber": "TSH_GZ_TG-【0.210-36(5V1)】-002",
+      "type": "非公制内螺纹牙规",
+      "fileName": "0.210-36(5V1)"
+    },
+    "非公制内螺纹牙规清单表/0.535-40 UNS 2B.jpg": {
+      "numeric": 3,
+      "instrumentNumber": "TSH_GZ_TG-【0.535-40 UNS 2B】-003",
+      "type": "非公制内螺纹牙规",
+      "fileName": "0.535-40 UNS 2B"
+    },
+    "非公制内螺纹牙规清单表/1-11 G(BSPP)  B.jpg": {
+      "numeric": 4,
+      "instrumentNumber": "TSH_GZ_TG-【1-11 G(BSPP) B】-004",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-11 G(BSPP) B"
+    },
+    "非公制内螺纹牙规清单表/1-11.5 NPSM 2B.jpg": {
+      "numeric": 5,
+      "instrumentNumber": "TSH_GZ_TG-【1-11.5 NPSM 2B】-005",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-11.5 NPSM 2B"
+    },
+    "非公制内螺纹牙规清单表/1-11.5 NPT.jpg": {
+      "numeric": 6,
+      "instrumentNumber": "TSH_GZ_TG-【1-11.5 NPT】-006",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-11.5 NPT"
+    },
+    "非公制内螺纹牙规清单表/1-1“2-11.5 NPSM 2B.jpg": {
+      "numeric": 7,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/2-11.5 NPSM 2B】-007",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/2-11.5 NPSM 2B"
+    },
+    "非公制内螺纹牙规清单表/1-1“4-11 G(BSPP).jpg": {
+      "numeric": 8,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/4-11 G(BSPP)】-008",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/4-11 G(BSPP)"
+    },
+    "非公制内螺纹牙规清单表/1-1“4-11.5 NPSM 2B.jpg": {
+      "numeric": 9,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/4-11.5 NPSM 2B】-009",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/4-11.5 NPSM 2B"
+    },
+    "非公制内螺纹牙规清单表/1-1“4-12 UNF 2B.jpg": {
+      "numeric": 10,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/4-12 UNF 2B】-010",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/4-12 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/1-1”2 - 11-1”2(1-1”2 - 11.5) NPT 2B.jpg": {
+      "numeric": 11,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/2 - 11-1/2(1-1/2 - 11.5) NPT 2B】-011",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/2 - 11-1/2(1-1/2 - 11.5) NPT 2B"
+    },
+    "非公制内螺纹牙规清单表/1-1”2 G(BSPP).jpg": {
+      "numeric": 12,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/2 G(BSPP)】-012",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/2 G(BSPP)"
+    },
+    "非公制内螺纹牙规清单表/1-1”2-11 G(BSPP)  B.jpg": {
+      "numeric": 13,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/2-11 G(BSPP) B】-013",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/2-11 G(BSPP) B"
+    },
+    "非公制内螺纹牙规清单表/1-1”4 - 11-1”2(1-1”4 - 11.5) NPT 2B.jpg.jpg": {
+      "numeric": 14,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/4 - 11-1/2(1-1/4 - 11.5) NPT 2B.jpg】-014",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/4 - 11-1/2(1-1/4 - 11.5) NPT 2B.jpg"
+    },
+    "非公制内螺纹牙规清单表/1-1”8-12 UNF 2B.jpg": {
+      "numeric": 15,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/8-12 UNF 2B】-015",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/8-12 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/1-1”8-20 UN 2B.jpg": {
+      "numeric": 16,
+      "instrumentNumber": "TSH_GZ_TG-【1-1/8-20 UN 2B】-016",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-1/8-20 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/1-3”8-16 UN 2B.jpg": {
+      "numeric": 17,
+      "instrumentNumber": "TSH_GZ_TG-【1-3/8-16 UN 2B】-017",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-3/8-16 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/1-5”16-12 UN 2B.jpg": {
+      "numeric": 18,
+      "instrumentNumber": "TSH_GZ_TG-【1-5/16-12 UN 2B】-018",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-5/16-12 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/1-5”16-12 UNJ 3B.jpg": {
+      "numeric": 19,
+      "instrumentNumber": "TSH_GZ_TG-【1-5/16-12 UNJ 3B】-019",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-5/16-12 UNJ 3B"
+    },
+    "非公制内螺纹牙规清单表/1-64 UNC 2B.jpg": {
+      "numeric": 20,
+      "instrumentNumber": "TSH_GZ_TG-【1-64 UNC 2B】-020",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-64 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/1-72 UNF 2B.jpg": {
+      "numeric": 21,
+      "instrumentNumber": "TSH_GZ_TG-【1-72 UNF 2B】-021",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-72 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/1-7”16-18(1.438-18)  UNEF 2B(1).jpg": {
+      "numeric": 22,
+      "instrumentNumber": "TSH_GZ_TG-【1-7/16-18(1.438-18) UNEF 2B】-022",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-7/16-18(1.438-18) UNEF 2B"
+    },
+    "非公制内螺纹牙规清单表/1-7”16-18(1.438-18) UNEF 2B.jpg": {
+      "numeric": 23,
+      "instrumentNumber": "TSH_GZ_TG-【1-7/16-18(1.438-18) UNEF 2B】-023",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1-7/16-18(1.438-18) UNEF 2B"
+    },
+    "非公制内螺纹牙规清单表/1.035-40 UNS 2B.jpg": {
+      "numeric": 24,
+      "instrumentNumber": "TSH_GZ_TG-【1.035-40 UNS 2B】-024",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1.035-40 UNS 2B"
+    },
+    "非公制内螺纹牙规清单表/10-24 UNC 2B(1).jpg": {
+      "numeric": 25,
+      "instrumentNumber": "TSH_GZ_TG-【10-24 UNC 2B】-025",
+      "type": "非公制内螺纹牙规",
+      "fileName": "10-24 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/10-24 UNC 2B.jpg": {
+      "numeric": 26,
+      "instrumentNumber": "TSH_GZ_TG-【10-24 UNC 2B】-026",
+      "type": "非公制内螺纹牙规",
+      "fileName": "10-24 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/10-32 UNF 2B.jpg": {
+      "numeric": 27,
+      "instrumentNumber": "TSH_GZ_TG-【10-32 UNF 2B】-027",
+      "type": "非公制内螺纹牙规",
+      "fileName": "10-32 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/12-32 UNEF 2B.jpg": {
+      "numeric": 28,
+      "instrumentNumber": "TSH_GZ_TG-【12-32 UNEF 2B】-028",
+      "type": "非公制内螺纹牙规",
+      "fileName": "12-32 UNEF 2B"
+    },
+    "非公制内螺纹牙规清单表/13.5 PG.jpg": {
+      "numeric": 29,
+      "instrumentNumber": "TSH_GZ_TG-【13.5 PG】-029",
+      "type": "非公制内螺纹牙规",
+      "fileName": "13.5 PG"
+    },
+    "非公制内螺纹牙规清单表/15”16-16 UN 2B.jpg": {
+      "numeric": 30,
+      "instrumentNumber": "TSH_GZ_TG-【15/16-16 UN 2B】-030",
+      "type": "非公制内螺纹牙规",
+      "fileName": "15/16-16 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/1“2-14 NPSM 2B.png": {
+      "numeric": 31,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-14 NPSM 2B】-031",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-14 NPSM 2B"
+    },
+    "非公制内螺纹牙规清单表/1”16-27 NPT.jpg": {
+      "numeric": 32,
+      "instrumentNumber": "TSH_GZ_TG-【1/16-27 NPT】-032",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/16-27 NPT"
+    },
+    "非公制内螺纹牙规清单表/1”2-13 UNC 2B.jpg": {
+      "numeric": 33,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-13 UNC 2B】-033",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-13 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/1”2-14 G (BSPP).jpg": {
+      "numeric": 34,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-14 G (BSPP)】-034",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-14 G (BSPP)"
+    },
+    "非公制内螺纹牙规清单表/1”2-14 NPT.jpg": {
+      "numeric": 35,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-14 NPT】-035",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-14 NPT"
+    },
+    "非公制内螺纹牙规清单表/1”2-14 NPTF.jpg": {
+      "numeric": 36,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-14 NPTF】-036",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-14 NPTF"
+    },
+    "非公制内螺纹牙规清单表/1”2-20 UNF 2B.jpg": {
+      "numeric": 37,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-20 UNF 2B】-037",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-20 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/1”2-20 UNF 3B.jpg": {
+      "numeric": 38,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-20 UNF 3B】-038",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-20 UNF 3B"
+    },
+    "非公制内螺纹牙规清单表/1”2-28 UNEF 3B.jpg": {
+      "numeric": 39,
+      "instrumentNumber": "TSH_GZ_TG-【1/2-28 UNEF 3B】-039",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/2-28 UNEF 3B"
+    },
+    "非公制内螺纹牙规清单表/1”4-18 NPT.jpg": {
+      "numeric": 40,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-18 NPT】-040",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-18 NPT"
+    },
+    "非公制内螺纹牙规清单表/1”4-19 G (BSPP).jpg": {
+      "numeric": 41,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-19 G (BSPP)】-041",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-19 G (BSPP)"
+    },
+    "非公制内螺纹牙规清单表/1”4-19 RC(PT).jpg": {
+      "numeric": 42,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-19 RC(PT)】-042",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-19 RC(PT)"
+    },
+    "非公制内螺纹牙规清单表/1”4-20 UNC 2B(1).jpg": {
+      "numeric": 43,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-20 UNC 2B】-043",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-20 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/1”4-20 UNC 2B.jpg": {
+      "numeric": 44,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-20 UNC 2B】-044",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-20 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/1”4-28 UNF 2B.jpg": {
+      "numeric": 45,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-28 UNF 2B】-045",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-28 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/1”4-28UNF 2B.jpg": {
+      "numeric": 46,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-28UNF 2B】-046",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-28UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/1”4-32UNEF 2B.jpg": {
+      "numeric": 47,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-32UNEF 2B】-047",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-32UNEF 2B"
+    },
+    "非公制内螺纹牙规清单表/1”4-36 UNS 2B.jpg": {
+      "numeric": 48,
+      "instrumentNumber": "TSH_GZ_TG-【1/4-36 UNS 2B】-048",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/4-36 UNS 2B"
+    },
+    "非公制内螺纹牙规清单表/1”8 G (BSPP).jpg": {
+      "numeric": 49,
+      "instrumentNumber": "TSH_GZ_TG-【1/8 G (BSPP)】-049",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/8 G (BSPP)"
+    },
+    "非公制内螺纹牙规清单表/1”8-27 NPT.jpg": {
+      "numeric": 50,
+      "instrumentNumber": "TSH_GZ_TG-【1/8-27 NPT】-050",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/8-27 NPT"
+    },
+    "非公制内螺纹牙规清单表/1”8-27 NPTF.jpg": {
+      "numeric": 51,
+      "instrumentNumber": "TSH_GZ_TG-【1/8-27 NPTF】-051",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/8-27 NPTF"
+    },
+    "非公制内螺纹牙规清单表/1”8-28 G (BSPP).jpg": {
+      "numeric": 52,
+      "instrumentNumber": "TSH_GZ_TG-【1/8-28 G (BSPP)】-052",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/8-28 G (BSPP)"
+    },
+    "非公制内螺纹牙规清单表/1”8-28 RC(PT) 2B.jpg": {
+      "numeric": 53,
+      "instrumentNumber": "TSH_GZ_TG-【1/8-28 RC(PT) 2B】-053",
+      "type": "非公制内螺纹牙规",
+      "fileName": "1/8-28 RC(PT) 2B"
+    },
+    "非公制内螺纹牙规清单表/2-11 G(BSPP)(1).jpg": {
+      "numeric": 54,
+      "instrumentNumber": "TSH_GZ_TG-【2-11 G(BSPP)】-054",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-11 G(BSPP)"
+    },
+    "非公制内螺纹牙规清单表/2-11 G(BSPP).jpg": {
+      "numeric": 55,
+      "instrumentNumber": "TSH_GZ_TG-【2-11 G(BSPP)】-055",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-11 G(BSPP)"
+    },
+    "非公制内螺纹牙规清单表/2-11.5 NPSM 2B.jpg": {
+      "numeric": 56,
+      "instrumentNumber": "TSH_GZ_TG-【2-11.5 NPSM 2B】-056",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-11.5 NPSM 2B"
+    },
+    "非公制内螺纹牙规清单表/2-12 UN 2B.jpg": {
+      "numeric": 57,
+      "instrumentNumber": "TSH_GZ_TG-【2-12 UN 2B】-057",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-12 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/2-3“4(2.75)-12 UN 2B.jpg": {
+      "numeric": 58,
+      "instrumentNumber": "TSH_GZ_TG-【2-3/4(2.75)-12 UN 2B】-058",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-3/4(2.75)-12 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/2-3”8-16 UN 2B.jpg": {
+      "numeric": 59,
+      "instrumentNumber": "TSH_GZ_TG-【2-3/8-16 UN 2B】-059",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-3/8-16 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/2-56 UNC 2B(1).jpg": {
+      "numeric": 60,
+      "instrumentNumber": "TSH_GZ_TG-【2-56 UNC 2B】-060",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-56 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/2-56 UNC 2B.jpg": {
+      "numeric": 61,
+      "instrumentNumber": "TSH_GZ_TG-【2-56 UNC 2B】-061",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-56 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/2-64 UNF 2B.jpg": {
+      "numeric": 62,
+      "instrumentNumber": "TSH_GZ_TG-【2-64 UNF 2B】-062",
+      "type": "非公制内螺纹牙规",
+      "fileName": "2-64 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/3“4-16 UNF LH.jpg": {
+      "numeric": 63,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-16 UNF LH】-063",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-16 UNF LH"
+    },
+    "非公制内螺纹牙规清单表/3“8-24 UNJF 3B.png": {
+      "numeric": 64,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-24 UNJF 3B】-064",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-24 UNJF 3B"
+    },
+    "非公制内螺纹牙规清单表/3”4-10 UNC 2B.jpg": {
+      "numeric": 65,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-10 UNC 2B】-065",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-10 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/3”4-14 G(BSPP)  B.jpg": {
+      "numeric": 66,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-14 G(BSPP) B】-066",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-14 G(BSPP) B"
+    },
+    "非公制内螺纹牙规清单表/3”4-14 NPT.jpg": {
+      "numeric": 67,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-14 NPT】-067",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-14 NPT"
+    },
+    "非公制内螺纹牙规清单表/3”4-14 PT（RC）.jpg": {
+      "numeric": 68,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-14 PT(RC)】-068",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-14 PT(RC)"
+    },
+    "非公制内螺纹牙规清单表/3”4-16 UNF 2B(1).jpg": {
+      "numeric": 69,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-16 UNF 2B】-069",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-16 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/3”4-16 UNF 2B.jpg": {
+      "numeric": 70,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-16 UNF 2B】-070",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-16 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/3”4-19 PT（RC）.jpg": {
+      "numeric": 71,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-19 PT(RC)】-071",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-19 PT(RC)"
+    },
+    "非公制内螺纹牙规清单表/3”4-32 UN 2B.jpg": {
+      "numeric": 72,
+      "instrumentNumber": "TSH_GZ_TG-【3/4-32 UN 2B】-072",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/4-32 UN 2B"
+    },
+    "非公制内螺纹牙规清单表/3”8 G (BSPP).jpg": {
+      "numeric": 73,
+      "instrumentNumber": "TSH_GZ_TG-【3/8 G (BSPP)】-073",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8 G (BSPP)"
+    },
+    "非公制内螺纹牙规清单表/3”8-16 UNC 2B(1).jpg": {
+      "numeric": 74,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-16 UNC 2B】-074",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-16 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/3”8-16 UNC 2B(2).jpg": {
+      "numeric": 75,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-16 UNC 2B】-075",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-16 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/3”8-16 UNC 2B.jpg": {
+      "numeric": 76,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-16 UNC 2B】-076",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-16 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/3”8-18 NPT.jpg": {
+      "numeric": 77,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-18 NPT】-077",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-18 NPT"
+    },
+    "非公制内螺纹牙规清单表/3”8-18 NPTF.jpg": {
+      "numeric": 78,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-18 NPTF】-078",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-18 NPTF"
+    },
+    "非公制内螺纹牙规清单表/3”8-19 BSPT.jpg": {
+      "numeric": 79,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-19 BSPT】-079",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-19 BSPT"
+    },
+    "非公制内螺纹牙规清单表/3”8-24 UNF 2B.jpg": {
+      "numeric": 80,
+      "instrumentNumber": "TSH_GZ_TG-【3/8-24 UNF 2B】-080",
+      "type": "非公制内螺纹牙规",
+      "fileName": "3/8-24 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/4-40 UNC 2B(1).jpg": {
+      "numeric": 81,
+      "instrumentNumber": "TSH_GZ_TG-【4-40 UNC 2B】-081",
+      "type": "非公制内螺纹牙规",
+      "fileName": "4-40 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/4-40 UNC 2B(2).jpg": {
+      "numeric": 82,
+      "instrumentNumber": "TSH_GZ_TG-【4-40 UNC 2B】-082",
+      "type": "非公制内螺纹牙规",
+      "fileName": "4-40 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/4-40 UNC 2B(3).jpg": {
+      "numeric": 83,
+      "instrumentNumber": "TSH_GZ_TG-【4-40 UNC 2B】-083",
+      "type": "非公制内螺纹牙规",
+      "fileName": "4-40 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/4-40 UNC 2B.jpg": {
+      "numeric": 84,
+      "instrumentNumber": "TSH_GZ_TG-【4-40 UNC 2B】-084",
+      "type": "非公制内螺纹牙规",
+      "fileName": "4-40 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/4-40UNC 2B.jpg": {
+      "numeric": 85,
+      "instrumentNumber": "TSH_GZ_TG-【4-40UNC 2B】-085",
+      "type": "非公制内螺纹牙规",
+      "fileName": "4-40UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/4-48 UNF 2B.jpg": {
+      "numeric": 86,
+      "instrumentNumber": "TSH_GZ_TG-【4-48 UNF 2B】-086",
+      "type": "非公制内螺纹牙规",
+      "fileName": "4-48 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/5-40 UNC 2B.jpg": {
+      "numeric": 87,
+      "instrumentNumber": "TSH_GZ_TG-【5-40 UNC 2B】-087",
+      "type": "非公制内螺纹牙规",
+      "fileName": "5-40 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/5“8-18 UNF 2B.jpg": {
+      "numeric": 88,
+      "instrumentNumber": "TSH_GZ_TG-【5/8-18 UNF 2B】-088",
+      "type": "非公制内螺纹牙规",
+      "fileName": "5/8-18 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/5”16-18 UNC 2B.jpg": {
+      "numeric": 89,
+      "instrumentNumber": "TSH_GZ_TG-【5/16-18 UNC 2B】-089",
+      "type": "非公制内螺纹牙规",
+      "fileName": "5/16-18 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/5”16-24 UNF 2B.jpg": {
+      "numeric": 90,
+      "instrumentNumber": "TSH_GZ_TG-【5/16-24 UNF 2B】-090",
+      "type": "非公制内螺纹牙规",
+      "fileName": "5/16-24 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/5”16-32 UNEF 2B.jpg": {
+      "numeric": 91,
+      "instrumentNumber": "TSH_GZ_TG-【5/16-32 UNEF 2B】-091",
+      "type": "非公制内螺纹牙规",
+      "fileName": "5/16-32 UNEF 2B"
+    },
+    "非公制内螺纹牙规清单表/6-32 UNC 2B(1).jpg": {
+      "numeric": 92,
+      "instrumentNumber": "TSH_GZ_TG-【6-32 UNC 2B】-092",
+      "type": "非公制内螺纹牙规",
+      "fileName": "6-32 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/6-32 UNC 2B.jpg": {
+      "numeric": 93,
+      "instrumentNumber": "TSH_GZ_TG-【6-32 UNC 2B】-093",
+      "type": "非公制内螺纹牙规",
+      "fileName": "6-32 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/6-40 UNF 2B.jpg": {
+      "numeric": 94,
+      "instrumentNumber": "TSH_GZ_TG-【6-40 UNF 2B】-094",
+      "type": "非公制内螺纹牙规",
+      "fileName": "6-40 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/6-40UNF 2B.jpg": {
+      "numeric": 95,
+      "instrumentNumber": "TSH_GZ_TG-【6-40UNF 2B】-095",
+      "type": "非公制内螺纹牙规",
+      "fileName": "6-40UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/6-48 UNS 3B.jpg": {
+      "numeric": 96,
+      "instrumentNumber": "TSH_GZ_TG-【6-48 UNS 3B】-096",
+      "type": "非公制内螺纹牙规",
+      "fileName": "6-48 UNS 3B"
+    },
+    "非公制内螺纹牙规清单表/7 PG.jpg": {
+      "numeric": 97,
+      "instrumentNumber": "TSH_GZ_TG-【7 PG】-097",
+      "type": "非公制内螺纹牙规",
+      "fileName": "7 PG"
+    },
+    "非公制内螺纹牙规清单表/7”16-14 UNC 2B.jpg": {
+      "numeric": 98,
+      "instrumentNumber": "TSH_GZ_TG-【7/16-14 UNC 2B】-098",
+      "type": "非公制内螺纹牙规",
+      "fileName": "7/16-14 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/7”16-20 UNF 2B(1).jpg": {
+      "numeric": 99,
+      "instrumentNumber": "TSH_GZ_TG-【7/16-20 UNF 2B】-099",
+      "type": "非公制内螺纹牙规",
+      "fileName": "7/16-20 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/7”16-20 UNF 2B.jpg": {
+      "numeric": 100,
+      "instrumentNumber": "TSH_GZ_TG-【7/16-20 UNF 2B】-100",
+      "type": "非公制内螺纹牙规",
+      "fileName": "7/16-20 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/7”8-14 UNF 2B.jpg": {
+      "numeric": 101,
+      "instrumentNumber": "TSH_GZ_TG-【7/8-14 UNF 2B】-101",
+      "type": "非公制内螺纹牙规",
+      "fileName": "7/8-14 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/7”8-20 UNEF 2B.jpg": {
+      "numeric": 102,
+      "instrumentNumber": "TSH_GZ_TG-【7/8-20 UNEF 2B】-102",
+      "type": "非公制内螺纹牙规",
+      "fileName": "7/8-20 UNEF 2B"
+    },
+    "非公制内螺纹牙规清单表/8-32 UNC 2B(1).jpg": {
+      "numeric": 103,
+      "instrumentNumber": "TSH_GZ_TG-【8-32 UNC 2B】-103",
+      "type": "非公制内螺纹牙规",
+      "fileName": "8-32 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/8-32 UNC 2B.jpg": {
+      "numeric": 104,
+      "instrumentNumber": "TSH_GZ_TG-【8-32 UNC 2B】-104",
+      "type": "非公制内螺纹牙规",
+      "fileName": "8-32 UNC 2B"
+    },
+    "非公制内螺纹牙规清单表/8-36 UNF 2B.jpg": {
+      "numeric": 105,
+      "instrumentNumber": "TSH_GZ_TG-【8-36 UNF 2B】-105",
+      "type": "非公制内螺纹牙规",
+      "fileName": "8-36 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/9”16-18 UNF 2B.jpg": {
+      "numeric": 106,
+      "instrumentNumber": "TSH_GZ_TG-【9/16-18 UNF 2B】-106",
+      "type": "非公制内螺纹牙规",
+      "fileName": "9/16-18 UNF 2B"
+    },
+    "非公制内螺纹牙规清单表/9”16-18 UNJF 3B.jpg": {
+      "numeric": 107,
+      "instrumentNumber": "TSH_GZ_TG-【9/16-18 UNJF 3B】-107",
+      "type": "非公制内螺纹牙规",
+      "fileName": "9/16-18 UNJF 3B"
+    },
+    "非公制外螺纹环规清单表/0.305-32（8V1）.jpg": {
+      "numeric": 1,
+      "instrumentNumber": "TSH_GZ_TR-【0.305-32(8V1)】-001",
+      "type": "非公制外螺纹环规",
+      "fileName": "0.305-32(8V1)"
+    },
+    "非公制外螺纹环规清单表/1-14 UNS 2A.png": {
+      "numeric": 2,
+      "instrumentNumber": "TSH_GZ_TR-【1-14 UNS 2A】-002",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-14 UNS 2A"
+    },
+    "非公制外螺纹环规清单表/1-1“16 - 16(1.0625-16) UN(UNEF) 3A.jpg": {
+      "numeric": 3,
+      "instrumentNumber": "TSH_GZ_TR-【1-1/16 - 16(1.0625-16) UN(UNEF) 3A】-003",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-1/16 - 16(1.0625-16) UN(UNEF) 3A"
+    },
+    "非公制外螺纹环规清单表/1-1“2 BSPP(G) 2A.jpg": {
+      "numeric": 4,
+      "instrumentNumber": "TSH_GZ_TR-【1-1/2 BSPP(G) 2A】-004",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-1/2 BSPP(G) 2A"
+    },
+    "非公制外螺纹环规清单表/1-1“2-16(1.5-16) UNEF(UN) 2A.jpg": {
+      "numeric": 5,
+      "instrumentNumber": "TSH_GZ_TR-【1-1/2-16(1.5-16) UNEF(UN) 2A】-005",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-1/2-16(1.5-16) UNEF(UN) 2A"
+    },
+    "非公制外螺纹环规清单表/1-1“4-11 G(BSPP).jpg": {
+      "numeric": 6,
+      "instrumentNumber": "TSH_GZ_TR-【1-1/4-11 G(BSPP)】-006",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-1/4-11 G(BSPP)"
+    },
+    "非公制外螺纹环规清单表/1-1“4-12 UNF 2A.jpg": {
+      "numeric": 7,
+      "instrumentNumber": "TSH_GZ_TR-【1-1/4-12 UNF 2A】-007",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-1/4-12 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/1-1”4 - 11-1”2(1-1”4 - 11.5) NPT 2A.jpg": {
+      "numeric": 8,
+      "instrumentNumber": "TSH_GZ_TR-【1-1/4 - 11-1/2(1-1/4 - 11.5) NPT 2A】-008",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-1/4 - 11-1/2(1-1/4 - 11.5) NPT 2A"
+    },
+    "非公制外螺纹环规清单表/1-20 UNEF 2A.png": {
+      "numeric": 9,
+      "instrumentNumber": "TSH_GZ_TR-【1-20 UNEF 2A】-009",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-20 UNEF 2A"
+    },
+    "非公制外螺纹环规清单表/1-3”4-12 UN 3A.jpg": {
+      "numeric": 10,
+      "instrumentNumber": "TSH_GZ_TR-【1-3/4-12 UN 3A】-010",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-3/4-12 UN 3A"
+    },
+    "非公制外螺纹环规清单表/1-5“16-12 UN 2A.jpg": {
+      "numeric": 11,
+      "instrumentNumber": "TSH_GZ_TR-【1-5/16-12 UN 2A】-011",
+      "type": "非公制外螺纹环规",
+      "fileName": "1-5/16-12 UN 2A"
+    },
+    "非公制外螺纹环规清单表/10-32 UNF 2A.jpg": {
+      "numeric": 12,
+      "instrumentNumber": "TSH_GZ_TR-【10-32 UNF 2A】-012",
+      "type": "非公制外螺纹环规",
+      "fileName": "10-32 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/15”16-20 UNEF 2A.jpg": {
+      "numeric": 13,
+      "instrumentNumber": "TSH_GZ_TR-【15/16-20 UNEF 2A】-013",
+      "type": "非公制外螺纹环规",
+      "fileName": "15/16-20 UNEF 2A"
+    },
+    "非公制外螺纹环规清单表/1“8-27 NPT.jpg": {
+      "numeric": 14,
+      "instrumentNumber": "TSH_GZ_TR-【1/8-27 NPT】-014",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/8-27 NPT"
+    },
+    "非公制外螺纹环规清单表/1”2-13 UNC 3A.jpg": {
+      "numeric": 15,
+      "instrumentNumber": "TSH_GZ_TR-【1/2-13 UNC 3A】-015",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/2-13 UNC 3A"
+    },
+    "非公制外螺纹环规清单表/1”2-14 PT(RC).jpg": {
+      "numeric": 16,
+      "instrumentNumber": "TSH_GZ_TR-【1/2-14 PT(RC)】-016",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/2-14 PT(RC)"
+    },
+    "非公制外螺纹环规清单表/1”2-20 UNF.jpg": {
+      "numeric": 17,
+      "instrumentNumber": "TSH_GZ_TR-【1/2-20 UNF】-017",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/2-20 UNF"
+    },
+    "非公制外螺纹环规清单表/1”4 G (BSPP) A.jpg": {
+      "numeric": 18,
+      "instrumentNumber": "TSH_GZ_TR-【1/4 G (BSPP) A】-018",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4 G (BSPP) A"
+    },
+    "非公制外螺纹环规清单表/1”4 G (BSPP).jpg": {
+      "numeric": 19,
+      "instrumentNumber": "TSH_GZ_TR-【1/4 G (BSPP)】-019",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4 G (BSPP)"
+    },
+    "非公制外螺纹环规清单表/1”4-18 NPT.jpg": {
+      "numeric": 20,
+      "instrumentNumber": "TSH_GZ_TR-【1/4-18 NPT】-020",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4-18 NPT"
+    },
+    "非公制外螺纹环规清单表/1”4-20 UNC 2A.jpg": {
+      "numeric": 21,
+      "instrumentNumber": "TSH_GZ_TR-【1/4-20 UNC 2A】-021",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4-20 UNC 2A"
+    },
+    "非公制外螺纹环规清单表/1”4-20 UNC 2A（1）.jpg": {
+      "numeric": 22,
+      "instrumentNumber": "TSH_GZ_TR-【1/4-20 UNC 2A】-022",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4-20 UNC 2A"
+    },
+    "非公制外螺纹环规清单表/1”4-28 UNF 2A.jpg": {
+      "numeric": 23,
+      "instrumentNumber": "TSH_GZ_TR-【1/4-28 UNF 2A】-023",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4-28 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/1”4-36 UNS 2A.jpg": {
+      "numeric": 24,
+      "instrumentNumber": "TSH_GZ_TR-【1/4-36 UNS 2A】-024",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/4-36 UNS 2A"
+    },
+    "非公制外螺纹环规清单表/1”8 G (BSPP).jpg": {
+      "numeric": 25,
+      "instrumentNumber": "TSH_GZ_TR-【1/8 G (BSPP)】-025",
+      "type": "非公制外螺纹环规",
+      "fileName": "1/8 G (BSPP)"
+    },
+    "非公制外螺纹环规清单表/3“4-14 NPS.jpg": {
+      "numeric": 26,
+      "instrumentNumber": "TSH_GZ_TR-【3/4-14 NPS】-026",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/4-14 NPS"
+    },
+    "非公制外螺纹环规清单表/3”4-14 NPT.jpg": {
+      "numeric": 27,
+      "instrumentNumber": "TSH_GZ_TR-【3/4-14 NPT】-027",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/4-14 NPT"
+    },
+    "非公制外螺纹环规清单表/3”4-16 UNF 2A.jpg": {
+      "numeric": 28,
+      "instrumentNumber": "TSH_GZ_TR-【3/4-16 UNF 2A】-028",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/4-16 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/3”4-16 UNF 2A.png": {
+      "numeric": 29,
+      "instrumentNumber": "TSH_GZ_TR-【3/4-16 UNF 2A】-029",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/4-16 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/3”8 G (BSPP).jpg": {
+      "numeric": 30,
+      "instrumentNumber": "TSH_GZ_TR-【3/8 G (BSPP)】-030",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/8 G (BSPP)"
+    },
+    "非公制外螺纹环规清单表/3”8-24 UNF 2A.jpg": {
+      "numeric": 31,
+      "instrumentNumber": "TSH_GZ_TR-【3/8-24 UNF 2A】-031",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/8-24 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/3”8-32 UNEF 2A.jpg": {
+      "numeric": 32,
+      "instrumentNumber": "TSH_GZ_TR-【3/8-32 UNEF 2A】-032",
+      "type": "非公制外螺纹环规",
+      "fileName": "3/8-32 UNEF 2A"
+    },
+    "非公制外螺纹环规清单表/4-40 UNC 2A.jpg": {
+      "numeric": 33,
+      "instrumentNumber": "TSH_GZ_TR-【4-40 UNC 2A】-033",
+      "type": "非公制外螺纹环规",
+      "fileName": "4-40 UNC 2A"
+    },
+    "非公制外螺纹环规清单表/5-11 G A.jpg": {
+      "numeric": 34,
+      "instrumentNumber": "TSH_GZ_TR-【5-11 G A】-034",
+      "type": "非公制外螺纹环规",
+      "fileName": "5-11 G A"
+    },
+    "非公制外螺纹环规清单表/50X8 Tr.jpg": {
+      "numeric": 35,
+      "instrumentNumber": "TSH_GZ_TR-【50X8 Tr】-035",
+      "type": "非公制外螺纹环规",
+      "fileName": "50X8 Tr"
+    },
+    "非公制外螺纹环规清单表/5”16-18UNC 2A.jpg": {
+      "numeric": 36,
+      "instrumentNumber": "TSH_GZ_TR-【5/16-18UNC 2A】-036",
+      "type": "非公制外螺纹环规",
+      "fileName": "5/16-18UNC 2A"
+    },
+    "非公制外螺纹环规清单表/5”16-24 UNF 2A.jpg": {
+      "numeric": 37,
+      "instrumentNumber": "TSH_GZ_TR-【5/16-24 UNF 2A】-037",
+      "type": "非公制外螺纹环规",
+      "fileName": "5/16-24 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/5”8 G (BSPP).jpg": {
+      "numeric": 38,
+      "instrumentNumber": "TSH_GZ_TR-【5/8 G (BSPP)】-038",
+      "type": "非公制外螺纹环规",
+      "fileName": "5/8 G (BSPP)"
+    },
+    "非公制外螺纹环规清单表/5”8-11 UNC 2A.jpg": {
+      "numeric": 39,
+      "instrumentNumber": "TSH_GZ_TR-【5/8-11 UNC 2A】-039",
+      "type": "非公制外螺纹环规",
+      "fileName": "5/8-11 UNC 2A"
+    },
+    "非公制外螺纹环规清单表/5”8-18 UNF 2A.png": {
+      "numeric": 40,
+      "instrumentNumber": "TSH_GZ_TR-【5/8-18 UNF 2A】-040",
+      "type": "非公制外螺纹环规",
+      "fileName": "5/8-18 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/6-40 UNF 2A.jpg": {
+      "numeric": 41,
+      "instrumentNumber": "TSH_GZ_TR-【6-40 UNF 2A】-041",
+      "type": "非公制外螺纹环规",
+      "fileName": "6-40 UNF 2A"
+    },
+    "非公制外螺纹环规清单表/7”8-14 (0.875-14)UNF 2A.jpg": {
+      "numeric": 42,
+      "instrumentNumber": "TSH_GZ_TR-【7/8-14 (0.875-14)UNF 2A】-042",
+      "type": "非公制外螺纹环规",
+      "fileName": "7/8-14 (0.875-14)UNF 2A"
+    },
+    "非公制外螺纹环规清单表/7”8-18 UNS 2A.jpg": {
+      "numeric": 43,
+      "instrumentNumber": "TSH_GZ_TR-【7/8-18 UNS 2A】-043",
+      "type": "非公制外螺纹环规",
+      "fileName": "7/8-18 UNS 2A"
+    },
+    "非公制外螺纹环规清单表/7”8-20 UNEF 2A.jpg": {
+      "numeric": 44,
+      "instrumentNumber": "TSH_GZ_TR-【7/8-20 UNEF 2A】-044",
+      "type": "非公制外螺纹环规",
+      "fileName": "7/8-20 UNEF 2A"
+    },
+    "非公制外螺纹环规清单表/8-32(0.1640-32) UNJC 3A.jpg": {
+      "numeric": 45,
+      "instrumentNumber": "TSH_GZ_TR-【8-32(0.1640-32) UNJC 3A】-045",
+      "type": "非公制外螺纹环规",
+      "fileName": "8-32(0.1640-32) UNJC 3A"
+    },
+    "非公制外螺纹环规清单表/9”16-18 UNF 2A.jpg": {
+      "numeric": 46,
+      "instrumentNumber": "TSH_GZ_TR-【9/16-18 UNF 2A】-046",
+      "type": "非公制外螺纹环规",
+      "fileName": "9/16-18 UNF 2A"
+    },
+    "公制内螺纹牙规清单表/M1.1X0.25 6H.jpg": {
+      "numeric": 1,
+      "instrumentNumber": "TSH_GZ_TG-【M1.1X0.25 6H】-001",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.1X0.25 6H"
+    },
+    "公制内螺纹牙规清单表/M1.2X0.2 6H(1).jpg": {
+      "numeric": 2,
+      "instrumentNumber": "TSH_GZ_TG-【M1.2X0.2 6H】-002",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.2X0.2 6H"
+    },
+    "公制内螺纹牙规清单表/M1.2X0.2 6H.jpg": {
+      "numeric": 3,
+      "instrumentNumber": "TSH_GZ_TG-【M1.2X0.2 6H】-003",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.2X0.2 6H"
+    },
+    "公制内螺纹牙规清单表/M1.2X0.25 6H(1).jpg": {
+      "numeric": 4,
+      "instrumentNumber": "TSH_GZ_TG-【M1.2X0.25 6H】-004",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.2X0.25 6H"
+    },
+    "公制内螺纹牙规清单表/M1.2X0.25 6H.jpg": {
+      "numeric": 5,
+      "instrumentNumber": "TSH_GZ_TG-【M1.2X0.25 6H】-005",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.2X0.25 6H"
+    },
+    "公制内螺纹牙规清单表/M1.4X0.3 6H(1).jpg": {
+      "numeric": 6,
+      "instrumentNumber": "TSH_GZ_TG-【M1.4X0.3 6H】-006",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.4X0.3 6H"
+    },
+    "公制内螺纹牙规清单表/M1.4X0.3 6H.jpg": {
+      "numeric": 7,
+      "instrumentNumber": "TSH_GZ_TG-【M1.4X0.3 6H】-007",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.4X0.3 6H"
+    },
+    "公制内螺纹牙规清单表/M1.6X0.2 6H.jpg": {
+      "numeric": 8,
+      "instrumentNumber": "TSH_GZ_TG-【M1.6X0.2 6H】-008",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.6X0.2 6H"
+    },
+    "公制内螺纹牙规清单表/M1.6X0.35 6H(1).jpg": {
+      "numeric": 9,
+      "instrumentNumber": "TSH_GZ_TG-【M1.6X0.35 6H】-009",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.6X0.35 6H"
+    },
+    "公制内螺纹牙规清单表/M1.6X0.35 6H.jpg": {
+      "numeric": 10,
+      "instrumentNumber": "TSH_GZ_TG-【M1.6X0.35 6H】-010",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1.6X0.35 6H"
+    },
+    "公制内螺纹牙规清单表/M1X0.2 6H.jpg": {
+      "numeric": 11,
+      "instrumentNumber": "TSH_GZ_TG-【M1X0.2 6H】-011",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1X0.2 6H"
+    },
+    "公制内螺纹牙规清单表/M1X0.25 6H(1).jpg": {
+      "numeric": 12,
+      "instrumentNumber": "TSH_GZ_TG-【M1X0.25 6H】-012",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1X0.25 6H"
+    },
+    "公制内螺纹牙规清单表/M1X0.25 6H.jpg": {
+      "numeric": 13,
+      "instrumentNumber": "TSH_GZ_TG-【M1X0.25 6H】-013",
+      "type": "公制内螺纹牙规",
+      "fileName": "M1X0.25 6H"
+    },
+    "公制内螺纹牙规清单表/M2.2X0.45 6H.jpg": {
+      "numeric": 14,
+      "instrumentNumber": "TSH_GZ_TG-【M2.2X0.45 6H】-014",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2.2X0.45 6H"
+    },
+    "公制内螺纹牙规清单表/M2.5X0.45 6H.jpg": {
+      "numeric": 15,
+      "instrumentNumber": "TSH_GZ_TG-【M2.5X0.45 6H】-015",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2.5X0.45 6H"
+    },
+    "公制内螺纹牙规清单表/M2.6X0.45 6H.jpg": {
+      "numeric": 16,
+      "instrumentNumber": "TSH_GZ_TG-【M2.6X0.45 6H】-016",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2.6X0.45 6H"
+    },
+    "公制内螺纹牙规清单表/M2X0.35 6H.jpg": {
+      "numeric": 17,
+      "instrumentNumber": "TSH_GZ_TG-【M2X0.35 6H】-017",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2X0.35 6H"
+    },
+    "公制内螺纹牙规清单表/M2X0.4 6G(1).jpg": {
+      "numeric": 18,
+      "instrumentNumber": "TSH_GZ_TG-【M2X0.4 6G】-018",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2X0.4 6G"
+    },
+    "公制内螺纹牙规清单表/M2X0.4 6G.jpg": {
+      "numeric": 19,
+      "instrumentNumber": "TSH_GZ_TG-【M2X0.4 6G】-019",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2X0.4 6G"
+    },
+    "公制内螺纹牙规清单表/M2X0.4 6H(1).jpg": {
+      "numeric": 20,
+      "instrumentNumber": "TSH_GZ_TG-【M2X0.4 6H】-020",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2X0.4 6H"
+    },
+    "公制内螺纹牙规清单表/M2X0.4 6H.jpg": {
+      "numeric": 21,
+      "instrumentNumber": "TSH_GZ_TG-【M2X0.4 6H】-021",
+      "type": "公制内螺纹牙规",
+      "fileName": "M2X0.4 6H"
+    },
+    "公制内螺纹牙规清单表/M3.5X0.6 6H.jpg": {
+      "numeric": 22,
+      "instrumentNumber": "TSH_GZ_TG-【M3.5X0.6 6H】-022",
+      "type": "公制内螺纹牙规",
+      "fileName": "M3.5X0.6 6H"
+    },
+    "公制内螺纹牙规清单表/M3X0.5 6H.jpg": {
+      "numeric": 23,
+      "instrumentNumber": "TSH_GZ_TG-【M3X0.5 6H】-023",
+      "type": "公制内螺纹牙规",
+      "fileName": "M3X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M4X0.5 6H(1).jpg": {
+      "numeric": 24,
+      "instrumentNumber": "TSH_GZ_TG-【M4X0.5 6H】-024",
+      "type": "公制内螺纹牙规",
+      "fileName": "M4X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M4X0.5 6H.jpg": {
+      "numeric": 25,
+      "instrumentNumber": "TSH_GZ_TG-【M4X0.5 6H】-025",
+      "type": "公制内螺纹牙规",
+      "fileName": "M4X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M4X0.7 6H(1).jpg": {
+      "numeric": 26,
+      "instrumentNumber": "TSH_GZ_TG-【M4X0.7 6H】-026",
+      "type": "公制内螺纹牙规",
+      "fileName": "M4X0.7 6H"
+    },
+    "公制内螺纹牙规清单表/M4X0.7 6H(2).jpg": {
+      "numeric": 27,
+      "instrumentNumber": "TSH_GZ_TG-【M4X0.7 6H】-027",
+      "type": "公制内螺纹牙规",
+      "fileName": "M4X0.7 6H"
+    },
+    "公制内螺纹牙规清单表/M4X0.7 6H.jpg": {
+      "numeric": 28,
+      "instrumentNumber": "TSH_GZ_TG-【M4X0.7 6H】-028",
+      "type": "公制内螺纹牙规",
+      "fileName": "M4X0.7 6H"
+    },
+    "公制内螺纹牙规清单表/M5X0.5 6H.jpg": {
+      "numeric": 29,
+      "instrumentNumber": "TSH_GZ_TG-【M5X0.5 6H】-029",
+      "type": "公制内螺纹牙规",
+      "fileName": "M5X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M5X0.8 6H.jpg": {
+      "numeric": 30,
+      "instrumentNumber": "TSH_GZ_TG-【M5X0.8 6H】-030",
+      "type": "公制内螺纹牙规",
+      "fileName": "M5X0.8 6H"
+    },
+    "公制内螺纹牙规清单表/M6X0.5 6H.jpg": {
+      "numeric": 31,
+      "instrumentNumber": "TSH_GZ_TG-【M6X0.5 6H】-031",
+      "type": "公制内螺纹牙规",
+      "fileName": "M6X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M6X0.75 6H.jpg": {
+      "numeric": 32,
+      "instrumentNumber": "TSH_GZ_TG-【M6X0.75 6H】-032",
+      "type": "公制内螺纹牙规",
+      "fileName": "M6X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M6X1 6H.jpg": {
+      "numeric": 33,
+      "instrumentNumber": "TSH_GZ_TG-【M6X1 6H】-033",
+      "type": "公制内螺纹牙规",
+      "fileName": "M6X1 6H"
+    },
+    "公制内螺纹牙规清单表/M7X0.5 6H.jpg": {
+      "numeric": 34,
+      "instrumentNumber": "TSH_GZ_TG-【M7X0.5 6H】-034",
+      "type": "公制内螺纹牙规",
+      "fileName": "M7X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M7X0.75 6H.jpg": {
+      "numeric": 35,
+      "instrumentNumber": "TSH_GZ_TG-【M7X0.75 6H】-035",
+      "type": "公制内螺纹牙规",
+      "fileName": "M7X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M7X1 6H(1).jpg": {
+      "numeric": 36,
+      "instrumentNumber": "TSH_GZ_TG-【M7X1 6H】-036",
+      "type": "公制内螺纹牙规",
+      "fileName": "M7X1 6H"
+    },
+    "公制内螺纹牙规清单表/M7X1 6H.jpg": {
+      "numeric": 37,
+      "instrumentNumber": "TSH_GZ_TG-【M7X1 6H】-037",
+      "type": "公制内螺纹牙规",
+      "fileName": "M7X1 6H"
+    },
+    "公制内螺纹牙规清单表/M8X0.5 6H.jpg": {
+      "numeric": 38,
+      "instrumentNumber": "TSH_GZ_TG-【M8X0.5 6H】-038",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M8X0.75 6H.jpg": {
+      "numeric": 39,
+      "instrumentNumber": "TSH_GZ_TG-【M8X0.75 6H】-039",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M8X1 6H(1).jpg": {
+      "numeric": 40,
+      "instrumentNumber": "TSH_GZ_TG-【M8X1 6H】-040",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X1 6H"
+    },
+    "公制内螺纹牙规清单表/M8X1 6H.jpg": {
+      "numeric": 41,
+      "instrumentNumber": "TSH_GZ_TG-【M8X1 6H】-041",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X1 6H"
+    },
+    "公制内螺纹牙规清单表/M8X1.25 6H.jpg": {
+      "numeric": 42,
+      "instrumentNumber": "TSH_GZ_TG-【M8X1.25 6H】-042",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X1.25 6H"
+    },
+    "公制内螺纹牙规清单表/M8X1.25 7H.jpg": {
+      "numeric": 43,
+      "instrumentNumber": "TSH_GZ_TG-【M8X1.25 7H】-043",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X1.25 7H"
+    },
+    "公制内螺纹牙规清单表/M8X1.25 LH 6H.jpg": {
+      "numeric": 44,
+      "instrumentNumber": "TSH_GZ_TG-【M8X1.25 LH 6H】-044",
+      "type": "公制内螺纹牙规",
+      "fileName": "M8X1.25 LH 6H"
+    },
+    "公制内螺纹牙规清单表/M9X0.5 6H.jpg": {
+      "numeric": 45,
+      "instrumentNumber": "TSH_GZ_TG-【M9X0.5 6H】-045",
+      "type": "公制内螺纹牙规",
+      "fileName": "M9X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M9X0.75 6H.jpg": {
+      "numeric": 46,
+      "instrumentNumber": "TSH_GZ_TG-【M9X0.75 6H】-046",
+      "type": "公制内螺纹牙规",
+      "fileName": "M9X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M9X1 6H.jpg": {
+      "numeric": 47,
+      "instrumentNumber": "TSH_GZ_TG-【M9X1 6H】-047",
+      "type": "公制内螺纹牙规",
+      "fileName": "M9X1 6H"
+    },
+    "公制内螺纹牙规清单表/M10X0.5 6H.jpg": {
+      "numeric": 48,
+      "instrumentNumber": "TSH_GZ_TG-【M10X0.5 6H】-048",
+      "type": "公制内螺纹牙规",
+      "fileName": "M10X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M10X0.75 6H.jpg": {
+      "numeric": 49,
+      "instrumentNumber": "TSH_GZ_TG-【M10X0.75 6H】-049",
+      "type": "公制内螺纹牙规",
+      "fileName": "M10X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M10X1 6H.jpg": {
+      "numeric": 50,
+      "instrumentNumber": "TSH_GZ_TG-【M10X1 6H】-050",
+      "type": "公制内螺纹牙规",
+      "fileName": "M10X1 6H"
+    },
+    "公制内螺纹牙规清单表/M10X1 LH 6H.jpg": {
+      "numeric": 51,
+      "instrumentNumber": "TSH_GZ_TG-【M10X1 LH 6H】-051",
+      "type": "公制内螺纹牙规",
+      "fileName": "M10X1 LH 6H"
+    },
+    "公制内螺纹牙规清单表/M10X1.25 6H.jpg": {
+      "numeric": 52,
+      "instrumentNumber": "TSH_GZ_TG-【M10X1.25 6H】-052",
+      "type": "公制内螺纹牙规",
+      "fileName": "M10X1.25 6H"
+    },
+    "公制内螺纹牙规清单表/M10X1.5 7H.jpg": {
+      "numeric": 53,
+      "instrumentNumber": "TSH_GZ_TG-【M10X1.5 7H】-053",
+      "type": "公制内螺纹牙规",
+      "fileName": "M10X1.5 7H"
+    },
+    "公制内螺纹牙规清单表/M11X0.5 6H.jpg": {
+      "numeric": 54,
+      "instrumentNumber": "TSH_GZ_TG-【M11X0.5 6H】-054",
+      "type": "公制内螺纹牙规",
+      "fileName": "M11X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M11X0.75 6H.jpg": {
+      "numeric": 55,
+      "instrumentNumber": "TSH_GZ_TG-【M11X0.75 6H】-055",
+      "type": "公制内螺纹牙规",
+      "fileName": "M11X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M11X1 6H(1).jpg": {
+      "numeric": 56,
+      "instrumentNumber": "TSH_GZ_TG-【M11X1 6H】-056",
+      "type": "公制内螺纹牙规",
+      "fileName": "M11X1 6H"
+    },
+    "公制内螺纹牙规清单表/M11X1 6H.jpg": {
+      "numeric": 57,
+      "instrumentNumber": "TSH_GZ_TG-【M11X1 6H】-057",
+      "type": "公制内螺纹牙规",
+      "fileName": "M11X1 6H"
+    },
+    "公制内螺纹牙规清单表/M12X0.5 6H.jpg": {
+      "numeric": 58,
+      "instrumentNumber": "TSH_GZ_TG-【M12X0.5 6H】-058",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M12X0.75 6H.jpg": {
+      "numeric": 59,
+      "instrumentNumber": "TSH_GZ_TG-【M12X0.75 6H】-059",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1 6H.jpg": {
+      "numeric": 60,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1 6H】-060",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.25 6H.jpg": {
+      "numeric": 61,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.25 6H】-061",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.25 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.5 6H.jpg": {
+      "numeric": 62,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.5 6H】-062",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.75 6H(1).jpg": {
+      "numeric": 63,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.75 6H】-063",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.75 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.75 6H(2).jpg": {
+      "numeric": 64,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.75 6H】-064",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.75 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.75 6H(3).jpg": {
+      "numeric": 65,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.75 6H】-065",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.75 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.75 6H(4).jpg": {
+      "numeric": 66,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.75 6H】-066",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.75 6H"
+    },
+    "公制内螺纹牙规清单表/M12X1.75 6H.jpg": {
+      "numeric": 67,
+      "instrumentNumber": "TSH_GZ_TG-【M12X1.75 6H】-067",
+      "type": "公制内螺纹牙规",
+      "fileName": "M12X1.75 6H"
+    },
+    "公制内螺纹牙规清单表/M13X1 6H.jpg": {
+      "numeric": 68,
+      "instrumentNumber": "TSH_GZ_TG-【M13X1 6H】-068",
+      "type": "公制内螺纹牙规",
+      "fileName": "M13X1 6H"
+    },
+    "公制内螺纹牙规清单表/M14X0.5 6H(1).jpg": {
+      "numeric": 69,
+      "instrumentNumber": "TSH_GZ_TG-【M14X0.5 6H】-069",
+      "type": "公制内螺纹牙规",
+      "fileName": "M14X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M14X0.5 6H.jpg": {
+      "numeric": 70,
+      "instrumentNumber": "TSH_GZ_TG-【M14X0.5 6H】-070",
+      "type": "公制内螺纹牙规",
+      "fileName": "M14X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M14X1 6H.jpg": {
+      "numeric": 71,
+      "instrumentNumber": "TSH_GZ_TG-【M14X1 6H】-071",
+      "type": "公制内螺纹牙规",
+      "fileName": "M14X1 6H"
+    },
+    "公制内螺纹牙规清单表/M14X1.25 6H.jpg": {
+      "numeric": 72,
+      "instrumentNumber": "TSH_GZ_TG-【M14X1.25 6H】-072",
+      "type": "公制内螺纹牙规",
+      "fileName": "M14X1.25 6H"
+    },
+    "公制内螺纹牙规清单表/M14X1.5 6H.jpg": {
+      "numeric": 73,
+      "instrumentNumber": "TSH_GZ_TG-【M14X1.5 6H】-073",
+      "type": "公制内螺纹牙规",
+      "fileName": "M14X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M14X2 6H.jpg": {
+      "numeric": 74,
+      "instrumentNumber": "TSH_GZ_TG-【M14X2 6H】-074",
+      "type": "公制内螺纹牙规",
+      "fileName": "M14X2 6H"
+    },
+    "公制内螺纹牙规清单表/M15X0.5 4H.jpg": {
+      "numeric": 75,
+      "instrumentNumber": "TSH_GZ_TG-【M15X0.5 4H】-075",
+      "type": "公制内螺纹牙规",
+      "fileName": "M15X0.5 4H"
+    },
+    "公制内螺纹牙规清单表/M15X0.5 6H.jpg": {
+      "numeric": 76,
+      "instrumentNumber": "TSH_GZ_TG-【M15X0.5 6H】-076",
+      "type": "公制内螺纹牙规",
+      "fileName": "M15X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M15X1 6H.jpg": {
+      "numeric": 77,
+      "instrumentNumber": "TSH_GZ_TG-【M15X1 6H】-077",
+      "type": "公制内螺纹牙规",
+      "fileName": "M15X1 6H"
+    },
+    "公制内螺纹牙规清单表/M15X1.5 6H.jpg": {
+      "numeric": 78,
+      "instrumentNumber": "TSH_GZ_TG-【M15X1.5 6H】-078",
+      "type": "公制内螺纹牙规",
+      "fileName": "M15X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M16X1 6H.jpg": {
+      "numeric": 79,
+      "instrumentNumber": "TSH_GZ_TG-【M16X1 6H】-079",
+      "type": "公制内螺纹牙规",
+      "fileName": "M16X1 6H"
+    },
+    "公制内螺纹牙规清单表/M16X1.5 6H(1).jpg": {
+      "numeric": 80,
+      "instrumentNumber": "TSH_GZ_TG-【M16X1.5 6H】-080",
+      "type": "公制内螺纹牙规",
+      "fileName": "M16X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M16X1.5 6H.jpg": {
+      "numeric": 81,
+      "instrumentNumber": "TSH_GZ_TG-【M16X1.5 6H】-081",
+      "type": "公制内螺纹牙规",
+      "fileName": "M16X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M16X2 6H(1).jpg": {
+      "numeric": 82,
+      "instrumentNumber": "TSH_GZ_TG-【M16X2 6H】-082",
+      "type": "公制内螺纹牙规",
+      "fileName": "M16X2 6H"
+    },
+    "公制内螺纹牙规清单表/M16X2 6H.jpg": {
+      "numeric": 83,
+      "instrumentNumber": "TSH_GZ_TG-【M16X2 6H】-083",
+      "type": "公制内螺纹牙规",
+      "fileName": "M16X2 6H"
+    },
+    "公制内螺纹牙规清单表/M17.5X0.5 6H.jpg": {
+      "numeric": 84,
+      "instrumentNumber": "TSH_GZ_TG-【M17.5X0.5 6H】-084",
+      "type": "公制内螺纹牙规",
+      "fileName": "M17.5X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M17X0.5 6H.jpg": {
+      "numeric": 85,
+      "instrumentNumber": "TSH_GZ_TG-【M17X0.5 6H】-085",
+      "type": "公制内螺纹牙规",
+      "fileName": "M17X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M17X1 6H.jpg": {
+      "numeric": 86,
+      "instrumentNumber": "TSH_GZ_TG-【M17X1 6H】-086",
+      "type": "公制内螺纹牙规",
+      "fileName": "M17X1 6H"
+    },
+    "公制内螺纹牙规清单表/M18X1 6H(1).jpg": {
+      "numeric": 87,
+      "instrumentNumber": "TSH_GZ_TG-【M18X1 6H】-087",
+      "type": "公制内螺纹牙规",
+      "fileName": "M18X1 6H"
+    },
+    "公制内螺纹牙规清单表/M18X1 6H.jpg": {
+      "numeric": 88,
+      "instrumentNumber": "TSH_GZ_TG-【M18X1 6H】-088",
+      "type": "公制内螺纹牙规",
+      "fileName": "M18X1 6H"
+    },
+    "公制内螺纹牙规清单表/M18X1.5 6H.jpg": {
+      "numeric": 89,
+      "instrumentNumber": "TSH_GZ_TG-【M18X1.5 6H】-089",
+      "type": "公制内螺纹牙规",
+      "fileName": "M18X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M18X2.5 6H(1).jpg": {
+      "numeric": 90,
+      "instrumentNumber": "TSH_GZ_TG-【M18X2.5 6H】-090",
+      "type": "公制内螺纹牙规",
+      "fileName": "M18X2.5 6H"
+    },
+    "公制内螺纹牙规清单表/M18X2.5 6H.jpg": {
+      "numeric": 91,
+      "instrumentNumber": "TSH_GZ_TG-【M18X2.5 6H】-091",
+      "type": "公制内螺纹牙规",
+      "fileName": "M18X2.5 6H"
+    },
+    "公制内螺纹牙规清单表/M19X0.75 6H.jpg": {
+      "numeric": 92,
+      "instrumentNumber": "TSH_GZ_TG-【M19X0.75 6H】-092",
+      "type": "公制内螺纹牙规",
+      "fileName": "M19X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M20X1 6H.jpg": {
+      "numeric": 93,
+      "instrumentNumber": "TSH_GZ_TG-【M20X1 6H】-093",
+      "type": "公制内螺纹牙规",
+      "fileName": "M20X1 6H"
+    },
+    "公制内螺纹牙规清单表/M20X1.5 6H(1).jpg": {
+      "numeric": 94,
+      "instrumentNumber": "TSH_GZ_TG-【M20X1.5 6H】-094",
+      "type": "公制内螺纹牙规",
+      "fileName": "M20X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M20X1.5 6H.jpg": {
+      "numeric": 95,
+      "instrumentNumber": "TSH_GZ_TG-【M20X1.5 6H】-095",
+      "type": "公制内螺纹牙规",
+      "fileName": "M20X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M20X2.5 6H(1).jpg": {
+      "numeric": 96,
+      "instrumentNumber": "TSH_GZ_TG-【M20X2.5 6H】-096",
+      "type": "公制内螺纹牙规",
+      "fileName": "M20X2.5 6H"
+    },
+    "公制内螺纹牙规清单表/M20X2.5 6H.jpg": {
+      "numeric": 97,
+      "instrumentNumber": "TSH_GZ_TG-【M20X2.5 6H】-097",
+      "type": "公制内螺纹牙规",
+      "fileName": "M20X2.5 6H"
+    },
+    "公制内螺纹牙规清单表/M21X1 6H.jpg": {
+      "numeric": 98,
+      "instrumentNumber": "TSH_GZ_TG-【M21X1 6H】-098",
+      "type": "公制内螺纹牙规",
+      "fileName": "M21X1 6H"
+    },
+    "公制内螺纹牙规清单表/M22X0.75 6H.jpg": {
+      "numeric": 99,
+      "instrumentNumber": "TSH_GZ_TG-【M22X0.75 6H】-099",
+      "type": "公制内螺纹牙规",
+      "fileName": "M22X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M22X1 6H.jpg": {
+      "numeric": 100,
+      "instrumentNumber": "TSH_GZ_TG-【M22X1 6H】-100",
+      "type": "公制内螺纹牙规",
+      "fileName": "M22X1 6H"
+    },
+    "公制内螺纹牙规清单表/M22X1.5  LH 6H.jpg": {
+      "numeric": 101,
+      "instrumentNumber": "TSH_GZ_TG-【M22X1.5 LH 6H】-101",
+      "type": "公制内螺纹牙规",
+      "fileName": "M22X1.5 LH 6H"
+    },
+    "公制内螺纹牙规清单表/M22X1.5 6H.jpg": {
+      "numeric": 102,
+      "instrumentNumber": "TSH_GZ_TG-【M22X1.5 6H】-102",
+      "type": "公制内螺纹牙规",
+      "fileName": "M22X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M22X2 6H.jpg": {
+      "numeric": 103,
+      "instrumentNumber": "TSH_GZ_TG-【M22X2 6H】-103",
+      "type": "公制内螺纹牙规",
+      "fileName": "M22X2 6H"
+    },
+    "公制内螺纹牙规清单表/M23X0.5 6H.jpg": {
+      "numeric": 104,
+      "instrumentNumber": "TSH_GZ_TG-【M23X0.5 6H】-104",
+      "type": "公制内螺纹牙规",
+      "fileName": "M23X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M24X0.5 6H.jpg": {
+      "numeric": 105,
+      "instrumentNumber": "TSH_GZ_TG-【M24X0.5 6H】-105",
+      "type": "公制内螺纹牙规",
+      "fileName": "M24X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M24X1 6H.jpg": {
+      "numeric": 106,
+      "instrumentNumber": "TSH_GZ_TG-【M24X1 6H】-106",
+      "type": "公制内螺纹牙规",
+      "fileName": "M24X1 6H"
+    },
+    "公制内螺纹牙规清单表/M24X1.5 6H.jpg": {
+      "numeric": 107,
+      "instrumentNumber": "TSH_GZ_TG-【M24X1.5 6H】-107",
+      "type": "公制内螺纹牙规",
+      "fileName": "M24X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M24X1.5 LH 6H.jpg": {
+      "numeric": 108,
+      "instrumentNumber": "TSH_GZ_TG-【M24X1.5 LH 6H】-108",
+      "type": "公制内螺纹牙规",
+      "fileName": "M24X1.5 LH 6H"
+    },
+    "公制内螺纹牙规清单表/M24x2 6H.jpg": {
+      "numeric": 109,
+      "instrumentNumber": "TSH_GZ_TG-【M24x2 6H】-109",
+      "type": "公制内螺纹牙规",
+      "fileName": "M24x2 6H"
+    },
+    "公制内螺纹牙规清单表/M24X3 6H.jpg": {
+      "numeric": 110,
+      "instrumentNumber": "TSH_GZ_TG-【M24X3 6H】-110",
+      "type": "公制内螺纹牙规",
+      "fileName": "M24X3 6H"
+    },
+    "公制内螺纹牙规清单表/M25X1 6H.jpg": {
+      "numeric": 111,
+      "instrumentNumber": "TSH_GZ_TG-【M25X1 6H】-111",
+      "type": "公制内螺纹牙规",
+      "fileName": "M25X1 6H"
+    },
+    "公制内螺纹牙规清单表/M25X1.5 6H.jpg": {
+      "numeric": 112,
+      "instrumentNumber": "TSH_GZ_TG-【M25X1.5 6H】-112",
+      "type": "公制内螺纹牙规",
+      "fileName": "M25X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M26X0.5 6H.jpg": {
+      "numeric": 113,
+      "instrumentNumber": "TSH_GZ_TG-【M26X0.5 6H】-113",
+      "type": "公制内螺纹牙规",
+      "fileName": "M26X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M26X1 6H.jpg": {
+      "numeric": 114,
+      "instrumentNumber": "TSH_GZ_TG-【M26X1 6H】-114",
+      "type": "公制内螺纹牙规",
+      "fileName": "M26X1 6H"
+    },
+    "公制内螺纹牙规清单表/M26X1.5 6H.jpg": {
+      "numeric": 115,
+      "instrumentNumber": "TSH_GZ_TG-【M26X1.5 6H】-115",
+      "type": "公制内螺纹牙规",
+      "fileName": "M26X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M26X1”36 6H.jpg": {
+      "numeric": 116,
+      "instrumentNumber": "TSH_GZ_TG-【M26X1/36 6H】-116",
+      "type": "公制内螺纹牙规",
+      "fileName": "M26X1/36 6H"
+    },
+    "公制内螺纹牙规清单表/M27X0.5 6H.jpg": {
+      "numeric": 117,
+      "instrumentNumber": "TSH_GZ_TG-【M27X0.5 6H】-117",
+      "type": "公制内螺纹牙规",
+      "fileName": "M27X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M27X0.75 6H.jpg": {
+      "numeric": 118,
+      "instrumentNumber": "TSH_GZ_TG-【M27X0.75 6H】-118",
+      "type": "公制内螺纹牙规",
+      "fileName": "M27X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M28X0.75 6H.jpg": {
+      "numeric": 119,
+      "instrumentNumber": "TSH_GZ_TG-【M28X0.75 6H】-119",
+      "type": "公制内螺纹牙规",
+      "fileName": "M28X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M28X1 6H.jpg": {
+      "numeric": 120,
+      "instrumentNumber": "TSH_GZ_TG-【M28X1 6H】-120",
+      "type": "公制内螺纹牙规",
+      "fileName": "M28X1 6H"
+    },
+    "公制内螺纹牙规清单表/M30X0.75 6H.jpg": {
+      "numeric": 121,
+      "instrumentNumber": "TSH_GZ_TG-【M30X0.75 6H】-121",
+      "type": "公制内螺纹牙规",
+      "fileName": "M30X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M30X1.5 6H(1).jpg": {
+      "numeric": 122,
+      "instrumentNumber": "TSH_GZ_TG-【M30X1.5 6H】-122",
+      "type": "公制内螺纹牙规",
+      "fileName": "M30X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M30X1.5 6H.jpg": {
+      "numeric": 123,
+      "instrumentNumber": "TSH_GZ_TG-【M30X1.5 6H】-123",
+      "type": "公制内螺纹牙规",
+      "fileName": "M30X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M30X3.5 6H.jpg": {
+      "numeric": 124,
+      "instrumentNumber": "TSH_GZ_TG-【M30X3.5 6H】-124",
+      "type": "公制内螺纹牙规",
+      "fileName": "M30X3.5 6H"
+    },
+    "公制内螺纹牙规清单表/M32X1 6H.jpg": {
+      "numeric": 125,
+      "instrumentNumber": "TSH_GZ_TG-【M32X1 6H】-125",
+      "type": "公制内螺纹牙规",
+      "fileName": "M32X1 6H"
+    },
+    "公制内螺纹牙规清单表/M32X1.25 6H.jpg": {
+      "numeric": 126,
+      "instrumentNumber": "TSH_GZ_TG-【M32X1.25 6H】-126",
+      "type": "公制内螺纹牙规",
+      "fileName": "M32X1.25 6H"
+    },
+    "公制内螺纹牙规清单表/M32X1.5 6H.jpg": {
+      "numeric": 127,
+      "instrumentNumber": "TSH_GZ_TG-【M32X1.5 6H】-127",
+      "type": "公制内螺纹牙规",
+      "fileName": "M32X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M33X1 6H.jpg": {
+      "numeric": 128,
+      "instrumentNumber": "TSH_GZ_TG-【M33X1 6H】-128",
+      "type": "公制内螺纹牙规",
+      "fileName": "M33X1 6H"
+    },
+    "公制内螺纹牙规清单表/M33X1.5 6G.jpg": {
+      "numeric": 129,
+      "instrumentNumber": "TSH_GZ_TG-【M33X1.5 6G】-129",
+      "type": "公制内螺纹牙规",
+      "fileName": "M33X1.5 6G"
+    },
+    "公制内螺纹牙规清单表/M35X0.5 6H.jpg": {
+      "numeric": 130,
+      "instrumentNumber": "TSH_GZ_TG-【M35X0.5 6H】-130",
+      "type": "公制内螺纹牙规",
+      "fileName": "M35X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M35X0.75 6H.jpg": {
+      "numeric": 131,
+      "instrumentNumber": "TSH_GZ_TG-【M35X0.75 6H】-131",
+      "type": "公制内螺纹牙规",
+      "fileName": "M35X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M36X0.5 6H.jpg": {
+      "numeric": 132,
+      "instrumentNumber": "TSH_GZ_TG-【M36X0.5 6H】-132",
+      "type": "公制内螺纹牙规",
+      "fileName": "M36X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M36X1 6H.jpg": {
+      "numeric": 133,
+      "instrumentNumber": "TSH_GZ_TG-【M36X1 6H】-133",
+      "type": "公制内螺纹牙规",
+      "fileName": "M36X1 6H"
+    },
+    "公制内螺纹牙规清单表/M36X1.5 6H.jpg": {
+      "numeric": 134,
+      "instrumentNumber": "TSH_GZ_TG-【M36X1.5 6H】-134",
+      "type": "公制内螺纹牙规",
+      "fileName": "M36X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M37X1 6H.jpg": {
+      "numeric": 135,
+      "instrumentNumber": "TSH_GZ_TG-【M37X1 6H】-135",
+      "type": "公制内螺纹牙规",
+      "fileName": "M37X1 6H"
+    },
+    "公制内螺纹牙规清单表/M38X2.5 6H.jpg": {
+      "numeric": 136,
+      "instrumentNumber": "TSH_GZ_TG-【M38X2.5 6H】-136",
+      "type": "公制内螺纹牙规",
+      "fileName": "M38X2.5 6H"
+    },
+    "公制内螺纹牙规清单表/M39X2 6H.jpg": {
+      "numeric": 137,
+      "instrumentNumber": "TSH_GZ_TG-【M39X2 6H】-137",
+      "type": "公制内螺纹牙规",
+      "fileName": "M39X2 6H"
+    },
+    "公制内螺纹牙规清单表/M40X1.5 4H.jpg": {
+      "numeric": 138,
+      "instrumentNumber": "TSH_GZ_TG-【M40X1.5 4H】-138",
+      "type": "公制内螺纹牙规",
+      "fileName": "M40X1.5 4H"
+    },
+    "公制内螺纹牙规清单表/M40X1.5 6H.jpg": {
+      "numeric": 139,
+      "instrumentNumber": "TSH_GZ_TG-【M40X1.5 6H】-139",
+      "type": "公制内螺纹牙规",
+      "fileName": "M40X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M41X0.75 6H.jpg": {
+      "numeric": 140,
+      "instrumentNumber": "TSH_GZ_TG-【M41X0.75 6H】-140",
+      "type": "公制内螺纹牙规",
+      "fileName": "M41X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M42X1.5 6H.jpg": {
+      "numeric": 141,
+      "instrumentNumber": "TSH_GZ_TG-【M42X1.5 6H】-141",
+      "type": "公制内螺纹牙规",
+      "fileName": "M42X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M43X0.75 6H.jpg": {
+      "numeric": 142,
+      "instrumentNumber": "TSH_GZ_TG-【M43X0.75 6H】-142",
+      "type": "公制内螺纹牙规",
+      "fileName": "M43X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M44X1 6H.jpg": {
+      "numeric": 143,
+      "instrumentNumber": "TSH_GZ_TG-【M44X1 6H】-143",
+      "type": "公制内螺纹牙规",
+      "fileName": "M44X1 6H"
+    },
+    "公制内螺纹牙规清单表/M44X2 6H.jpg": {
+      "numeric": 144,
+      "instrumentNumber": "TSH_GZ_TG-【M44X2 6H】-144",
+      "type": "公制内螺纹牙规",
+      "fileName": "M44X2 6H"
+    },
+    "公制内螺纹牙规清单表/M45X1.5 6H.jpg": {
+      "numeric": 145,
+      "instrumentNumber": "TSH_GZ_TG-【M45X1.5 6H】-145",
+      "type": "公制内螺纹牙规",
+      "fileName": "M45X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M48X1 6H.jpg": {
+      "numeric": 146,
+      "instrumentNumber": "TSH_GZ_TG-【M48X1 6H】-146",
+      "type": "公制内螺纹牙规",
+      "fileName": "M48X1 6H"
+    },
+    "公制内螺纹牙规清单表/M48X1.5 6H.jpg": {
+      "numeric": 147,
+      "instrumentNumber": "TSH_GZ_TG-【M48X1.5 6H】-147",
+      "type": "公制内螺纹牙规",
+      "fileName": "M48X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M48X2 6H.jpg": {
+      "numeric": 148,
+      "instrumentNumber": "TSH_GZ_TG-【M48X2 6H】-148",
+      "type": "公制内螺纹牙规",
+      "fileName": "M48X2 6H"
+    },
+    "公制内螺纹牙规清单表/M50X0.75 6H.jpg": {
+      "numeric": 149,
+      "instrumentNumber": "TSH_GZ_TG-【M50X0.75 6H】-149",
+      "type": "公制内螺纹牙规",
+      "fileName": "M50X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M50X1 6H.jpg": {
+      "numeric": 150,
+      "instrumentNumber": "TSH_GZ_TG-【M50X1 6H】-150",
+      "type": "公制内螺纹牙规",
+      "fileName": "M50X1 6H"
+    },
+    "公制内螺纹牙规清单表/M50X1.25 6H.jpg": {
+      "numeric": 151,
+      "instrumentNumber": "TSH_GZ_TG-【M50X1.25 6H】-151",
+      "type": "公制内螺纹牙规",
+      "fileName": "M50X1.25 6H"
+    },
+    "公制内螺纹牙规清单表/M50X1.5 6H(1).jpg": {
+      "numeric": 152,
+      "instrumentNumber": "TSH_GZ_TG-【M50X1.5 6H】-152",
+      "type": "公制内螺纹牙规",
+      "fileName": "M50X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M50X1.5 6H.jpg": {
+      "numeric": 153,
+      "instrumentNumber": "TSH_GZ_TG-【M50X1.5 6H】-153",
+      "type": "公制内螺纹牙规",
+      "fileName": "M50X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M50X2 6H.jpg": {
+      "numeric": 154,
+      "instrumentNumber": "TSH_GZ_TG-【M50X2 6H】-154",
+      "type": "公制内螺纹牙规",
+      "fileName": "M50X2 6H"
+    },
+    "公制内螺纹牙规清单表/M57X0.5 6H.jpg": {
+      "numeric": 155,
+      "instrumentNumber": "TSH_GZ_TG-【M57X0.5 6H】-155",
+      "type": "公制内螺纹牙规",
+      "fileName": "M57X0.5 6H"
+    },
+    "公制内螺纹牙规清单表/M60X0.75 6H.jpg": {
+      "numeric": 156,
+      "instrumentNumber": "TSH_GZ_TG-【M60X0.75 6H】-156",
+      "type": "公制内螺纹牙规",
+      "fileName": "M60X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M60X1.5 6H.jpg": {
+      "numeric": 157,
+      "instrumentNumber": "TSH_GZ_TG-【M60X1.5 6H】-157",
+      "type": "公制内螺纹牙规",
+      "fileName": "M60X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M62X0.75 6H.jpg": {
+      "numeric": 158,
+      "instrumentNumber": "TSH_GZ_TG-【M62X0.75 6H】-158",
+      "type": "公制内螺纹牙规",
+      "fileName": "M62X0.75 6H"
+    },
+    "公制内螺纹牙规清单表/M65X1.5 6H.jpg": {
+      "numeric": 159,
+      "instrumentNumber": "TSH_GZ_TG-【M65X1.5 6H】-159",
+      "type": "公制内螺纹牙规",
+      "fileName": "M65X1.5 6H"
+    },
+    "公制内螺纹牙规清单表/M68X2 6H.jpg": {
+      "numeric": 160,
+      "instrumentNumber": "TSH_GZ_TG-【M68X2 6H】-160",
+      "type": "公制内螺纹牙规",
+      "fileName": "M68X2 6H"
+    },
+    "公制内螺纹牙规清单表/M69X0.75 6H.jpg": {
+      "numeric": 161,
+      "instrumentNumber": "TSH_GZ_TG-【M69X0.75 6H】-161",
+      "type": "公制内螺纹牙规",
+      "fileName": "M69X0.75 6H"
+    },
+    "公制外螺纹环规清单表/M1.4X0.3 6g.jpg": {
+      "numeric": 1,
+      "instrumentNumber": "TSH_GZ_TR-【M1.4X0.3 6g】-001",
+      "type": "公制外螺纹环规",
+      "fileName": "M1.4X0.3 6g"
+    },
+    "公制外螺纹环规清单表/M1.6X0.35 6g(1).jpg": {
+      "numeric": 2,
+      "instrumentNumber": "TSH_GZ_TR-【M1.6X0.35 6g】-002",
+      "type": "公制外螺纹环规",
+      "fileName": "M1.6X0.35 6g"
+    },
+    "公制外螺纹环规清单表/M1.6X0.35 6g(2).jpg": {
+      "numeric": 3,
+      "instrumentNumber": "TSH_GZ_TR-【M1.6X0.35 6g】-003",
+      "type": "公制外螺纹环规",
+      "fileName": "M1.6X0.35 6g"
+    },
+    "公制外螺纹环规清单表/M1.6X0.35 6g.jpg": {
+      "numeric": 4,
+      "instrumentNumber": "TSH_GZ_TR-【M1.6X0.35 6g】-004",
+      "type": "公制外螺纹环规",
+      "fileName": "M1.6X0.35 6g"
+    },
+    "公制外螺纹环规清单表/M2.5X0.45 6g.jpg": {
+      "numeric": 5,
+      "instrumentNumber": "TSH_GZ_TR-【M2.5X0.45 6g】-005",
+      "type": "公制外螺纹环规",
+      "fileName": "M2.5X0.45 6g"
+    },
+    "公制外螺纹环规清单表/M2X0.4 6g(1).jpg": {
+      "numeric": 6,
+      "instrumentNumber": "TSH_GZ_TR-【M2X0.4 6g】-006",
+      "type": "公制外螺纹环规",
+      "fileName": "M2X0.4 6g"
+    },
+    "公制外螺纹环规清单表/M2X0.4 6g.jpg": {
+      "numeric": 7,
+      "instrumentNumber": "TSH_GZ_TR-【M2X0.4 6g】-007",
+      "type": "公制外螺纹环规",
+      "fileName": "M2X0.4 6g"
+    },
+    "公制外螺纹环规清单表/M3X0.5 6g(1).jpg": {
+      "numeric": 8,
+      "instrumentNumber": "TSH_GZ_TR-【M3X0.5 6g】-008",
+      "type": "公制外螺纹环规",
+      "fileName": "M3X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M3X0.5 6g.jpg": {
+      "numeric": 9,
+      "instrumentNumber": "TSH_GZ_TR-【M3X0.5 6g】-009",
+      "type": "公制外螺纹环规",
+      "fileName": "M3X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M3X0.5 6g（2）.jpg": {
+      "numeric": 10,
+      "instrumentNumber": "TSH_GZ_TR-【M3X0.5 6g】-010",
+      "type": "公制外螺纹环规",
+      "fileName": "M3X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M4.5X0.5 6g.jpg": {
+      "numeric": 11,
+      "instrumentNumber": "TSH_GZ_TR-【M4.5X0.5 6g】-011",
+      "type": "公制外螺纹环规",
+      "fileName": "M4.5X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M4X0.7 6g(1).jpg": {
+      "numeric": 12,
+      "instrumentNumber": "TSH_GZ_TR-【M4X0.7 6g】-012",
+      "type": "公制外螺纹环规",
+      "fileName": "M4X0.7 6g"
+    },
+    "公制外螺纹环规清单表/M4X0.7 6g.jpg": {
+      "numeric": 13,
+      "instrumentNumber": "TSH_GZ_TR-【M4X0.7 6g】-013",
+      "type": "公制外螺纹环规",
+      "fileName": "M4X0.7 6g"
+    },
+    "公制外螺纹环规清单表/M5X0.5 6g.jpg": {
+      "numeric": 14,
+      "instrumentNumber": "TSH_GZ_TR-【M5X0.5 6g】-014",
+      "type": "公制外螺纹环规",
+      "fileName": "M5X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M5X0.8 6g(1).jpg": {
+      "numeric": 15,
+      "instrumentNumber": "TSH_GZ_TR-【M5X0.8 6g】-015",
+      "type": "公制外螺纹环规",
+      "fileName": "M5X0.8 6g"
+    },
+    "公制外螺纹环规清单表/M5X0.8 6g.jpg": {
+      "numeric": 16,
+      "instrumentNumber": "TSH_GZ_TR-【M5X0.8 6g】-016",
+      "type": "公制外螺纹环规",
+      "fileName": "M5X0.8 6g"
+    },
+    "公制外螺纹环规清单表/M6X0.5 6g.jpg": {
+      "numeric": 17,
+      "instrumentNumber": "TSH_GZ_TR-【M6X0.5 6g】-017",
+      "type": "公制外螺纹环规",
+      "fileName": "M6X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M6X1 6g(1).jpg": {
+      "numeric": 18,
+      "instrumentNumber": "TSH_GZ_TR-【M6X1 6g】-018",
+      "type": "公制外螺纹环规",
+      "fileName": "M6X1 6g"
+    },
+    "公制外螺纹环规清单表/M6X1 6g.jpg": {
+      "numeric": 19,
+      "instrumentNumber": "TSH_GZ_TR-【M6X1 6g】-019",
+      "type": "公制外螺纹环规",
+      "fileName": "M6X1 6g"
+    },
+    "公制外螺纹环规清单表/M6X1 LH 6g.jpg": {
+      "numeric": 20,
+      "instrumentNumber": "TSH_GZ_TR-【M6X1 LH 6g】-020",
+      "type": "公制外螺纹环规",
+      "fileName": "M6X1 LH 6g"
+    },
+    "公制外螺纹环规清单表/M7.5X0.5 6g.png": {
+      "numeric": 21,
+      "instrumentNumber": "TSH_GZ_TR-【M7.5X0.5 6g】-021",
+      "type": "公制外螺纹环规",
+      "fileName": "M7.5X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M7X1 6g(1).jpg": {
+      "numeric": 22,
+      "instrumentNumber": "TSH_GZ_TR-【M7X1 6g】-022",
+      "type": "公制外螺纹环规",
+      "fileName": "M7X1 6g"
+    },
+    "公制外螺纹环规清单表/M7X1 6g.jpg": {
+      "numeric": 23,
+      "instrumentNumber": "TSH_GZ_TR-【M7X1 6g】-023",
+      "type": "公制外螺纹环规",
+      "fileName": "M7X1 6g"
+    },
+    "公制外螺纹环规清单表/M8X0.5 6g.jpg": {
+      "numeric": 24,
+      "instrumentNumber": "TSH_GZ_TR-【M8X0.5 6g】-024",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M8X0.75 6g(1).jpg": {
+      "numeric": 25,
+      "instrumentNumber": "TSH_GZ_TR-【M8X0.75 6g】-025",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M8X0.75 6g(2).jpg": {
+      "numeric": 26,
+      "instrumentNumber": "TSH_GZ_TR-【M8X0.75 6g】-026",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M8X0.75 6g.jpg": {
+      "numeric": 27,
+      "instrumentNumber": "TSH_GZ_TR-【M8X0.75 6g】-027",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M8X1 6g(1).jpg": {
+      "numeric": 28,
+      "instrumentNumber": "TSH_GZ_TR-【M8X1 6g】-028",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X1 6g"
+    },
+    "公制外螺纹环规清单表/M8X1 6g.jpg": {
+      "numeric": 29,
+      "instrumentNumber": "TSH_GZ_TR-【M8X1 6g】-029",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X1 6g"
+    },
+    "公制外螺纹环规清单表/M8X1.25 6g(1).jpg": {
+      "numeric": 30,
+      "instrumentNumber": "TSH_GZ_TR-【M8X1.25 6g】-030",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X1.25 6g"
+    },
+    "公制外螺纹环规清单表/M8X1.25 6g.jpg": {
+      "numeric": 31,
+      "instrumentNumber": "TSH_GZ_TR-【M8X1.25 6g】-031",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X1.25 6g"
+    },
+    "公制外螺纹环规清单表/M8X1.25 LH 6g.jpg": {
+      "numeric": 32,
+      "instrumentNumber": "TSH_GZ_TR-【M8X1.25 LH 6g】-032",
+      "type": "公制外螺纹环规",
+      "fileName": "M8X1.25 LH 6g"
+    },
+    "公制外螺纹环规清单表/M9X0.5 6g.jpg": {
+      "numeric": 33,
+      "instrumentNumber": "TSH_GZ_TR-【M9X0.5 6g】-033",
+      "type": "公制外螺纹环规",
+      "fileName": "M9X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M10X0.5 6g.jpg": {
+      "numeric": 34,
+      "instrumentNumber": "TSH_GZ_TR-【M10X0.5 6g】-034",
+      "type": "公制外螺纹环规",
+      "fileName": "M10X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M10X1 6g(1).jpg": {
+      "numeric": 35,
+      "instrumentNumber": "TSH_GZ_TR-【M10X1 6g】-035",
+      "type": "公制外螺纹环规",
+      "fileName": "M10X1 6g"
+    },
+    "公制外螺纹环规清单表/M10X1 6g.jpg": {
+      "numeric": 36,
+      "instrumentNumber": "TSH_GZ_TR-【M10X1 6g】-036",
+      "type": "公制外螺纹环规",
+      "fileName": "M10X1 6g"
+    },
+    "公制外螺纹环规清单表/M10X1.25 6g(1).jpg": {
+      "numeric": 37,
+      "instrumentNumber": "TSH_GZ_TR-【M10X1.25 6g】-037",
+      "type": "公制外螺纹环规",
+      "fileName": "M10X1.25 6g"
+    },
+    "公制外螺纹环规清单表/M10X1.25 6g.jpg": {
+      "numeric": 38,
+      "instrumentNumber": "TSH_GZ_TR-【M10X1.25 6g】-038",
+      "type": "公制外螺纹环规",
+      "fileName": "M10X1.25 6g"
+    },
+    "公制外螺纹环规清单表/M10X1.5 6g.jpg": {
+      "numeric": 39,
+      "instrumentNumber": "TSH_GZ_TR-【M10X1.5 6g】-039",
+      "type": "公制外螺纹环规",
+      "fileName": "M10X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M11X1 6g.jpg": {
+      "numeric": 40,
+      "instrumentNumber": "TSH_GZ_TR-【M11X1 6g】-040",
+      "type": "公制外螺纹环规",
+      "fileName": "M11X1 6g"
+    },
+    "公制外螺纹环规清单表/M12X0.5 6g.jpg": {
+      "numeric": 41,
+      "instrumentNumber": "TSH_GZ_TR-【M12X0.5 6g】-041",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M12X0.75 6g.jpg": {
+      "numeric": 42,
+      "instrumentNumber": "TSH_GZ_TR-【M12X0.75 6g】-042",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M12X1 6g.jpg": {
+      "numeric": 43,
+      "instrumentNumber": "TSH_GZ_TR-【M12X1 6g】-043",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X1 6g"
+    },
+    "公制外螺纹环规清单表/M12X1.25 6g.jpg": {
+      "numeric": 44,
+      "instrumentNumber": "TSH_GZ_TR-【M12X1.25 6g】-044",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X1.25 6g"
+    },
+    "公制外螺纹环规清单表/M12X1.5 LH 6g.jpg": {
+      "numeric": 45,
+      "instrumentNumber": "TSH_GZ_TR-【M12X1.5 LH 6g】-045",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X1.5 LH 6g"
+    },
+    "公制外螺纹环规清单表/M12X1.75 6g(1).jpg": {
+      "numeric": 46,
+      "instrumentNumber": "TSH_GZ_TR-【M12X1.75 6g】-046",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X1.75 6g"
+    },
+    "公制外螺纹环规清单表/M12X1.75 6g.jpg": {
+      "numeric": 47,
+      "instrumentNumber": "TSH_GZ_TR-【M12X1.75 6g】-047",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X1.75 6g"
+    },
+    "公制外螺纹环规清单表/M12X1.75 LH 6g.jpg": {
+      "numeric": 48,
+      "instrumentNumber": "TSH_GZ_TR-【M12X1.75 LH 6g】-048",
+      "type": "公制外螺纹环规",
+      "fileName": "M12X1.75 LH 6g"
+    },
+    "公制外螺纹环规清单表/M13X1 6g.jpg": {
+      "numeric": 49,
+      "instrumentNumber": "TSH_GZ_TR-【M13X1 6g】-049",
+      "type": "公制外螺纹环规",
+      "fileName": "M13X1 6g"
+    },
+    "公制外螺纹环规清单表/M14X0.5 6g.jpg": {
+      "numeric": 50,
+      "instrumentNumber": "TSH_GZ_TR-【M14X0.5 6g】-050",
+      "type": "公制外螺纹环规",
+      "fileName": "M14X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M14X1 6g.jpg": {
+      "numeric": 51,
+      "instrumentNumber": "TSH_GZ_TR-【M14X1 6g】-051",
+      "type": "公制外螺纹环规",
+      "fileName": "M14X1 6g"
+    },
+    "公制外螺纹环规清单表/M14X1.5 6g.jpg": {
+      "numeric": 52,
+      "instrumentNumber": "TSH_GZ_TR-【M14X1.5 6g】-052",
+      "type": "公制外螺纹环规",
+      "fileName": "M14X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M14X2 6g.jpg": {
+      "numeric": 53,
+      "instrumentNumber": "TSH_GZ_TR-【M14X2 6g】-053",
+      "type": "公制外螺纹环规",
+      "fileName": "M14X2 6g"
+    },
+    "公制外螺纹环规清单表/M15X0.5 4h.jpg": {
+      "numeric": 54,
+      "instrumentNumber": "TSH_GZ_TR-【M15X0.5 4h】-054",
+      "type": "公制外螺纹环规",
+      "fileName": "M15X0.5 4h"
+    },
+    "公制外螺纹环规清单表/M15X0.5 6g.png": {
+      "numeric": 55,
+      "instrumentNumber": "TSH_GZ_TR-【M15X0.5 6g】-055",
+      "type": "公制外螺纹环规",
+      "fileName": "M15X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M15X1 6g.jpg": {
+      "numeric": 56,
+      "instrumentNumber": "TSH_GZ_TR-【M15X1 6g】-056",
+      "type": "公制外螺纹环规",
+      "fileName": "M15X1 6g"
+    },
+    "公制外螺纹环规清单表/M16X1 6g.jpg": {
+      "numeric": 57,
+      "instrumentNumber": "TSH_GZ_TR-【M16X1 6g】-057",
+      "type": "公制外螺纹环规",
+      "fileName": "M16X1 6g"
+    },
+    "公制外螺纹环规清单表/M16X1.5 6g.jpg": {
+      "numeric": 58,
+      "instrumentNumber": "TSH_GZ_TR-【M16X1.5 6g】-058",
+      "type": "公制外螺纹环规",
+      "fileName": "M16X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M16X2 6g.jpg": {
+      "numeric": 59,
+      "instrumentNumber": "TSH_GZ_TR-【M16X2 6g】-059",
+      "type": "公制外螺纹环规",
+      "fileName": "M16X2 6g"
+    },
+    "公制外螺纹环规清单表/M17X0.5 6g(1).jpg": {
+      "numeric": 60,
+      "instrumentNumber": "TSH_GZ_TR-【M17X0.5 6g】-060",
+      "type": "公制外螺纹环规",
+      "fileName": "M17X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M17X0.5 6g.jpg": {
+      "numeric": 61,
+      "instrumentNumber": "TSH_GZ_TR-【M17X0.5 6g】-061",
+      "type": "公制外螺纹环规",
+      "fileName": "M17X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M17X1 6g.jpg": {
+      "numeric": 62,
+      "instrumentNumber": "TSH_GZ_TR-【M17X1 6g】-062",
+      "type": "公制外螺纹环规",
+      "fileName": "M17X1 6g"
+    },
+    "公制外螺纹环规清单表/M18X1 6g(1).jpg": {
+      "numeric": 63,
+      "instrumentNumber": "TSH_GZ_TR-【M18X1 6g】-063",
+      "type": "公制外螺纹环规",
+      "fileName": "M18X1 6g"
+    },
+    "公制外螺纹环规清单表/M18X1 6g.jpg": {
+      "numeric": 64,
+      "instrumentNumber": "TSH_GZ_TR-【M18X1 6g】-064",
+      "type": "公制外螺纹环规",
+      "fileName": "M18X1 6g"
+    },
+    "公制外螺纹环规清单表/M18X2.5 6g.jpg": {
+      "numeric": 65,
+      "instrumentNumber": "TSH_GZ_TR-【M18X2.5 6g】-065",
+      "type": "公制外螺纹环规",
+      "fileName": "M18X2.5 6g"
+    },
+    "公制外螺纹环规清单表/M20X0.5 6g.jpg": {
+      "numeric": 66,
+      "instrumentNumber": "TSH_GZ_TR-【M20X0.5 6g】-066",
+      "type": "公制外螺纹环规",
+      "fileName": "M20X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M20X1 6g.jpg": {
+      "numeric": 67,
+      "instrumentNumber": "TSH_GZ_TR-【M20X1 6g】-067",
+      "type": "公制外螺纹环规",
+      "fileName": "M20X1 6g"
+    },
+    "公制外螺纹环规清单表/M20X1.5 6g.jpg": {
+      "numeric": 68,
+      "instrumentNumber": "TSH_GZ_TR-【M20X1.5 6g】-068",
+      "type": "公制外螺纹环规",
+      "fileName": "M20X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M20X2.5 6g.jpg": {
+      "numeric": 69,
+      "instrumentNumber": "TSH_GZ_TR-【M20X2.5 6g】-069",
+      "type": "公制外螺纹环规",
+      "fileName": "M20X2.5 6g"
+    },
+    "公制外螺纹环规清单表/M21X1 6g.jpg": {
+      "numeric": 70,
+      "instrumentNumber": "TSH_GZ_TR-【M21X1 6g】-070",
+      "type": "公制外螺纹环规",
+      "fileName": "M21X1 6g"
+    },
+    "公制外螺纹环规清单表/M22X0.5 6g.jpg": {
+      "numeric": 71,
+      "instrumentNumber": "TSH_GZ_TR-【M22X0.5 6g】-071",
+      "type": "公制外螺纹环规",
+      "fileName": "M22X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M22X1 6g.jpg": {
+      "numeric": 72,
+      "instrumentNumber": "TSH_GZ_TR-【M22X1 6g】-072",
+      "type": "公制外螺纹环规",
+      "fileName": "M22X1 6g"
+    },
+    "公制外螺纹环规清单表/M22X1.25 6g.jpg": {
+      "numeric": 73,
+      "instrumentNumber": "TSH_GZ_TR-【M22X1.25 6g】-073",
+      "type": "公制外螺纹环规",
+      "fileName": "M22X1.25 6g"
+    },
+    "公制外螺纹环规清单表/M22X1.5 6g.jpg": {
+      "numeric": 74,
+      "instrumentNumber": "TSH_GZ_TR-【M22X1.5 6g】-074",
+      "type": "公制外螺纹环规",
+      "fileName": "M22X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M22X2 6g.jpg": {
+      "numeric": 75,
+      "instrumentNumber": "TSH_GZ_TR-【M22X2 6g】-075",
+      "type": "公制外螺纹环规",
+      "fileName": "M22X2 6g"
+    },
+    "公制外螺纹环规清单表/M22X2.5 6g.jpg": {
+      "numeric": 76,
+      "instrumentNumber": "TSH_GZ_TR-【M22X2.5 6g】-076",
+      "type": "公制外螺纹环规",
+      "fileName": "M22X2.5 6g"
+    },
+    "公制外螺纹环规清单表/M23X1.5 6g.jpg": {
+      "numeric": 77,
+      "instrumentNumber": "TSH_GZ_TR-【M23X1.5 6g】-077",
+      "type": "公制外螺纹环规",
+      "fileName": "M23X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M24X1 6g.jpg": {
+      "numeric": 78,
+      "instrumentNumber": "TSH_GZ_TR-【M24X1 6g】-078",
+      "type": "公制外螺纹环规",
+      "fileName": "M24X1 6g"
+    },
+    "公制外螺纹环规清单表/M24X2 6g.jpg": {
+      "numeric": 79,
+      "instrumentNumber": "TSH_GZ_TR-【M24X2 6g】-079",
+      "type": "公制外螺纹环规",
+      "fileName": "M24X2 6g"
+    },
+    "公制外螺纹环规清单表/M24X3 6g.jpg": {
+      "numeric": 80,
+      "instrumentNumber": "TSH_GZ_TR-【M24X3 6g】-080",
+      "type": "公制外螺纹环规",
+      "fileName": "M24X3 6g"
+    },
+    "公制外螺纹环规清单表/M25X1 6g.jpg": {
+      "numeric": 81,
+      "instrumentNumber": "TSH_GZ_TR-【M25X1 6g】-081",
+      "type": "公制外螺纹环规",
+      "fileName": "M25X1 6g"
+    },
+    "公制外螺纹环规清单表/M25X1.5 6g(1).jpg": {
+      "numeric": 82,
+      "instrumentNumber": "TSH_GZ_TR-【M25X1.5 6g】-082",
+      "type": "公制外螺纹环规",
+      "fileName": "M25X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M25X1.5 6g(2).jpg": {
+      "numeric": 83,
+      "instrumentNumber": "TSH_GZ_TR-【M25X1.5 6g】-083",
+      "type": "公制外螺纹环规",
+      "fileName": "M25X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M25X1.5 6g.jpg": {
+      "numeric": 84,
+      "instrumentNumber": "TSH_GZ_TR-【M25X1.5 6g】-084",
+      "type": "公制外螺纹环规",
+      "fileName": "M25X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M27X1 6g.jpg": {
+      "numeric": 85,
+      "instrumentNumber": "TSH_GZ_TR-【M27X1 6g】-085",
+      "type": "公制外螺纹环规",
+      "fileName": "M27X1 6g"
+    },
+    "公制外螺纹环规清单表/M28X0.75 6g.jpg": {
+      "numeric": 86,
+      "instrumentNumber": "TSH_GZ_TR-【M28X0.75 6g】-086",
+      "type": "公制外螺纹环规",
+      "fileName": "M28X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M28X1 6g.png": {
+      "numeric": 87,
+      "instrumentNumber": "TSH_GZ_TR-【M28X1 6g】-087",
+      "type": "公制外螺纹环规",
+      "fileName": "M28X1 6g"
+    },
+    "公制外螺纹环规清单表/M28X1.5 LH 6g.jpg": {
+      "numeric": 88,
+      "instrumentNumber": "TSH_GZ_TR-【M28X1.5 LH 6g】-088",
+      "type": "公制外螺纹环规",
+      "fileName": "M28X1.5 LH 6g"
+    },
+    "公制外螺纹环规清单表/M30X1.5 6g.jpg": {
+      "numeric": 89,
+      "instrumentNumber": "TSH_GZ_TR-【M30X1.5 6g】-089",
+      "type": "公制外螺纹环规",
+      "fileName": "M30X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M30X2 6g.jpg": {
+      "numeric": 90,
+      "instrumentNumber": "TSH_GZ_TR-【M30X2 6g】-090",
+      "type": "公制外螺纹环规",
+      "fileName": "M30X2 6g"
+    },
+    "公制外螺纹环规清单表/M30X3 6g.jpg": {
+      "numeric": 91,
+      "instrumentNumber": "TSH_GZ_TR-【M30X3 6g】-091",
+      "type": "公制外螺纹环规",
+      "fileName": "M30X3 6g"
+    },
+    "公制外螺纹环规清单表/M30X3.5 6g(1).jpg": {
+      "numeric": 92,
+      "instrumentNumber": "TSH_GZ_TR-【M30X3.5 6g】-092",
+      "type": "公制外螺纹环规",
+      "fileName": "M30X3.5 6g"
+    },
+    "公制外螺纹环规清单表/M30X3.5 6g.jpg": {
+      "numeric": 93,
+      "instrumentNumber": "TSH_GZ_TR-【M30X3.5 6g】-093",
+      "type": "公制外螺纹环规",
+      "fileName": "M30X3.5 6g"
+    },
+    "公制外螺纹环规清单表/M31X0.75 6g.jpg": {
+      "numeric": 94,
+      "instrumentNumber": "TSH_GZ_TR-【M31X0.75 6g】-094",
+      "type": "公制外螺纹环规",
+      "fileName": "M31X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M32X1.5 6g(1).jpg": {
+      "numeric": 95,
+      "instrumentNumber": "TSH_GZ_TR-【M32X1.5 6g】-095",
+      "type": "公制外螺纹环规",
+      "fileName": "M32X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M32X1.5 6g(2).jpg": {
+      "numeric": 96,
+      "instrumentNumber": "TSH_GZ_TR-【M32X1.5 6g】-096",
+      "type": "公制外螺纹环规",
+      "fileName": "M32X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M32X1.5 6g.jpg": {
+      "numeric": 97,
+      "instrumentNumber": "TSH_GZ_TR-【M32X1.5 6g】-097",
+      "type": "公制外螺纹环规",
+      "fileName": "M32X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M33X1.5 6g.jpg": {
+      "numeric": 98,
+      "instrumentNumber": "TSH_GZ_TR-【M33X1.5 6g】-098",
+      "type": "公制外螺纹环规",
+      "fileName": "M33X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M33X3.5 6g.jpg": {
+      "numeric": 99,
+      "instrumentNumber": "TSH_GZ_TR-【M33X3.5 6g】-099",
+      "type": "公制外螺纹环规",
+      "fileName": "M33X3.5 6g"
+    },
+    "公制外螺纹环规清单表/M34X0.5 6g.jpg": {
+      "numeric": 100,
+      "instrumentNumber": "TSH_GZ_TR-【M34X0.5 6g】-100",
+      "type": "公制外螺纹环规",
+      "fileName": "M34X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M35X1.5 6g.jpg": {
+      "numeric": 101,
+      "instrumentNumber": "TSH_GZ_TR-【M35X1.5 6g】-101",
+      "type": "公制外螺纹环规",
+      "fileName": "M35X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M36X0.75 6g.jpg": {
+      "numeric": 102,
+      "instrumentNumber": "TSH_GZ_TR-【M36X0.75 6g】-102",
+      "type": "公制外螺纹环规",
+      "fileName": "M36X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M36X1 6g.jpg": {
+      "numeric": 103,
+      "instrumentNumber": "TSH_GZ_TR-【M36X1 6g】-103",
+      "type": "公制外螺纹环规",
+      "fileName": "M36X1 6g"
+    },
+    "公制外螺纹环规清单表/M36X1.5 6g.jpg": {
+      "numeric": 104,
+      "instrumentNumber": "TSH_GZ_TR-【M36X1.5 6g】-104",
+      "type": "公制外螺纹环规",
+      "fileName": "M36X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M36X3 6g.jpg": {
+      "numeric": 105,
+      "instrumentNumber": "TSH_GZ_TR-【M36X3 6g】-105",
+      "type": "公制外螺纹环规",
+      "fileName": "M36X3 6g"
+    },
+    "公制外螺纹环规清单表/M37X1 6g.jpg": {
+      "numeric": 106,
+      "instrumentNumber": "TSH_GZ_TR-【M37X1 6g】-106",
+      "type": "公制外螺纹环规",
+      "fileName": "M37X1 6g"
+    },
+    "公制外螺纹环规清单表/M37X1.5 6g.jpg": {
+      "numeric": 107,
+      "instrumentNumber": "TSH_GZ_TR-【M37X1.5 6g】-107",
+      "type": "公制外螺纹环规",
+      "fileName": "M37X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M38X2.5 6g.jpg": {
+      "numeric": 108,
+      "instrumentNumber": "TSH_GZ_TR-【M38X2.5 6g】-108",
+      "type": "公制外螺纹环规",
+      "fileName": "M38X2.5 6g"
+    },
+    "公制外螺纹环规清单表/M41X0.75 6g.jpg": {
+      "numeric": 109,
+      "instrumentNumber": "TSH_GZ_TR-【M41X0.75 6g】-109",
+      "type": "公制外螺纹环规",
+      "fileName": "M41X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M42X4.5 6g.jpg": {
+      "numeric": 110,
+      "instrumentNumber": "TSH_GZ_TR-【M42X4.5 6g】-110",
+      "type": "公制外螺纹环规",
+      "fileName": "M42X4.5 6g"
+    },
+    "公制外螺纹环规清单表/M44X1 6g.jpg": {
+      "numeric": 111,
+      "instrumentNumber": "TSH_GZ_TR-【M44X1 6g】-111",
+      "type": "公制外螺纹环规",
+      "fileName": "M44X1 6g"
+    },
+    "公制外螺纹环规清单表/M44X2 6g.jpg": {
+      "numeric": 112,
+      "instrumentNumber": "TSH_GZ_TR-【M44X2 6g】-112",
+      "type": "公制外螺纹环规",
+      "fileName": "M44X2 6g"
+    },
+    "公制外螺纹环规清单表/M45X1.5 6g.png": {
+      "numeric": 113,
+      "instrumentNumber": "TSH_GZ_TR-【M45X1.5 6g】-113",
+      "type": "公制外螺纹环规",
+      "fileName": "M45X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M45X2 6g.jpg": {
+      "numeric": 114,
+      "instrumentNumber": "TSH_GZ_TR-【M45X2 6g】-114",
+      "type": "公制外螺纹环规",
+      "fileName": "M45X2 6g"
+    },
+    "公制外螺纹环规清单表/M46X0.5 6g.jpg": {
+      "numeric": 115,
+      "instrumentNumber": "TSH_GZ_TR-【M46X0.5 6g】-115",
+      "type": "公制外螺纹环规",
+      "fileName": "M46X0.5 6g"
+    },
+    "公制外螺纹环规清单表/M46X1 6g.jpg": {
+      "numeric": 116,
+      "instrumentNumber": "TSH_GZ_TR-【M46X1 6g】-116",
+      "type": "公制外螺纹环规",
+      "fileName": "M46X1 6g"
+    },
+    "公制外螺纹环规清单表/M48X0.75 6g.jpg": {
+      "numeric": 117,
+      "instrumentNumber": "TSH_GZ_TR-【M48X0.75 6g】-117",
+      "type": "公制外螺纹环规",
+      "fileName": "M48X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M48X2 6g.jpg": {
+      "numeric": 118,
+      "instrumentNumber": "TSH_GZ_TR-【M48X2 6g】-118",
+      "type": "公制外螺纹环规",
+      "fileName": "M48X2 6g"
+    },
+    "公制外螺纹环规清单表/M52X0.75 6g.jpg": {
+      "numeric": 119,
+      "instrumentNumber": "TSH_GZ_TR-【M52X0.75 6g】-119",
+      "type": "公制外螺纹环规",
+      "fileName": "M52X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M52X1 6g.jpg": {
+      "numeric": 120,
+      "instrumentNumber": "TSH_GZ_TR-【M52X1 6g】-120",
+      "type": "公制外螺纹环规",
+      "fileName": "M52X1 6g"
+    },
+    "公制外螺纹环规清单表/M56X0.75 6g.jpg": {
+      "numeric": 121,
+      "instrumentNumber": "TSH_GZ_TR-【M56X0.75 6g】-121",
+      "type": "公制外螺纹环规",
+      "fileName": "M56X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M58X1 6g.jpg": {
+      "numeric": 122,
+      "instrumentNumber": "TSH_GZ_TR-【M58X1 6g】-122",
+      "type": "公制外螺纹环规",
+      "fileName": "M58X1 6g"
+    },
+    "公制外螺纹环规清单表/M58X1.5 6g.jpg": {
+      "numeric": 123,
+      "instrumentNumber": "TSH_GZ_TR-【M58X1.5 6g】-123",
+      "type": "公制外螺纹环规",
+      "fileName": "M58X1.5 6g"
+    },
+    "公制外螺纹环规清单表/M60X2 6g.jpg": {
+      "numeric": 124,
+      "instrumentNumber": "TSH_GZ_TR-【M60X2 6g】-124",
+      "type": "公制外螺纹环规",
+      "fileName": "M60X2 6g"
+    },
+    "公制外螺纹环规清单表/M65X0.75 6g.jpg": {
+      "numeric": 125,
+      "instrumentNumber": "TSH_GZ_TR-【M65X0.75 6g】-125",
+      "type": "公制外螺纹环规",
+      "fileName": "M65X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M65X2 6g.jpg": {
+      "numeric": 126,
+      "instrumentNumber": "TSH_GZ_TR-【M65X2 6g】-126",
+      "type": "公制外螺纹环规",
+      "fileName": "M65X2 6g"
+    },
+    "公制外螺纹环规清单表/M66X0.75 6g.jpg": {
+      "numeric": 127,
+      "instrumentNumber": "TSH_GZ_TR-【M66X0.75 6g】-127",
+      "type": "公制外螺纹环规",
+      "fileName": "M66X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M68X2 6g.jpg": {
+      "numeric": 128,
+      "instrumentNumber": "TSH_GZ_TR-【M68X2 6g】-128",
+      "type": "公制外螺纹环规",
+      "fileName": "M68X2 6g"
+    },
+    "公制外螺纹环规清单表/M77X0.75 6g.jpg": {
+      "numeric": 129,
+      "instrumentNumber": "TSH_GZ_TR-【M77X0.75 6g】-129",
+      "type": "公制外螺纹环规",
+      "fileName": "M77X0.75 6g"
+    },
+    "公制外螺纹环规清单表/M78X2 6g.jpg": {
+      "numeric": 130,
+      "instrumentNumber": "TSH_GZ_TR-【M78X2 6g】-130",
+      "type": "公制外螺纹环规",
+      "fileName": "M78X2 6g"
+    },
+    "公制外螺纹环规清单表/M80X2 6g.jpg": {
+      "numeric": 131,
+      "instrumentNumber": "TSH_GZ_TR-【M80X2 6g】-131",
+      "type": "公制外螺纹环规",
+      "fileName": "M80X2 6g"
+    },
+    "公制外螺纹环规清单表/M80X2 LH 6g.jpg": {
+      "numeric": 132,
+      "instrumentNumber": "TSH_GZ_TR-【M80X2 LH 6g】-132",
+      "type": "公制外螺纹环规",
+      "fileName": "M80X2 LH 6g"
+    },
+    "公制外螺纹环规清单表/M90X1 6g.jpg": {
+      "numeric": 133,
+      "instrumentNumber": "TSH_GZ_TR-【M90X1 6g】-133",
+      "type": "公制外螺纹环规",
+      "fileName": "M90X1 6g"
+    }
+  },
+  "type_max": {
+    "非公制内螺纹牙规清单表": 107,
+    "非公制外螺纹环规清单表": 46,
+    "公制内螺纹牙规清单表": 161,
+    "公制外螺纹环规清单表": 133
+  }
+}
