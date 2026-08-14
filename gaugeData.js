@@ -46,7 +46,7 @@ document.addEventListener('keydown', function(e) {
     if (e.key==='F12') { prevent=true; msg="🔍 这个按键在这里有其他用途哦！"; }
     if (e.ctrlKey && e.key==='u') { prevent=true; msg="🔮 源代码是魔法师的秘密，暂时不能公开哦！"; }
     if (e.ctrlKey&&e.shiftKey&&e.key==='I') { prevent=true; msg="🎪 这个组合键会召唤小精灵，但今天它们休息了~"; }
-    if (e.ctrlKey&&e.shiftKey&&e.key==='J') { prevent=true; msg="📝 这个快捷键正在参加茶话会，晚点再来试试~"; }
+    if (e.ctrlKey&&e.shiftKey&&e.key==='J') { prevent=true; msg="📝 这个快捷键正在参加茶话会，稍点再来试试~"; }
     if (e.ctrlKey&&e.shiftKey&&e.key==='C') { prevent=true; msg="🎨 这个功能正在创作新作品，稍后再来查看~"; }
     if ((e.metaKey||e.ctrlKey)&&e.altKey&&e.key==='U') { prevent=true; msg="🔮 源代码是魔法师的秘密，暂时不能公开哦！"; }
     if ((e.metaKey||e.ctrlKey)&&e.altKey&&e.key==='I') { prevent=true; msg="🎪 这个组合键会召唤小精灵，但今天它们休息了~"; }
@@ -552,7 +552,10 @@ function statusHTML(status) {
     }
 }
 
-// 渲染表格
+// ✅ 全局：当前正在显示的数据集
+let currentData = [];
+
+// 渲染表格 + 更新计数器
 function renderTable(data) {
     const tbody = document.getElementById('table-body');
     tbody.innerHTML = '';
@@ -574,7 +577,6 @@ function renderTable(data) {
             ? `<span style="color:#b21f1f;font-weight:bold;">${item.fileName}</span>`
             : item.fileName;
 
-        // 无效时查看按钮替换为恢复提示
         let actionCell;
         if (item.status === 'valid') {
             actionCell = `<button class="view-btn" data-idx="${idx}"><i class="fas fa-eye"></i> <span>查看图片</span></button>`;
@@ -593,29 +595,14 @@ function renderTable(data) {
         tbody.appendChild(tr);
     });
 
-    // ===== 统计计数器（三个全部更新）=====
-    // 始终基于全量 gaugeData 计算全局计数，筛选/搜索只影响表格行
-    const globalValid   = gaugeData.filter(d => d.status === 'valid').length;
-    const globalInvalid = gaugeData.length - globalValid;
-    const globalTotal   = gaugeData.length;
+    // ✅ 计数器基于当前传入的数据计算
+    const validCount   = data.filter(d => d.status === 'valid').length;
+    const invalidCount = data.filter(d => d.status === 'invalid').length;
+    const totalCount   = data.length;
 
-    // 当前筛选/搜索后的计数
-    const currentValid   = data.filter(d => d.status === 'valid').length;
-    const currentInvalid = data.length - currentValid;
-    const currentTotal   = data.length;
-
-    // 更新 DOM
-    document.getElementById('total-counter').textContent   = globalValid;
-    const icEl = document.getElementById('invalid-counter');
-    if (icEl) icEl.textContent = globalInvalid;
-    const acEl = document.getElementById('all-counter');
-    if (acEl) {
-        acEl.textContent = globalTotal;
-        // 筛选时显示明细提示
-        acEl.title = (currentTotal !== globalTotal)
-            ? `当前显示 ${currentTotal} 条，全局总计 ${globalTotal}`
-            : `全局总计 ${globalTotal}`;
-    }
+    document.getElementById('total-counter').textContent  = validCount;
+    document.getElementById('invalid-counter').textContent = invalidCount;
+    document.getElementById('all-counter').textContent    = totalCount;
 
     // 绑定查看按钮
     document.querySelectorAll('.view-btn').forEach(btn => {
@@ -643,38 +630,56 @@ document.addEventListener('DOMContentLoaded', function() {
     const ud = document.getElementById('update-date');
     if (ud) ud.textContent = dateStr;
 
-    renderTable(gaugeData);
+    // ✅ 初始化当前数据集
+    currentData = [...gaugeData];
+    renderTable(currentData);
 
-    // 类型筛选
-    const tf = document.getElementById('type-filter');
-    if (tf) tf.addEventListener('change', function() {
-        const v = this.value;
-        const filtered = v==='all' ? gaugeData : gaugeData.filter(d => d.type===v);
-        renderTable(filtered);
-    });
+    // ✅ 类型筛选
+    const typeFilter = document.getElementById('type-filter');
+    if (typeFilter) {
+        typeFilter.addEventListener('change', function() {
+            const v = this.value;
+            if (v === 'all') {
+                currentData = [...gaugeData];
+            } else {
+                currentData = gaugeData.filter(d => d.type === v);
+            }
+            renderTable(currentData);
+        });
+    }
 
-    // 状态筛选
-    const sf = document.getElementById('status-filter');
-    if (sf) sf.addEventListener('change', function() {
-        const v = this.value;
-        let filtered;
-        if (v==='all') filtered = gaugeData;
-        else if (v==='valid') filtered = gaugeData.filter(d => d.status==='valid');
-        else filtered = gaugeData.filter(d => d.status==='invalid');
-        renderTable(filtered);
-    });
+    // ✅ 状态筛选
+    const statusFilter = document.getElementById('status-filter');
+    if (statusFilter) {
+        statusFilter.addEventListener('change', function() {
+            const v = this.value;
+            if (v === 'all') {
+                currentData = [...gaugeData];
+            } else if (v === 'valid') {
+                currentData = gaugeData.filter(d => d.status === 'valid');
+            } else {
+                currentData = gaugeData.filter(d => d.status === 'invalid');
+            }
+            renderTable(currentData);
+        });
+    }
 
-    // 搜索（同时搜索名称和编号）
-    const sd = document.getElementById('search');
-    if (sd) sd.addEventListener('input', function() {
-        const term = this.value.toLowerCase().trim();
-        if (!term) { renderTable(gaugeData); return; }
-        const filtered = gaugeData.filter(d =>
-            d.fileName.toLowerCase().includes(term) ||
-            d.instrumentNumber.toLowerCase().includes(term)
-        );
-        renderTable(filtered);
-    });
+    // ✅ 搜索（基于当前筛选结果再过滤）
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const term = this.value.toLowerCase().trim();
+            if (!term) {
+                renderTable(currentData);
+                return;
+            }
+            const filtered = currentData.filter(d =>
+                d.fileName.toLowerCase().includes(term) ||
+                d.instrumentNumber.toLowerCase().includes(term)
+            );
+            renderTable(filtered);
+        });
+    }
 
     // 关闭模态框
     const cb = document.querySelector('.close-btn');
