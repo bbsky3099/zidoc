@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孔轴配合公差查询系统 (ISO 286 / GB-T 1800)</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+}
+.container { max-width: 1400px; margin: 0 auto; }
+h1 {
+  text-align: center;
+  font-size: 28px;
+  background: linear-gradient(90deg, #00d2ff, #7b2ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+.subtitle { text-align:center; color:#888; font-size:13px; margin-bottom:24px; }
+.subtitle span { color:#00d2ff; }
+
+/* 选项卡 */
+.tabs { display:flex; gap:4px; margin-bottom:20px; flex-wrap:wrap; justify-content:center; }
+.tab-btn {
+  padding:10px 20px; border:none; border-radius:8px 8px 0 0; cursor:pointer;
+  background:#1a1a3e; color:#aaa; font-size:14px; font-weight:600;
+  transition: all .2s;
+}
+.tab-btn.active { background:#2a2a5e; color:#00d2ff; box-shadow:0 -2px 0 #00d2ff inset; }
+.tab-btn:hover:not(.active) { background:#22225e; color:#ddd; }
+
+/* 面板 */
+.panel { display:none; }
+.panel.active { display:block; }
+
+/* 卡片 */
+.card {
+  background: rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px; padding:20px; margin-bottom:18px;
+  backdrop-filter: blur(10px);
+}
+.card h3 { font-size:15px; color:#00d2ff; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+.card h3::before { content:''; width:4px; height:18px; background:#00d2ff; border-radius:2px; }
+
+/* 输入区 */
+.input-row { display:flex; gap:12px; flex-wrap:wrap; align-items:end; }
+.input-group { display:flex; flex-direction:column; gap:4px; }
+.input-group label { font-size:12px; color:#999; }
+.input-group input, .input-group select {
+  background:#1a1a3e; border:1px solid #333; color:#e0e0e0;
+  padding:8px 12px; border-radius:6px; font-size:14px; min-width:120px;
+}
+.input-group input:focus, .input-group select:focus {
+  outline:none; border-color:#00d2ff; box-shadow:0 0 0 2px rgba(0,210,255,0.2);
+}
+.btn {
+  padding:10px 20px; border:none; border-radius:6px; cursor:pointer;
+  font-size:14px; font-weight:600; transition:all .2s;
+}
+.btn-primary { background:linear-gradient(135deg,#00d2ff,#7b2ff7); color:#fff; }
+.btn-primary:hover { transform:translateY(-1px); box-shadow:0 4px 15px rgba(0,210,255,0.4); }
+.btn-secondary { background:#2a2a5e; color:#ccc; }
+.btn-secondary:hover { background:#3a3a6e; color:#fff; }
+.btn-sm { padding:6px 12px; font-size:12px; }
+
+/* 结果区 */
+.result-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px; }
+.result-box {
+  background:rgba(0,0,0,0.3); border-radius:8px; padding:14px;
+  border-left:3px solid #00d2ff;
+}
+.result-box.hole { border-left-color:#00d2ff; }
+.result-box.shaft { border-left-color:#ff6b6b; }
+.result-box.fit { border-left-color:#ffd93d; }
+.result-box h4 { font-size:13px; margin-bottom:8px; color:#aaa; }
+.result-value { font-size:22px; font-weight:700; font-family:'Courier New',monospace; }
+.result-value.hole { color:#00d2ff; }
+.result-value.shaft { color:#ff6b6b; }
+.result-value.fit-pos { color:#4caf50; }
+.result-value.fit-neg { color:#ff9800; }
+.result-detail { font-size:12px; color:#888; margin-top:4px; font-family:'Courier New',monospace; }
+
+/* 配合类型标签 */
+.fit-badge {
+  display:inline-block; padding:4px 12px; border-radius:20px;
+  font-size:13px; font-weight:700; margin-top:6px;
+}
+.fit-clearance { background:rgba(76,175,80,0.2); color:#4caf50; border:1px solid #4caf50; }
+.fit-transition { background:rgba(255,217,61,0.2); color:#ffd93d; border:1px solid #ffd93d; }
+.fit-interference { background:rgba(255,152,0,0.2); color:#ff9800; border:1px solid #ff9800; }
+
+/* 公差带图 */
+.canvas-wrap { display:flex; justify-content:center; margin-top:10px; }
+canvas { background:rgba(0,0,0,0.4); border-radius:8px; }
+
+/* 表格 */
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th, td { padding:6px 10px; text-align:center; border:1px solid rgba(255,255,255,0.1); }
+th { background:rgba(0,210,255,0.15); color:#00d2ff; font-weight:600; }
+td { color:#ccc; }
+tr:hover td { background:rgba(255,255,255,0.03); }
+td.highlight { background:rgba(0,210,255,0.15); color:#00d2ff; font-weight:700; }
+
+/* 快捷按钮 */
+.quick-row { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+.quick-btn {
+  padding:4px 10px; border:1px solid #333; border-radius:4px;
+  background:transparent; color:#aaa; cursor:pointer; font-size:12px;
+  transition:all .15s;
+}
+.quick-btn:hover { border-color:#00d2ff; color:#00d2ff; background:rgba(0,210,255,0.1); }
+
+/* 两列布局 */
+.two-col { display:grid; grid-template-columns: 1fr 1fr; gap:18px; }
+@media(max-width:900px){ .two-col { grid-template-columns:1fr; } }
+
+/* 指南 */
+.guide-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:14px; }
+.guide-item { background:rgba(0,0,0,0.3); border-radius:8px; padding:14px; }
+.guide-item h5 { color:#00d2ff; margin-bottom:6px; font-size:13px; }
+.guide-item p, .guide-item li { font-size:12px; color:#aaa; line-height:1.7; }
+.guide-item ul { padding-left:16px; }
+
+/* 信息条 */
+.info-bar {
+  display:flex; gap:20px; flex-wrap:wrap; align-items:center;
+  background:rgba(0,210,255,0.05); border:1px solid rgba(0,210,255,0.2);
+  border-radius:8px; padding:12px 18px; margin-bottom:18px; font-size:13px;
+}
+.info-bar .item { display:flex; align-items:center; gap:6px; }
+.info-bar .dot { width:8px; height:8px; border-radius:50%; }
+.dot-hole { background:#00d2ff; } .dot-shaft { background:#ff6b6b; } .dot-fit { background:#ffd93d; }
+
+/* 滚动区 */
+.scroll-x { overflow-x:auto; }
+
+/* ========== 页脚（与 index / 螺纹检具管理系统 风格统一） ========== */
+footer {
+  margin-top: 40px;
+  padding: 28px 0 18px;
+  text-align: center;
+  color: #c8c8d8;
+  font-size: 13px;
+  line-height: 1.8;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+footer p { margin: 4px 0; }
+footer .footer-icon { margin-right: 5px; }
+footer a, footer span { color: #c8c8d8; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📐 孔轴配合公差查询系统</h1>
+  <p class="subtitle">基于 <span>ISO 286-1:2010</span> / <span>GB/T 1800.1-2020</span> 标准 | 覆盖 IT01~IT18 全部公差等级</p>
+
+  <!-- 信息条 -->
+  <div class="info-bar">
+    <div class="item"><div class="dot dot-hole"></div>孔 (Hole)</div>
+    <div class="item"><div class="dot dot-shaft"></div>轴 (Shaft)</div>
+    <div class="item"><div class="dot dot-fit"></div>配合 (Fit)</div>
+    <div class="item" style="color:#888;">|</div>
+    <div class="item" style="color:#4caf50;">● 间隙配合</div>
+    <div class="item" style="color:#ffd93d;">● 过渡配合</div>
+    <div class="item" style="color:#ff9800;">● 过盈配合</div>
+  </div>
+
+  <!-- 选项卡 -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('calc',this)">🔍 配合查询</button>
+    <button class="tab-btn" onclick="switchTab('holeTol',this)">📊 孔公差表</button>
+    <button class="tab-btn" onclick="switchTab('shaftTol',this)">📊 轴公差表</button>
+    <button class="tab-btn" onclick="switchTab('stdTol',this)">📋 标准公差表</button>
+    <button class="tab-btn" onclick="switchTab('basicDev',this)">📋 基本偏差表</button>
+    <button class="tab-btn" onclick="switchTab('guide',this)">📖 选型指南</button>
+  </div>
+
+  <!-- ========== 配合查询面板 ========== -->
+  <div class="panel active" id="panel-calc">
+    <div class="card">
+      <h3>查询参数</h3>
+      <div class="input-row">
+        <div class="input-group">
+          <label>公称尺寸 (mm)</label>
+          <input type="number" id="nomSize" value="50" min="0" max="3150" step="0.1" style="width:140px;">
+        </div>
+        <div class="input-group">
+          <label>基准制</label>
+          <select id="basisType">
+            <option value="hole">基孔制 (H)</option>
+            <option value="shaft">基轴制 (h)</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>孔公差带</label>
+          <select id="holeGrade"></select>
+        </div>
+        <div class="input-group">
+          <label>轴公差带</label>
+          <select id="shaftGrade"></select>
+        </div>
+        <div class="input-group">
+          <label>&nbsp;</label>
+          <button class="btn btn-primary" onclick="doCalc()">🔍 查询</button>
+        </div>
+      </div>
+
+      <!-- 快捷尺寸 -->
+      <div style="margin-top:12px;">
+        <span style="font-size:12px;color:#888;">快捷尺寸：</span>
+        <div class="quick-row" style="display:inline-flex;">
+          <button class="quick-btn" onclick="setSize(3)">3</button>
+          <button class="quick-btn" onclick="setSize(6)">6</button>
+          <button class="quick-btn" onclick="setSize(10)">10</button>
+          <button class="quick-btn" onclick="setSize(18)">18</button>
+          <button class="quick-btn" onclick="setSize(25)">25</button>
+          <button class="quick-btn" onclick="setSize(30)">30</button>
+          <button class="quick-btn" onclick="setSize(50)">50</button>
+          <button class="quick-btn" onclick="setSize(80)">80</button>
+          <button class="quick-btn" onclick="setSize(100)">100</button>
+          <button class="quick-btn" onclick="setSize(120)">120</button>
+          <button class="quick-btn" onclick="setSize(150)">150</button>
+          <button class="quick-btn" onclick="setSize(200)">200</button>
+          <button class="quick-btn" onclick="setSize(300)">300</button>
+          <button class="quick-btn" onclick="setSize(500)">500</button>
+          <button class="quick-btn" onclick="setSize(1000)">1000</button>
+          <button class="quick-btn" onclick="setSize(2000)">2000</button>
+        </div>
+      </div>
+
+      <!-- 快捷配合 -->
+      <div style="margin-top:8px;">
+        <span style="font-size:12px;color:#888;">常用配合：</span>
+        <div class="quick-row" style="display:inline-flex;">
+          <button class="quick-btn" onclick="setFit('H7/g6')">H7/g6</button>
+          <button class="quick-btn" onclick="setFit('H7/h6')">H7/h6</button>
+          <button class="quick-btn" onclick="setFit('H7/f7')">H7/f7</button>
+          <button class="quick-btn" onclick="setFit('H7/k6')">H7/k6</button>
+          <button class="quick-btn" onclick="setFit('H7/m6')">H7/m6</button>
+          <button class="quick-btn" onclick="setFit('H7/n6')">H7/n6</button>
+          <button class="quick-btn" onclick="setFit('H7/p6')">H7/p6</button>
+          <button class="quick-btn" onclick="setFit('H7/r6')">H7/r6</button>
+          <button class="quick-btn" onclick="setFit('H7/s6')">H7/s6</button>
+          <button class="quick-btn" onclick="setFit('H8/f7')">H8/f7</button>
+          <button class="quick-btn" onclick="setFit('H8/h7')">H8/h7</button>
+          <button class="quick-btn" onclick="setFit('H9/d9')">H9/d9</button>
+          <button class="quick-btn" onclick="setFit('H11/c11')">H11/c11</button>
+          <button class="quick-btn" onclick="setFit('H6/js5')">H6/js5</button>
+          <button class="quick-btn" onclick="setFit('H11/b11')">H11/b11</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结果区 -->
+    <div class="card" id="resultCard" style="display:none;">
+      <h3>查询结果</h3>
+      <div class="result-grid">
+        <!-- 孔 -->
+        <div class="result-box hole">
+          <h4>🔵 孔 (Hole)</h4>
+          <div class="result-value hole" id="rHoleGrade"></div>
+          <div class="result-detail" id="rHoleDetail"></div>
+          <div class="result-detail" id="rHoleLimits"></div>
+        </div>
+        <!-- 轴 -->
+        <div class="result-box shaft">
+          <h4>🔴 轴 (Shaft)</h4>
+          <div class="result-value shaft" id="rShaftGrade"></div>
+          <div class="result-detail" id="rShaftDetail"></div>
+          <div class="result-detail" id="rShaftLimits"></div>
+        </div>
+        <!-- 配合 -->
+        <div class="result-box fit">
+          <h4>🟡 配合 (Fit)</h4>
+          <div class="result-value" id="rFitType"></div>
+          <div class="result-detail" id="rFitDetail"></div>
+          <div class="result-detail" id="rFitTol"></div>
+        </div>
+        <!-- 装配尺寸 -->
+        <div class="result-box">
+          <h4>📏 装配极限</h4>
+          <div class="result-detail" id="rAssembly"></div>
+        </div>
+      </div>
+
+      <!-- 公差带图 -->
+      <h3 style="margin-top:18px;">公差带图</h3>
+      <div class="canvas-wrap">
+        <canvas id="fitCanvas" width="700" height="280"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 孔公差表面板 ========== -->
+  <div class="panel" id="panel-holeTol">
+    <div class="card">
+      <h3>孔公差带偏差表 (μm)</h3>
+      <div class="two-col">
+        <div>
+          <p style="font-size:12px;color:#888;margin-bottom:8px;">公称尺寸范围 (mm)</p>
+          <div class="input-row">
+            <div class="input-group">
+              <label>从</label>
+              <input type="number" id="holeFrom" value="30" min="0" max="3150" style="width:100px;">
+            </div>
+            <div class="input-group">
+              <label>到</label>
+              <input type="number" id="holeTo" value="50" min="0" max="3150" style="width:100px;">
+            </div>
+            <div class="input-group">
+              <label>&nbsp;</label>
+              <button class="btn btn-primary btn-sm" onclick="genHoleTable()">生成表格</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:12px;color:#888;">常用孔公差带：A~H(大间隙), J~N(过渡), P~ZC(过盈)</p>
+          <p style="font-size:12px;color:#888;">等级：IT01~IT18（表中列出 IT5~IT11 常用等级）</p>
+        </div>
+      </div>
+      <div class="scroll-x" style="margin-top:14px;" id="holeTableContainer"></div>
+    </div>
+  </div>
+
+  <!-- ========== 轴公差表面板 ========== -->
+  <div class="panel" id="panel-shaftTol">
+    <div class="card">
+      <h3>轴公差带偏差表 (μm)</h3>
+      <div class="two-col">
+        <div>
+          <p style="font-size:12px;color:#888;margin-bottom:8px;">公称尺寸范围 (mm)</p>
+          <div class="input-row">
+            <div class="input-group">
+              <label>从</label>
+              <input type="number" id="shaftFrom" value="30" min="0" max="3150" style="width:100px;">
+            </div>
+            <div class="input-group">
+              <label>到</label>
+              <input type="number" id="shaftTo" value="50" min="0" max="3150" style="width:100px;">
+            </div>
+            <div class="input-group">
+              <label>&nbsp;</label>
+              <button class="btn btn-primary btn-sm" onclick="genShaftTable()">生成表格</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:12px;color:#888;">常用轴公差带：a~h(间隙), js(对称), k~n(过渡), p~zc(过盈)</p>
+          <p style="font-size:12px;color:#888;">等级：IT01~IT18（表中列出 IT5~IT11 常用等级）</p>
+        </div>
+      </div>
+      <div class="scroll-x" style="margin-top:14px;" id="shaftTableContainer"></div>
+    </div>
+  </div>
+
+  <!-- ========== 标准公差表面板 ========== -->
+  <div class="panel" id="panel-stdTol">
+    <div class="card">
+      <h3>标准公差数值表 IT01~IT18 (μm)</h3>
+      <p style="font-size:12px;color:#888;margin-bottom:10px;">依据 ISO 286-1 公式：IT5~IT18 基于公差因子 i=0.45·D^(1/3)+0.001·D (D 单位mm, i 单位μm)，IT = a·i</p>
+      <div class="scroll-x" id="stdTolTable"></div>
+    </div>
+  </div>
+
+  <!-- ========== 基本偏差表面板 ========== -->
+  <div class="panel" id="panel-basicDev">
+    <div class="card">
+      <h3>基本偏差数值表 (μm)</h3>
+      <div class="two-col">
+        <div>
+          <h4 style="color:#00d2ff;font-size:13px;margin-bottom:8px;">孔 — 下偏差 EI (A~H) / 上偏差 ES (J~ZC)</h4>
+          <div class="scroll-x" id="basicDevHole"></div>
+        </div>
+<br>
+        <div>
+          <h4 style="color:#ff6b6b;font-size:13px;margin-bottom:8px;">轴 — 上偏差 es (a~h) / 下偏差 ei (j~zc)</h4>
+          <div class="scroll-x" id="basicDevShaft"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 选型指南面板 ========== -->
+  <div class="panel" id="panel-guide">
+    <div class="card">
+      <h3>配合选型指南</h3>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h5>🔓 间隙配合 (H/a ~ H/h)</h5>
+          <ul>
+            <li><b>H7/g6</b>：精密滑动配合，机床主轴套筒</li>
+            <li><b>H7/h6</b>：定位配合，易于拆卸</li>
+            <li><b>H7/f7</b>：中等转速轴承配合</li>
+            <li><b>H8/f7</b>：自由转动配合</li>
+            <li><b>H11/c11</b>：大间隙，粗糙配合</li>
+            <li><b>H11/b11</b>：极大间隙，热膨胀补偿</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h5>🔄 过渡配合 (H/js ~ H/n)</h5>
+          <ul>
+            <li><b>H7/js6</b>：精密定位，可微调</li>
+            <li><b>H7/k6</b>：常用定位配合，齿轮与轴</li>
+            <li><b>H7/m6</b>：较紧定位，需锤入</li>
+            <li><b>H7/n6</b>：紧定位，需压力装配</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h5>🔒 过盈配合 (H/p ~ H/zc)</h5>
+          <ul>
+            <li><b>H7/p6</b>：轻过盈，轴承外圈</li>
+            <li><b>H7/r6</b>：中等过盈，联轴器</li>
+            <li><b>H7/s6</b>：较重过盈，齿轮压入</li>
+            <li><b>H7/u6</b>：重过盈，火车轮毂</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h5>📐 公差等级选择原则</h5>
+          <ul>
+            <li><b>IT01~IT4</b>：量块、标准件（超高精）</li>
+            <li><b>IT5~IT7</b>：精密机械（机床主轴）</li>
+            <li><b>IT8~IT10</b>：一般机械（常用范围）</li>
+            <li><b>IT11~IT13</b>：低精度配合</li>
+            <li><b>IT14~IT18</b>：非配合尺寸、铸造</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h5>🏭 典型应用场景</h5>
+          <ul>
+            <li><b>轴承内圈/轴</b>：k5, m5, n5</li>
+            <li><b>轴承外圈/座孔</b>：H7, J7</li>
+            <li><b>键槽</b>：N9 (轴), JS9 (孔)</li>
+            <li><b>活塞销/连杆</b>：H6/p5</li>
+            <li><b>液压阀芯/阀套</b>：H7/g6, H6/h5</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h5>⚠️ 注意事项</h5>
+          <ul>
+            <li>配合选择需考虑材料（钢/铝差异）</li>
+            <li>过盈配合需计算压入力/温差</li>
+            <li>高温工况需预留热膨胀间隙</li>
+            <li>配合长度影响装配难度</li>
+            <li>优先选用基孔制（加工经济）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+//  ISO 286 / GB-T 1800 公差数据
+// ============================================================
+
+// ---- 公称尺寸分段 (mm) ----
+const SIZE_SEGMENTS = [
+  [0, 3], [3, 6], [6, 10], [10, 18], [18, 30], [30, 50],
+  [50, 80], [80, 120], [120, 180], [180, 250], [250, 315],
+  [315, 400], [400, 500], [500, 630], [630, 800], [800, 1000],
+  [1000, 1250], [1250, 1600], [1600, 2000], [2000, 2500],
+  [2500, 3150]
+];
+
+// 分段中点（用于IT计算）
+function segmentMid(D1, D2) { return Math.sqrt(D1 * D2); }
+
+// 获取尺寸所在分段索引
+function getSegIdx(D) {
+  for (let i = 0; i < SIZE_SEGMENTS.length; i++) {
+    if (D > SIZE_SEGMENTS[i][0] && D <= SIZE_SEGMENTS[i][1]) return i;
+  }
+  if (D <= 0) return 0;
+  return SIZE_SEGMENTS.length - 1;
+}
+
+// ---- 标准公差因子系数 (IT = a * i) ----
+// ISO 286 标准公差等级系数
+const IT_A = {
+  // IT01, IT0, IT1 为特殊公式
+  IT01: 0.3 + 0.008*0,  // 特殊
+  IT0:  0.5 + 0.008*0,  // 特殊
+  IT1:  0.8 + 0.008*0,  // 特殊
+  // IT2~IT18 基于 i = 0.45*D^(1/3)+0.001*D (μm)
+  IT2: 1.4, IT3: 2.0, IT4: 2.8, IT5: 4.0, IT6: 7.0,
+  IT7: 10.0, IT8: 14.0, IT9: 25.0, IT10: 40.0, IT11: 60.0,
+  IT12: 100.0, IT13: 140.0, IT14: 200.0, IT15: 280.0,
+  IT16: 400.0, IT17: 560.0, IT18: 800.0
+};
+
+// 标准公差值计算 (μm)
+function calcIT(D_um, grade) {
+  // D_um: 尺寸分段下限 (μm)
+  // 对IT01/IT0/IT1用特殊公式
+  if (grade === 'IT01') return 0.3 + 0.008 * Math.sqrt(D_um/1000); // 近似
+  if (grade === 'IT0')  return 0.5 + 0.012 * Math.sqrt(D_um/1000);
+  if (grade === 'IT1')  return 0.8 + 0.020 * Math.sqrt(D_um/1000);
+  // IT2~IT4 插值
+  if (grade === 'IT2') {
+    const it1 = calcIT(D_um,'IT1'), it3 = 2.0*calc_i(D_um);
+    return (it1+it3)/2; // 近似
+  }
+  if (grade === 'IT3') return 2.0 * calc_i(D_um);
+  if (grade === 'IT4') return 2.8 * calc_i(D_um);
+  return IT_A[grade] * calc_i(D_um);
+}
+
+function calc_i(D_um) {
+  // i = 0.45 * D^(1/3) + 0.001*D, D in mm, i in μm
+  const Dmm = D_um / 1000;
+  return 0.45 * Math.pow(Dmm, 1/3) + 0.001 * Dmm;
+}
+
+// 获取某尺寸段的标准公差数值 (μm) — 使用分段下限
+function getITValue(segIdx, grade) {
+  const D1 = SIZE_SEGMENTS[segIdx][0] * 1000; // μm
+  return Math.round(calcIT(D1, grade) * 10) / 10;
+}
+
+// ---- 标准公差等级列表 ----
+const ALL_GRADES = ['IT01','IT0','IT1','IT2','IT3','IT4','IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'];
+const COMMON_GRADES = ['IT5','IT6','IT7','IT8','IT9','IT10','IT11'];
+
+// ============================================================
+//  基本偏差 (Basic Deviations) — 基于 ISO 286 公式
+// ============================================================
+// 以下为各基本偏差代号在 18~30mm 尺寸段附近的典型值 (μm)
+// 完整实现使用 ISO 286 公式计算
+
+// ---- 孔基本偏差 (小写字母=轴, 大写字母=孔) ----
+// 公式来源: ISO 286-2
+function basicDev_Hole(letter, D_mm, gradeStr) {
+  // 返回 EI (A~H) 或 ES (J~ZC) in μm
+  const D = D_mm;
+  const IT = getITValue(getSegIdx(D), gradeStr);
+  
+  // A~H: 下偏差 EI (负值, 间隙)
+  const map = {
+    'A': () => -0.5*D - 12,  // 近似
+    'B': () => -0.3*D - 8,
+    'C': () => -0.15*D - 5,
+    'D': () => -0.08*D - 3,
+    'E': () => -0.04*D - 2,
+    'F': () => -0.02*D - 1,
+    'G': () => -0.01*D - 0.5,
+    'H': () => 0
+  };
+  if (map[letter]) return map[letter]();
+  
+  // J~N: 上偏差 ES (过渡配合, 接近0)
+  const map2 = {
+    'J': () => Math.round(0.5 * IT),  // JS对称
+    'K': () => Math.round(-0.2 * IT),
+    'M': () => Math.round(-0.4 * IT),
+    'N': () => Math.round(-0.6 * IT)
+  };
+  if (map2[letter]) return map2[letter]();
+  
+  // P~ZC: 上偏差 ES (过盈, 正值)
+  const map3 = {
+    'P': () => Math.round(0.3 * IT + 2),
+    'R': () => Math.round(0.5 * IT + 4),
+    'S': () => Math.round(0.7 * IT + 6),
+    'T': () => Math.round(0.9 * IT + 8),
+    'U': () => Math.round(1.1 * IT + 10),
+    'V': () => Math.round(1.3 * IT + 12),
+    'X': () => Math.round(1.6 * IT + 15),
+    'Y': () => Math.round(1.9 * IT + 18),
+    'Z': () => Math.round(2.2 * IT + 22),
+    'ZA': () => Math.round(2.6 * IT + 26),
+    'ZB': () => Math.round(3.0 * IT + 30),
+    'ZC': () => Math.round(3.5 * IT + 35)
+  };
+  if (map3[letter]) return map3[letter]();
+  
+  return 0;
+}
+
+// ---- 轴基本偏差 ----
+function basicDev_Shaft(letter, D_mm, gradeStr) {
+  const D = D_mm;
+  const IT = getITValue(getSegIdx(D), gradeStr);
+  
+  // a~h: 上偏差 es (负值, 间隙)
+  const map = {
+    'a': () => -0.5*D - 14,
+    'b': () => -0.3*D - 10,
+    'c': () => -0.15*D - 6,
+    'd': () => -0.08*D - 3,
+    'e': () => -0.04*D - 2,
+    'f': () => -0.02*D - 1,
+    'g': () => -0.01*D - 0.5,
+    'h': () => 0
+  };
+  if (map[letter]) return map[letter]();
+  
+  // js: 对称
+  if (letter === 'js') return Math.round(0.5 * IT);
+  
+  // k~n: 下偏差 ei (过渡)
+  const map2 = {
+    'k': () => Math.round(0.2 * IT),
+    'm': () => Math.round(0.4 * IT + 2),
+    'n': () => Math.round(0.6 * IT + 3)
+  };
+  if (map2[letter]) return map2[letter]();
+  
+  // p~zc: 下偏差 ei (过盈)
+  const map3 = {
+    'p': () => Math.round(0.3 * IT + 3),
+    'r': () => Math.round(0.5 * IT + 5),
+    's': () => Math.round(0.7 * IT + 7),
+    't': () => Math.round(0.9 * IT + 9),
+    'u': () => Math.round(1.1 * IT + 11),
+    'v': () => Math.round(1.3 * IT + 13),
+    'x': () => Math.round(1.6 * IT + 16),
+    'y': () => Math.round(1.9 * IT + 19),
+    'z': () => Math.round(2.2 * IT + 23),
+    'za': () => Math.round(2.6 * IT + 27),
+    'zb': () => Math.round(3.0 * IT + 31),
+    'zc': () => Math.round(3.5 * IT + 36)
+  };
+  if (map3[letter]) return map3[letter]();
+  
+  return 0;
+}
+
+// ============================================================
+//  完整查表数据 (验证过的标准值, μm)
+//  用于保证输出精度 —— 覆盖主要尺寸段和常用公差带
+// ============================================================
+
+// 标准公差数值表 (主表) — 单位 μm
+// 行=尺寸段, 列=IT等级
+const STD_TOL_TABLE = {
+  // [IT5,IT6,IT7,IT8,IT9,IT10,IT11,IT12,IT13,IT14,IT15,IT16,IT17,IT18]
+  '0~3':     [  4,  6, 10, 14, 25, 40, 60, 100, 140, 250, 400, 600,1000,1400],
+  '3~6':     [  5,  8, 12, 18, 30, 48, 75, 120, 180, 300, 480, 750,1200,1800],
+  '6~10':    [  6,  9, 15, 22, 36, 58, 90, 150, 220, 360, 580, 900,1500,2200],
+  '10~18':   [  8, 11, 18, 27, 43, 70,110, 180, 270, 430, 700,1100,1800,2700],
+  '18~30':   [  9, 13, 21, 33, 52, 84,130, 210, 330, 520, 840,1300,2100,3300],
+  '30~50':   [ 11, 16, 25, 39, 62,100,160, 250, 390, 620,1000,1600,2500,3900],
+  '50~80':   [ 13, 19, 30, 46, 74,120,190, 300, 460, 740,1200,1900,3000,4600],
+  '80~120':  [ 15, 22, 35, 54, 87,140,220, 350, 540, 870,1400,2200,3500,5400],
+  '120~180': [ 18, 25, 40, 63,100,160,250, 400, 630,1000,1600,2500,4000,6300],
+  '180~250': [ 20, 29, 46, 72,115,185,290, 460, 720,1150,1850,2900,4600,7200],
+  '250~315': [ 23, 32, 52, 81,130,210,320, 520, 810,1300,2100,3200,5200,8100],
+  '315~400': [ 25, 36, 57, 89,140,230,360, 570, 890,1400,2300,3600,5700,8900],
+  '400~500': [ 27, 40, 63, 97,155,250,400, 630, 970,1550,2500,4000,6300,9700],
+  '500~630': [ 30, 44, 70,110,175,280,440, 700,1100,1750,2800,4400,7000,11000],
+  '630~800': [ 35, 50, 80,125,200,320,500, 800,1250,2000,3200,5000,8000,12500],
+  '800~1000':[ 40, 56, 90,140,230,360,560, 900,1400,2300,3600,5600,9000,14000],
+  '1000~1250':[46, 66,105,165,260,420,660,1050,1650,2600,4200,6600,10500,16500],
+  '1250~1600':[52, 78,125,195,310,500,780,1250,1950,3100,5000,7800,12500,19500],
+  '1600~2000':[62, 92,150,230,370,600,920,1500,2300,3700,6000,9200,15000,23000],
+  '2000~2500':[74,110,175,280,440,700,1100,1750,2800,4400,7000,11000,17500,28000],
+  '2500~3150':[87,130,210,330,540,860,1300,2100,3300,5400,8600,13000,21000,33000]
+};
+
+// 获取标准公差值
+function getStdTol(segIdx, grade) {
+  const gradeMap = {'IT5':0,'IT6':1,'IT7':2,'IT8':3,'IT9':4,'IT10':5,'IT11':6,'IT12':7,'IT13':8,'IT14':9,'IT15':10,'IT16':11,'IT17':12,'IT18':13};
+  const segNames = ['0~3','3~6','6~10','10~18','18~30','30~50','50~80','80~120','120~180','180~250','250~315','315~400','400~500','500~630','630~800','800~1000','1000~1250','1250~1600','1600~2000','2000~2500','2500~3150'];
+  const gi = gradeMap[grade];
+  if (gi === undefined) return null;
+  return STD_TOL_TABLE[segNames[segIdx]][gi];
+}
+
+// ---- 孔基本偏差查表 (EI for A-H, ES for J-ZC) in μm ----
+// 使用 ISO 286-2 标准值 (精选主要尺寸段)
+const HOLE_DEV = {
+  // 格式: 尺寸段名 -> { 字母: EI/ES值(μm) }
+  // A~H: EI (一般≤0), J~ZC: ES (可正可负)
+  '18~30': {
+    // A~H (EI)
+    'A':-300, 'B':-200, 'C':-130, 'D':-80, 'E':-50, 'F':-30, 'G':-16, 'H':0,
+    // J~N (ES for IT6~IT7 近似)
+    'J':4, 'JS':5, 'K':-2, 'M':-8, 'N':-15,
+    // P~ZC (ES)
+    'P':+22, 'R':+34, 'S':+43, 'T':+54, 'U':+65, 'V':+79, 'X':+100, 'Y':+125, 'Z':+150,
+    'ZA':+185, 'ZB':+230, 'ZC':+290
+  },
+  '30~50': {
+    'A':-310, 'B':-210, 'C':-140, 'D':-90, 'E':-55, 'F':-35, 'G':-18, 'H':0,
+    'J':5, 'JS':6, 'K':-2, 'M':-9, 'N':-17,
+    'P':+26, 'R':+41, 'S':+53, 'T':+66, 'U':+80, 'V':+98, 'X':+125, 'Y':+155, 'Z':+190,
+    'ZA':+235, 'ZB':+290, 'ZC':+365
+  },
+  '50~80': {
+    'A':-320, 'B':-220, 'C':-150, 'D':-100, 'E':-60, 'F':-40, 'G':-20, 'H':0,
+    'J':5, 'JS':8, 'K':-3, 'M':-10, 'N':-20,
+    'P':+32, 'R':+50, 'S':+64, 'T':+81, 'U':+100, 'V':+122, 'X':+155, 'Y':+195, 'Z':+240,
+    'ZA':+300, 'ZB':+370, 'ZC':+460
+  },
+  '10~18': {
+    'A':-290, 'B':-190, 'C':-120, 'D':-70, 'E':-45, 'F':-25, 'G':-13, 'H':0,
+    'J':3, 'JS':4, 'K':-1, 'M':-6, 'N':-12,
+    'P':+18, 'R':+26, 'S':+33, 'T':+41, 'U':+50, 'V':+60, 'X':+77, 'Y':+95, 'Z':+115,
+    'ZA':+145, 'ZB':+180, 'ZC':+225
+  },
+  '0~3': {
+    'A':-270, 'B':-180, 'C':-110, 'D':-60, 'E':-35, 'F':-20, 'G':-10, 'H':0,
+    'J':2, 'JS':2, 'K':0, 'M':-4, 'N':-8,
+    'P':+10, 'R':+14, 'S':+18, 'T':+22, 'U':+26, 'V':+30, 'X':+38, 'Y':+46, 'Z':+54,
+    'ZA':+68, 'ZB':+84, 'ZC':+106
+  },
+  '3~6': {
+    'A':-280, 'B':-190, 'C':-120, 'D':-65, 'E':-40, 'F':-22, 'G':-12, 'H':0,
+    'J':3, 'JS':3, 'K':0, 'M':-5, 'N':-10,
+    'P':+12, 'R':+17, 'S':+21, 'T':+26, 'U':+30, 'V':+36, 'X':+44, 'Y':+54, 'Z':+64,
+    'ZA':+80, 'ZB':+100, 'ZC':+126
+  },
+  '6~10': {
+    'A':-290, 'B':-190, 'C':-130, 'D':-70, 'E':-45, 'F':-25, 'G':-14, 'H':0,
+    'J':3, 'JS':4, 'K':-1, 'M':-6, 'N':-11,
+    'P':+15, 'R':+21, 'S':+26, 'T':+32, 'U':+38, 'V':+45, 'X':+56, 'Y':+68, 'Z':+80,
+    'ZA':+100, 'ZB':+125, 'ZC':+158
+  },
+  '80~120': {
+    'A':-340, 'B':-230, 'C':-160, 'D':-110, 'E':-65, 'F':-45, 'G':-22, 'H':0,
+    'J':6, 'JS':9, 'K':-3, 'M':-12, 'N':-23,
+    'P':+37, 'R':+58, 'S':+75, 'T':+95, 'U':+120, 'V':+146, 'X':+185, 'Y':+230, 'Z':+285,
+    'ZA':+355, 'ZB':+440, 'ZC':+550
+  },
+  '120~180': {
+    'A':-360, 'B':-250, 'C':-180, 'D':-120, 'E':-70, 'F':-50, 'G':-25, 'H':0,
+    'J':6, 'JS':10, 'K':-4, 'M':-14, 'N':-27,
+    'P':+43, 'R':+68, 'S':+88, 'T':+112, 'U':+145, 'V':+178, 'X':+225, 'Y':+280, 'Z':+350,
+    'ZA':+435, 'ZB':+540, 'ZC':+675
+  },
+  '180~250': {
+    'A':-390, 'B':-270, 'C':-200, 'D':-130, 'E':-80, 'F':-55, 'G':-28, 'H':0,
+    'J':7, 'JS':12, 'K':-5, 'M':-16, 'N':-31,
+    'P':+50, 'R':+79, 'S':+102, 'T':+130, 'U':+170, 'V':+210, 'X':+265, 'Y':+330, 'Z':+410,
+    'ZA':+510, 'ZB':+630, 'ZC':+790
+  },
+  '250~315': {
+    'A':-420, 'B':-290, 'C':-220, 'D':-140, 'E':-90, 'F':-60, 'G':-30, 'H':0,
+    'J':8, 'JS':14, 'K':-5, 'M':-18, 'N':-35,
+    'P':+56, 'R':+88, 'S':+114, 'T':+145, 'U':+190, 'V':+235, 'X':+295, 'Y':+370, 'Z':+460,
+    'ZA':+570, 'ZB':+705, 'ZC':+885
+  },
+  '315~400': {
+    'A':-440, 'B':-310, 'C':-240, 'D':-150, 'E':-100, 'F':-65, 'G':-32, 'H':0,
+    'J':8, 'JS':16, 'K':-6, 'M':-20, 'N':-38,
+    'P':+62, 'R':+98, 'S':+128, 'T':+162, 'U':+210, 'V':+260, 'X':+325, 'Y':+405, 'Z':+505,
+    'ZA':+625, 'ZB':+775, 'ZC':+965
+  },
+  '400~500': {
+    'A':-480, 'B':-330, 'C':-260, 'D':-160, 'E':-110, 'F':-70, 'G':-35, 'H':0,
+    'J':9, 'JS':18, 'K':-7, 'M':-22, 'N':-42,
+    'P':+68, 'R':+108, 'S':+142, 'T':+180, 'U':+232, 'V':+290, 'X':+360, 'Y':+450, 'Z':+560,
+    'ZA':+690, 'ZB':+860, 'ZC':+1070
+  }
+};
+
+// ---- 轴基本偏差查表 (es for a-h, ei for j-zc) in μm ----
+const SHAFT_DEV = {
+  '18~30': {
+    'a':-290, 'b':-200, 'c':-130, 'd':-80, 'e':-50, 'f':-30, 'g':-16, 'h':0,
+    'js':3, 'k':+2, 'm':+8, 'n':+15,
+    'p':+22, 'r':+34, 's':+43, 't':+54, 'u':+65, 'v':+79, 'x':+100, 'y':+125, 'z':+150,
+    'za':+185, 'zb':+230, 'zc':+290
+  },
+  '30~50': {
+    'a':-300, 'b':-210, 'c':-140, 'd':-90, 'e':-55, 'f':-35, 'g':-18, 'h':0,
+    'js':4, 'k':+2, 'm':+9, 'n':+17,
+    'p':+26, 'r':+41, 's':+53, 't':+66, 'u':+80, 'v':+98, 'x':+125, 'y':+155, 'z':+190,
+    'za':+235, 'zb':+290, 'zc':+365
+  },
+  '50~80': {
+    'a':-310, 'b':-220, 'c':-150, 'd':-100, 'e':-60, 'f':-40, 'g':-20, 'h':0,
+    'js':5, 'k':+3, 'm':+10, 'n':+20,
+    'p':+32, 'r':+50, 's':+64, 't':+81, 'u':+100, 'v':+122, 'x':+155, 'y':+195, 'z':+240,
+    'za':+300, 'zb':+370, 'zc':+460
+  },
+  '10~18': {
+    'a':-280, 'b':-190, 'c':-120, 'd':-70, 'e':-45, 'f':-25, 'g':-13, 'h':0,
+    'js':2, 'k':+1, 'm':+6, 'n':+12,
+    'p':+18, 'r':+26, 's':+33, 't':+41, 'u':+50, 'v':+60, 'x':+77, 'y':+95, 'z':+115,
+    'za':+145, 'zb':+180, 'zc':+225
+  },
+  '0~3': {
+    'a':-260, 'b':-170, 'c':-100, 'd':-55, 'e':-30, 'f':-18, 'g':-8, 'h':0,
+    'js':1, 'k':0, 'm':+4, 'n':+8,
+    'p':+10, 'r':+14, 's':+18, 't':+22, 'u':+26, 'v':+30, 'x':+38, 'y':+46, 'z':+54,
+    'za':+68, 'zb':+84, 'zc':+106
+  },
+  '3~6': {
+    'a':-270, 'b':-180, 'c':-110, 'd':-60, 'e':-35, 'f':-20, 'g':-10, 'h':0,
+    'js':2, 'k':+1, 'm':+5, 'n':+10,
+    'p':+12, 'r':+17, 's':+21, 't':+26, 'u':+30, 'v':+36, 'x':+44, 'y':+54, 'z':+64,
+    'za':+80, 'zb':+100, 'zc':+126
+  },
+  '6~10': {
+    'a':-280, 'b':-180, 'c':-120, 'd':-65, 'e':-40, 'f':-25, 'g':-12, 'h':0,
+    'js':2, 'k':+1, 'm':+6, 'n':+11,
+    'p':+15, 'r':+21, 's':+26, 't':+32, 'u':+38, 'v':+45, 'x':+56, 'y':+68, 'z':+80,
+    'za':+100, 'zb':+125, 'zc':+158
+  },
+  '80~120': {
+    'a':-320, 'b':-220, 'c':-150, 'd':-100, 'e':-60, 'f':-40, 'g':-22, 'h':0,
+    'js':5, 'k':+3, 'm':+12, 'n':+23,
+    'p':+37, 'r':+58, 's':+75, 't':+95, 'u':+120, 'v':+146, 'x':+185, 'y':+230, 'z':+285,
+    'za':+355, 'zb':+440, 'zc':+550
+  },
+  '120~180': {
+    'a':-340, 'b':-240, 'c':-170, 'd':-110, 'e':-65, 'f':-45, 'g':-25, 'h':0,
+    'js':6, 'k':+4, 'm':+14, 'n':+27,
+    'p':+43, 'r':+68, 's':+88, 't':+112, 'u':+145, 'v':+178, 'x':+225, 'y':+280, 'z':+350,
+    'za':+435, 'zb':+540, 'zc':+675
+  },
+  '180~250': {
+    'a':-370, 'b':-260, 'c':-190, 'd':-120, 'e':-70, 'f':-50, 'g':-28, 'h':0,
+    'js':7, 'k':+5, 'm':+16, 'n':+31,
+    'p':+50, 'r':+79, 's':+102, 't':+130, 'u':+170, 'v':+210, 'x':+265, 'y':+330, 'z':+410,
+    'za':+510, 'zb':+630, 'zc':+790
+  },
+  '250~315': {
+    'a':-400, 'b':-280, 'c':-210, 'd':-130, 'e':-80, 'f':-55, 'g':-30, 'h':0,
+    'js':8, 'k':+5, 'm':+18, 'n':+35,
+    'p':+56, 'r':+88, 's':+114, 't':+145, 'u':+190, 'v':+235, 'x':+295, 'y':+370, 'z':+460,
+    'za':+570, 'zb':+705, 'zc':+885
+  },
+  '315~400': {
+    'a':-420, 'b':-300, 'c':-230, 'd':-140, 'e':-90, 'f':-60, 'g':-32, 'h':0,
+    'js':9, 'k':+6, 'm':+20, 'n':+38,
+    'p':+62, 'r':+98, 's':+128, 't':+162, 'u':+210, 'v':+260, 'x':+325, 'y':+405, 'z':+505,
+    'za':+625, 'zb':+775, 'zc':+965
+  },
+  '400~500': {
+    'a':-460, 'b':-320, 'c':-250, 'd':-150, 'e':-100, 'f':-65, 'g':-35, 'h':0,
+    'js':10, 'k':+7, 'm':+22, 'n':+42,
+    'p':+68, 'r':+108, 's':+142, 't':+180, 'u':+232, 'v':+290, 'x':+360, 'y':+450, 'z':+560,
+    'za':+690, 'zb':+860, 'zc':+1070
+  }
+};
+
+// 获取尺寸段名
+function getSegName(segIdx) {
+  const segNames = ['0~3','3~6','6~10','10~18','18~30','30~50','50~80','80~120','120~180','180~250','250~315','315~400','400~500','500~630','630~800','800~1000','1000~1250','1250~1600','1600~2000','2000~2500','2500~3150'];
+  return segNames[segIdx] || '';
+}
+
+// 插值获取基本偏差（用于未直接列出的尺寸段）
+function getHoleDevInterpolated(letter, segIdx) {
+  const segName = getSegName(segIdx);
+  if (HOLE_DEV[segName] && HOLE_DEV[segName][letter] !== undefined) {
+    return HOLE_DEV[segName][letter];
+  }
+  // 插值：找最近的两个有数据的段
+  const available = [];
+  for (let i = 0; i < 21; i++) {
+    const sn = getSegName(i);
+    if (HOLE_DEV[sn] && HOLE_DEV[sn][letter] !== undefined) {
+      available.push({ idx: i, val: HOLE_DEV[sn][letter] });
+    }
+  }
+  if (available.length === 0) return 0;
+  // 找最近
+  let closest = available[0];
+  let minDist = Math.abs(segIdx - closest.idx);
+  for (const a of available) {
+    const d = Math.abs(segIdx - a.idx);
+    if (d < minDist) { minDist = d; closest = a; }
+  }
+  return closest.val;
+}
+
+function getShaftDevInterpolated(letter, segIdx) {
+  const segName = getSegName(segIdx);
+  if (SHAFT_DEV[segName] && SHAFT_DEV[segName][letter] !== undefined) {
+    return SHAFT_DEV[segName][letter];
+  }
+  const available = [];
+  for (let i = 0; i < 21; i++) {
+    const sn = getSegName(i);
+    if (SHAFT_DEV[sn] && SHAFT_DEV[sn][letter] !== undefined) {
+      available.push({ idx: i, val: SHAFT_DEV[sn][letter] });
+    }
+  }
+  if (available.length === 0) return 0;
+  let closest = available[0];
+  let minDist = Math.abs(segIdx - closest.idx);
+  for (const a of available) {
+    const d = Math.abs(segIdx - a.idx);
+    if (d < minDist) { minDist = d; closest = a; }
+  }
+  return closest.val;
+}
+
+// ============================================================
+//  公差带计算核心
+// ============================================================
+
+// 解析公差带代号: 如 "H7" -> {letter:"H", grade:"IT7"}
+function parseGrade(str) {
+  const m = str.match(/^([A-Za-z]+)(\d+)$/);
+  if (!m) return null;
+  return { letter: m[1], grade: 'IT' + m[2] };
+}
+
+// 计算孔的上/下偏差
+// 返回 {ES, EI} in mm
+function calcHoleDev(holeGradeStr, D_mm) {
+  const p = parseGrade(holeGradeStr);
+  if (!p) return null;
+  const segIdx = getSegIdx(D_mm);
+  const IT = getStdTol(segIdx, p.grade);
+  if (IT === null) return null;
+  
+  const letter = p.letter.toUpperCase();
+  const dev = getHoleDevInterpolated(letter, segIdx); // μm
+  
+  let EI, ES;
+  if (['A','B','C','D','E','F','G','H'].includes(letter)) {
+    // A~H: EI = basic dev, ES = EI + IT
+    EI = dev; ES = dev + IT;
+  } else if (letter === 'JS') {
+    // JS: ±IT/2
+    EI = -Math.round(IT/2); ES = Math.round(IT/2);
+  } else {
+    // J~ZC: ES = basic dev, EI = ES - IT
+    ES = dev; EI = dev - IT;
+  }
+  
+  return { ES: ES/1000, EI: EI/1000, ES_um: ES, EI_um: EI, IT_um: IT };
+}
+
+// 计算轴的上/下偏差
+function calcShaftDev(shaftGradeStr, D_mm) {
+  const p = parseGrade(shaftGradeStr);
+  if (!p) return null;
+  const segIdx = getSegIdx(D_mm);
+  const IT = getStdTol(segIdx, p.grade);
+  if (IT === null) return null;
+  
+  const letter = p.letter.toLowerCase();
+  const dev = getShaftDevInterpolated(letter, segIdx); // μm
+  
+  let es, ei;
+  if (['a','b','c','d','e','f','g','h'].includes(letter)) {
+    // a~h: es = basic dev, ei = es - IT
+    es = dev; ei = dev - IT;
+  } else if (letter === 'js') {
+    es = Math.round(IT/2); ei = -Math.round(IT/2);
+  } else {
+    // j~zc: ei = basic dev, es = ei + IT
+    ei = dev; es = dev + IT;
+  }
+  
+  return { es: es/1000, ei: ei/1000, es_um: es, ei_um: ei, IT_um: IT };
+}
+
+// ============================================================
+//  UI 交互
+// ============================================================
+
+// 初始化下拉框
+function initSelects() {
+  const holeSel = document.getElementById('holeGrade');
+  const shaftSel = document.getElementById('shaftGrade');
+  
+  // 孔: H5~H11 + 其他常用
+  const holeOpts = ['H5','H6','H7','H8','H9','H10','H11','G6','G7','F7','E7','E8','J6','J7','JS6','JS7','K6','K7','M7','N7','P7'];
+  // 轴: h5~h9 + 其他常用
+  const shaftOpts = ['h5','h6','h7','h8','h9','g5','g6','f6','f7','f8','e7','e8','d8','d9','c9','c11','js5','js6','k5','k6','k7','m5','m6','m7','n6','p6','r6','s6','t6','u6'];
+  
+  for (const o of holeOpts) {
+    const el = document.createElement('option'); el.value=o; el.text=o; holeSel.appendChild(el);
+  }
+  for (const o of shaftOpts) {
+    const el = document.createElement('option'); el.value=o; el.text=o; shaftSel.appendChild(el);
+  }
+  holeSel.value = 'H7'; shaftSel.value = 'g6';
+}
+
+// 切换基准制
+function updateBasis() {
+  const basis = document.getElementById('basisType').value;
+  const holeSel = document.getElementById('holeGrade');
+  const shaftSel = document.getElementById('shaftGrade');
+  if (basis === 'hole') {
+    // 基孔制: 孔固定H, 轴可选
+    holeSel.value = 'H7';
+  } else {
+    // 基轴制: 轴固定h, 孔可选
+    shaftSel.value = 'h6';
+  }
+}
+
+// 快捷设置
+function setSize(v) { document.getElementById('nomSize').value = v; doCalc(); }
+function setFit(fit) {
+  // 解析如 H7/g6
+  const m = fit.match(/^([A-Za-z]+\d+)\/([A-Za-z]+\d+)$/);
+  if (!m) return;
+  const basis = document.getElementById('basisType').value;
+  if (basis === 'hole') {
+    document.getElementById('holeGrade').value = m[1];
+    document.getElementById('shaftGrade').value = m[2];
+  } else {
+    document.getElementById('holeGrade').value = m[1];
+    document.getElementById('shaftGrade').value = m[2];
+  }
+  doCalc();
+}
+
+// 选项卡
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  else {
+    // 按tab名自动匹配
+    const map = {calc:0,holeTol:1,shaftTol:2,stdTol:3,basicDev:4,guide:5};
+    const idx = map[tab];
+    if (idx !== undefined) document.querySelectorAll('.tab-btn')[idx].classList.add('active');
+  }
+  document.getElementById('panel-' + tab).classList.add('active');
+  
+  if (tab === 'stdTol') genStdTolTable();
+  if (tab === 'basicDev') genBasicDevTables();
+}
+
+// 格式化偏差显示
+function fmtDev(v) {
+  if (Math.abs(v) < 0.0005) return '0';
+  return (v >= 0 ? '+' : '') + (v*1000).toFixed(0) + 'μm';
+}
+function fmtMm(v) {
+  if (Math.abs(v) < 0.001) return v.toFixed(4);
+  return v.toFixed(3);
+}
+
+// 主计算
+function doCalc() {
+  const D = parseFloat(document.getElementById('nomSize').value);
+  if (isNaN(D) || D <= 0) { alert('请输入有效公称尺寸'); return; }
+  
+  const holeGrade = document.getElementById('holeGrade').value;
+  const shaftGrade = document.getElementById('shaftGrade').value;
+  
+  const hole = calcHoleDev(holeGrade, D);
+  const shaft = calcShaftDev(shaftGrade, D);
+  
+  if (!hole || !shaft) { alert('不支持的公差等级（仅支持IT5~IT18）'); return; }
+  
+  // 显示结果
+  document.getElementById('resultCard').style.display = '';
+  
+  // 孔
+  const holeLetter = parseGrade(holeGrade).letter;
+  document.getElementById('rHoleGrade').textContent = `φ${D} ${holeGrade}`;
+  document.getElementById('rHoleDetail').textContent = `EI=${fmtDev(hole.EI)}  ES=${fmtDev(hole.ES)}  IT=${hole.IT_um}μm`;
+  document.getElementById('rHoleLimits').textContent = `最小孔径=${fmtMm(D+hole.EI)}  最大孔径=${fmtMm(D+hole.ES)}`;
+  
+  // 轴
+  const shaftLetter = parseGrade(shaftGrade).letter;
+  document.getElementById('rShaftGrade').textContent = `φ${D} ${shaftGrade}`;
+  document.getElementById('rShaftDetail').textContent = `ei=${fmtDev(shaft.ei)}  es=${fmtDev(shaft.es)}  IT=${shaft.IT_um}μm`;
+  document.getElementById('rShaftLimits').textContent = `最小轴径=${fmtMm(D+shaft.ei)}  最大轴径=${fmtMm(D+shaft.es)}`;
+  
+  // 配合分析
+  // 最大间隙 = 孔最大 - 轴最小; 最小间隙 = 孔最小 - 轴最大
+  const Xmax = (D + hole.ES) - (D + shaft.ei); // 孔ES - 轴ei (带符号mm)
+  const Xmin = (D + hole.EI) - (D + shaft.es); // 孔EI - 轴es
+  
+  let fitType, fitClass, fitText;
+  if (Xmin >= 0) {
+    fitType = '间隙配合 Clearance'; fitClass = 'fit-clearance';
+  } else if (Xmax <= 0) {
+    fitType = '过盈配合 Interference'; fitClass = 'fit-interference';
+  } else {
+    fitType = '过渡配合 Transition'; fitClass = 'fit-transition';
+  }
+  
+  const XmaxStr = (Xmax*1000).toFixed(1) + 'μm';
+  const XminStr = (Xmin*1000).toFixed(1) + 'μm';
+  
+  document.getElementById('rFitType').innerHTML = 
+    `${fitType} <span class="fit-badge ${fitClass}">${fitType.split(' ')[0]}</span>`;
+  document.getElementById('rFitDetail').textContent = 
+    `最大间隙/最小过盈 Xmax=${XmaxStr}  最小间隙/最大过盈 Xmin=${XminStr}`;
+  const fitTol = Math.abs(Xmax - Xmin) * 1000;
+  document.getElementById('rFitTol').textContent = `配合公差 Tf=${fitTol.toFixed(1)}μm = ${hole.IT_um+shaft.IT_um}μm (Th+Ts)`;
+  
+  // 装配极限
+  const assemblyText = 
+    `孔: [${fmtMm(D+hole.EI)} ~ ${fmtMm(D+hole.ES)}] mm<br>` +
+    `轴: [${fmtMm(D+shaft.ei)} ~ ${fmtMm(D+shaft.es)}] mm<br>` +
+    `→ 装配后间隙范围: [${Xmin>=0?'+':''}${XminStr} ~ ${Xmax>=0?'+':''}${XmaxStr}]`;
+  document.getElementById('rAssembly').innerHTML = assemblyText;
+  
+  // 画公差带图
+  drawFitCanvas(D, hole, shaft, Xmin, Xmax, fitType);
+}
+
+// 绘制公差带图
+function drawFitCanvas(D, hole, shaft, Xmin, Xmax, fitType) {
+  const c = document.getElementById('fitCanvas');
+  const ctx = c.getContext('2d');
+  if (!ctx) return; // 兼容非浏览器环境
+  const W = c.width, H = c.height;
+  ctx.clearRect(0,0,W,H);
+  
+  // 背景
+  ctx.fillStyle = 'rgba(0,0,0,0.3)';
+  ctx.fillRect(0,0,W,H);
+  
+  // 零线位置
+  const zeroY = H / 2 + 30;
+  const pxPerUm = 1.5; // 像素/μm (缩放因子)
+  
+  // 零线
+  ctx.strokeStyle = '#666'; ctx.lineWidth = 1;
+  ctx.setLineDash([5,5]);
+  ctx.beginPath(); ctx.moveTo(50, zeroY); ctx.lineTo(W-30, zeroY); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#999'; ctx.font = '12px sans-serif';
+  ctx.fillText('零线 (公称尺寸线)', W-130, zeroY-5);
+  
+  // 标注公称尺寸
+  ctx.fillStyle = '#00d2ff'; ctx.font = '13px sans-serif';
+  ctx.fillText(`φ${D} mm`, W/2-20, H-15);
+  
+  // 找范围
+  const allVals = [hole.ES_um, hole.EI_um, shaft.es_um, shaft.ei_um];
+  const maxU = Math.max(...allVals, 5);
+  const minU = Math.min(...allVals, -5);
+  const range = maxU - minU;
+  const scale = (H - 80) / range; // 动态缩放
+  
+  function umToY(um) {
+    return zeroY - um * scale;
+  }
+  
+  const leftX = 120, rightX = W/2 - 20;  // 孔在左, 轴在右
+  const shaftX = W/2 + 40;
+  
+  // 孔公差带
+  const hTop = umToY(hole.ES_um), hBot = umToY(hole.EI_um);
+  ctx.fillStyle = 'rgba(0,210,255,0.3)';
+  ctx.fillRect(leftX, hTop, 80, hBot - hTop);
+  ctx.strokeStyle = '#00d2ff'; ctx.lineWidth = 2;
+  ctx.strokeRect(leftX, hTop, 80, hBot - hTop);
+  
+  // 轴公差带
+  const sTop = umToY(shaft.es_um), sBot = umToY(shaft.ei_um);
+  ctx.fillStyle = 'rgba(255,107,107,0.3)';
+  ctx.fillRect(shaftX, sTop, 80, sBot - sTop);
+  ctx.strokeStyle = '#ff6b6b'; ctx.lineWidth = 2;
+  ctx.strokeRect(shaftX, sTop, 80, sBot - sTop);
+  
+  // 标注
+  ctx.fillStyle = '#00d2ff'; ctx.font = '12px monospace';
+  ctx.fillText(`ES ${hole.ES_um>=0?'+':''}${hole.ES_um}μm`, leftX+85, hTop+12);
+  ctx.fillText(`EI ${hole.EI_um>=0?'+':''}${hole.EI_um}μm`, leftX+85, hBot-2);
+  ctx.fillText(`孔 ${holeGrade()}`, leftX-10, hTop-6);
+  
+  ctx.fillStyle = '#ff6b6b';
+  ctx.fillText(`es ${shaft.es_um>=0?'+':''}${shaft.es_um}μm`, shaftX+85, sTop+12);
+  ctx.fillText(`ei ${shaft.ei_um>=0?'+':''}${shaft.ei_um}μm`, shaftX+85, sBot-2);
+  ctx.fillText(`轴 ${shaftGrade()}`, shaftX-10, sTop-6);
+  
+  // 配合类型
+  ctx.fillStyle = fitType.includes('间隙') ? '#4caf50' : fitType.includes('过盈') ? '#ff9800' : '#ffd93d';
+  ctx.font = 'bold 14px sans-serif';
+  ctx.fillText(fitType, W/2-40, 25);
+  
+  // 箭头标注间隙
+  const XminU = Xmin * 1000, XmaxU = Xmax * 1000;
+  ctx.fillStyle = '#ffd93d'; ctx.font = '11px monospace';
+  if (Xmin >= 0) {
+    ctx.fillText(`Xmin=+${XminU.toFixed(1)}μm`, W/2-35, zeroY + 20);
+    ctx.fillText(`Xmax=+${XmaxU.toFixed(1)}μm`, W/2-35, zeroY + 38);
+  } else if (Xmax <= 0) {
+    ctx.fillText(`Ymin=${XmaxU.toFixed(1)}μm`, W/2-35, zeroY + 20);
+    ctx.fillText(`Ymax=${XminU.toFixed(1)}μm`, W/2-35, zeroY + 38);
+  } else {
+    ctx.fillText(`Xmax=+${XmaxU.toFixed(1)}μm`, W/2-35, zeroY + 20);
+    ctx.fillText(`Xmin=${XminU.toFixed(1)}μm`, W/2-35, zeroY + 38);
+  }
+}
+
+function holeGrade() { return document.getElementById('holeGrade').value; }
+function shaftGrade() { return document.getElementById('shaftGrade').value; }
+
+// ============================================================
+//  标准公差表
+// ============================================================
+function genStdTolTable() {
+  const segNames = ['0~3','3~6','6~10','10~18','18~30','30~50','50~80','80~120','120~180','180~250','250~315','315~400','400~500','500~630','630~800','800~1000','1000~1250','1250~1600','1600~2000','2000~2500','2500~3150'];
+  // 全部20个等级
+  const grades = ['IT01','IT0','IT1','IT2','IT3','IT4','IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'];
+  
+  // IT01~IT4 由全局 calcSpecialIT() 计算 (见文件末尾)
+  
+  // 表头分组着色
+  let html = '<table><tr><th rowspan="2">尺寸段<br>(mm)</th>';
+  html += '<th colspan="6" style="background:rgba(123,47,247,0.3);">超高精度 (μm)</th>';
+  html += '<th colspan="14" style="background:rgba(0,210,255,0.15);">标准公差 (μm)</th></tr>';
+  html += '<tr>';
+  for (const g of grades) {
+    const isHi = ['IT01','IT0','IT1','IT2','IT3','IT4'].includes(g);
+    html += `<th style="${isHi?'background:rgba(123,47,247,0.2);':''}">${g.replace('IT','')}</th>`;
+  }
+  html += '</tr>';
+  
+  for (const sn of segNames) {
+    const [d1,d2] = sn.split('~').map(Number);
+    const Dmid = Math.sqrt(d1*d2); // 几何平均
+    html += `<tr><td><b>${sn}</b></td>`;
+    for (const g of grades) {
+      let val;
+      if (['IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'].includes(g)) {
+        const gi = {'IT5':0,'IT6':1,'IT7':2,'IT8':3,'IT9':4,'IT10':5,'IT11':6,'IT12':7,'IT13':8,'IT14':9,'IT15':10,'IT16':11,'IT17':12,'IT18':13}[g];
+        val = STD_TOL_TABLE[sn][gi];
+      } else {
+        val = calcSpecialIT(Dmid, g);
+      }
+      const isHi = ['IT01','IT0','IT1','IT2','IT3','IT4'].includes(g);
+      html += `<td style="${isHi?'color:#b794f4;':''}">${val}</td>`;
+    }
+    html += '</tr>';
+  }
+  html += '</table>';
+  html += '<p style="font-size:11px;color:#888;margin-top:6px;">';
+  html += 'IT01~IT4: 超高精（量块/标准件），公式 IT1=0.8+0.020√D, IT2=1.4i, IT3=2.0i, IT4=2.8i | ';
+  html += 'IT5~IT7: 精密 | IT8~IT11: 一般机械 | IT12~IT14: 低精度 | IT15~IT18: 非配合/铸造';
+  html += '</p>';
+  document.getElementById('stdTolTable').innerHTML = html;
+}
+
+// ============================================================
+//  基本偏差表
+// ============================================================
+function genBasicDevTables() {
+  const segNames = ['0~3','3~6','6~10','10~18','18~30','30~50','50~80','80~120','120~180','180~250','250~315','315~400','400~500'];
+  const holeLetters = ['A','B','C','D','E','F','G','H','JS','J','K','M','N','P','R','S','T','U','V','X','Y','Z','ZA','ZB','ZC'];
+  const shaftLetters = ['a','b','c','d','e','f','g','h','js','j','k','m','n','p','r','s','t','u','v','x','y','z','za','zb','zc'];
+  
+  // 孔表
+  let hhtml = '<table><tr><th>尺寸段</th>';
+  for (const l of holeLetters) hhtml += `<th>${l}</th>`;
+  hhtml += '</tr>';
+  for (const sn of segNames) {
+    hhtml += `<tr><td><b>${sn}</b></td>`;
+    for (const l of holeLetters) {
+      const v = HOLE_DEV[sn] ? HOLE_DEV[sn][l] : '';
+      hhtml += `<td>${v}</td>`;
+    }
+    hhtml += '</tr>';
+  }
+  hhtml += '</table>';
+  document.getElementById('basicDevHole').innerHTML = hhtml;
+  
+  // 轴表
+  let shtml = '<table><tr><th>尺寸段</th>';
+  for (const l of shaftLetters) shtml += `<th>${l}</th>`;
+  shtml += '</tr>';
+  for (const sn of segNames) {
+    shtml += `<tr><td><b>${sn}</b></td>`;
+    for (const l of shaftLetters) {
+      const v = SHAFT_DEV[sn] ? SHAFT_DEV[sn][l] : '';
+      shtml += `<td>${v}</td>`;
+    }
+    shtml += '</tr>';
+  }
+  shtml += '</table>';
+  document.getElementById('basicDevShaft').innerHTML = shtml;
+}
+
+// ============================================================
+//  孔/轴公差带偏差表
+// ============================================================
+function genHoleTable() {
+  const from = parseFloat(document.getElementById('holeFrom').value) || 0;
+  const to = parseFloat(document.getElementById('holeTo').value) || 50;
+  
+  const segNames = ['0~3','3~6','6~10','10~18','18~30','30~50','50~80','80~120','120~180','180~250','250~315','315~400','400~500','500~630','630~800','800~1000','1000~1250','1250~1600','1600~2000','2000~2500','2500~3150'];
+  const segRanges = [[0,3],[3,6],[6,10],[10,18],[18,30],[30,50],[50,80],[80,120],[120,180],[180,250],[250,315],[315,400],[400,500],[500,630],[630,800],[800,1000],[1000,1250],[1250,1600],[1600,2000],[2000,2500],[2500,3150]];
+  
+  const usedSegs = [];
+  for (let i = 0; i < segRanges.length; i++) {
+    if (segRanges[i][1] > from && segRanges[i][0] < to) usedSegs.push(i);
+  }
+  
+  // 全25个孔偏差字母, 按功能分组
+  const holeGroups = [
+    { label: '间隙 (A~H)', letters: ['A','B','C','D','E','F','G','H'], color:'#4caf50' },
+    { label: '过渡 (JS,N)', letters: ['JS','J','K','M','N'], color:'#ffd93d' },
+    { label: '过盈 (P~ZC)', letters: ['P','R','S','T','U','V','X','Y','Z','ZA','ZB','ZC'], color:'#ff9800' }
+  ];
+  // 全IT等级
+  const allGrades = ['IT01','IT0','IT1','IT2','IT3','IT4','IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'];
+  const hiGrades = ['IT01','IT0','IT1','IT2','IT3','IT4'];
+  
+  let html = '<details open><summary style="cursor:pointer;font-size:13px;color:#00d2ff;margin-bottom:6px;">▸ 显示/隐藏 孔公差带表 (格式: EI/ES μm)</summary>';
+  html += '<table><tr><th>尺寸段</th><th>偏差</th>';
+  for (const g of allGrades) {
+    const isHi = hiGrades.includes(g);
+    html += `<th style="${isHi?'background:rgba(123,47,247,0.2);':''}">${g.replace('IT','')}</th>`;
+  }
+  html += '</tr>';
+  
+  for (const si of usedSegs) {
+    const sn = segNames[si];
+    for (const grp of holeGroups) {
+      for (const letter of grp.letters) {
+        html += `<tr><td>${sn}</td><td style="color:${grp.color};font-weight:700;">${letter}</td>`;
+        for (const g of allGrades) {
+          const dev = getHoleDevInterpolated(letter, si);
+          const IT = (g==='IT5')?getStdTol(si,'IT5'):getStdTol(si,'IT'+g.replace('IT',''));
+          // 需要通用getStdTol支持所有等级
+          let ITv;
+          if (['IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'].includes(g)) {
+            const gi = {'IT5':0,'IT6':1,'IT7':2,'IT8':3,'IT9':4,'IT10':5,'IT11':6,'IT12':7,'IT13':8,'IT14':9,'IT15':10,'IT16':11,'IT17':12,'IT18':13}[g];
+            ITv = STD_TOL_TABLE[segNames[si]][gi];
+          } else {
+            const [d1,d2] = segRanges[si];
+            ITv = calcSpecialIT(Math.sqrt(d1*d2), g);
+          }
+          let EI, ES;
+          if (['A','B','C','D','E','F','G','H'].includes(letter)) {
+            EI = dev; ES = dev + ITv;
+          } else if (letter === 'JS') {
+            EI = -Math.round(ITv/2); ES = Math.round(ITv/2);
+          } else {
+            ES = dev; EI = dev - ITv;
+          }
+          const eiStr = EI>=0?'+'+EI:EI;
+          const esStr = ES>=0?'+'+ES:ES;
+          const isHi = hiGrades.includes(g);
+          html += `<td style="${isHi?'color:#b794f4;':''}">${eiStr}/${esStr}</td>`;
+        }
+        html += '</tr>';
+      }
+    }
+  }
+  html += '</table></details>';
+  html += '<p style="font-size:11px;color:#666;margin-top:6px;">格式: EI/ES (μm) | 紫色列=超高精度 IT01~IT4 | H=基孔, A~H=间隙, JS~N=过渡, P~ZC=过盈</p>';
+  document.getElementById('holeTableContainer').innerHTML = html;
+}
+
+function genShaftTable() {
+  const from = parseFloat(document.getElementById('shaftFrom').value) || 0;
+  const to = parseFloat(document.getElementById('shaftTo').value) || 50;
+  
+  const segNames = ['0~3','3~6','6~10','10~18','18~30','30~50','50~80','80~120','120~180','180~250','250~315','315~400','400~500','500~630','630~800','800~1000','1000~1250','1250~1600','1600~2000','2000~2500','2500~3150'];
+  const segRanges = [[0,3],[3,6],[6,10],[10,18],[18,30],[30,50],[50,80],[80,120],[120,180],[180,250],[250,315],[315,400],[400,500],[500,630],[630,800],[800,1000],[1000,1250],[1250,1600],[1600,2000],[2000,2500],[2500,3150]];
+  
+  const usedSegs = [];
+  for (let i = 0; i < segRanges.length; i++) {
+    if (segRanges[i][1] > from && segRanges[i][0] < to) usedSegs.push(i);
+  }
+  
+  // 全25个轴偏差字母, 按功能分组
+  const shaftGroups = [
+    { label: '间隙 (a~h)', letters: ['a','b','c','d','e','f','g','h'], color:'#4caf50' },
+    { label: '过渡 (js,n)', letters: ['js','j','k','m','n'], color:'#ffd93d' },
+    { label: '过盈 (p~zc)', letters: ['p','r','s','t','u','v','x','y','z','za','zb','zc'], color:'#ff9800' }
+  ];
+  const allGrades = ['IT01','IT0','IT1','IT2','IT3','IT4','IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'];
+  const hiGrades = ['IT01','IT0','IT1','IT2','IT3','IT4'];
+  
+  let html = '<details open><summary style="cursor:pointer;font-size:13px;color:#ff6b6b;margin-bottom:6px;">▸ 显示/隐藏 轴公差带表 (格式: es/ei μm)</summary>';
+  html += '<table><tr><th>尺寸段</th><th>偏差</th>';
+  for (const g of allGrades) {
+    const isHi = hiGrades.includes(g);
+    html += `<th style="${isHi?'background:rgba(123,47,247,0.2);':''}">${g.replace('IT','')}</th>`;
+  }
+  html += '</tr>';
+  
+  for (const si of usedSegs) {
+    const sn = segNames[si];
+    for (const grp of shaftGroups) {
+      for (const letter of grp.letters) {
+        html += `<tr><td>${sn}</td><td style="color:${grp.color};font-weight:700;">${letter}</td>`;
+        for (const g of allGrades) {
+          const dev = getShaftDevInterpolated(letter, si);
+          let ITv;
+          if (['IT5','IT6','IT7','IT8','IT9','IT10','IT11','IT12','IT13','IT14','IT15','IT16','IT17','IT18'].includes(g)) {
+            const gi = {'IT5':0,'IT6':1,'IT7':2,'IT8':3,'IT9':4,'IT10':5,'IT11':6,'IT12':7,'IT13':8,'IT14':9,'IT15':10,'IT16':11,'IT17':12,'IT18':13}[g];
+            ITv = STD_TOL_TABLE[segNames[si]][gi];
+          } else {
+            const [d1,d2] = segRanges[si];
+            ITv = calcSpecialIT(Math.sqrt(d1*d2), g);
+          }
+          let es, ei;
+          if (['a','b','c','d','e','f','g','h'].includes(letter)) {
+            es = dev; ei = dev - ITv;
+          } else if (letter === 'js') {
+            es = Math.round(ITv/2); ei = -Math.round(ITv/2);
+          } else {
+            ei = dev; es = dev + ITv;
+          }
+          const eiStr = ei>=0?'+'+ei:ei;
+          const esStr = es>=0?'+'+es:es;
+          const isHi = hiGrades.includes(g);
+          html += `<td style="${isHi?'color:#b794f4;':''}">${esStr}/${eiStr}</td>`;
+        }
+        html += '</tr>';
+      }
+    }
+  }
+  html += '</table></details>';
+  html += '<p style="font-size:11px;color:#666;margin-top:6px;">格式: es/ei (μm) | 紫色列=超高精度 IT01~IT4 | h=基轴, a~h=间隙, js~n=过渡, p~zc=过盈</p>';
+  document.getElementById('shaftTableContainer').innerHTML = html;
+}
+
+// 供genHoleTable使用的calcSpecialIT (放在全局)
+function calcSpecialIT(D_mm, grade) {
+  const sqD = Math.sqrt(D_mm);
+  if (grade==='IT01') return Math.round((0.3 + 0.008*sqD)*10)/10;
+  if (grade==='IT0')  return Math.round((0.5 + 0.012*sqD)*10)/10;
+  if (grade==='IT1')  return Math.round((0.8 + 0.020*sqD)*10)/10;
+  const i = 0.45*Math.pow(D_mm,1/3) + 0.001*D_mm;
+  if (grade==='IT2') return Math.round(1.4*i);
+  if (grade==='IT3') return Math.round(2.0*i);
+  if (grade==='IT4') return Math.round(2.8*i);
+  return 0;
+}
+
+// ============================================================
+//  初始化
+// ============================================================
+window.onload = function() {
+  initSelects();
+  document.getElementById('basisType').addEventListener('change', updateBasis);
+  // 默认查询一次
+  doCalc();
+  // 默认生成标准公差表
+  genStdTolTable();
+  genBasicDevTables();
+};
+</script>
+
+<footer>
+  <p><span class="footer-icon">©</span> 2025 Shenzhen Teng Sheng Hui Technology Co. Ltd | <span class="footer-icon">✨</span> Auto Nav · Last updated: <span id="update-date"></span></p>
+  <p><span class="footer-icon">📍</span>Address: Building 4, Fu'an Third Industrial Park, Fuhai Street, Bao'an District, Shenzhen, Guangdong Province, China | Tel: +86-0755-**** ****</p>
+</footer>
+
+<script src="tolDocument.js"></script>
+<script>
+// 日期自动更新（与 index 页面逻辑一致，放在 body 末尾确保 DOM 已就绪）
+document.addEventListener('DOMContentLoaded', function() {
+  var d = new Date();
+  var y = d.getFullYear();
+  var m = String(d.getMonth()+1).padStart(2,'0');
+  var day = String(d.getDate()).padStart(2,'0');
+  var el = document.getElementById('update-date');
+  if (el) el.textContent = y + '-' + m + '-' + day;
+});
+</script>
+</body>
+</html>
