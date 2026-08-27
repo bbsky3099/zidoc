@@ -310,6 +310,7 @@ const gaugeData = [
 { type: "公制内螺纹牙规", fileName: "M14X1.25 6H", instrumentNumber: "TSH_GZ_TG-【M14X1.25 6H】-054", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M14X1.25 6H.jpg", status: "valid" },
 { type: "公制内螺纹牙规", fileName: "M14X1.5 6H", instrumentNumber: "TSH_GZ_TG-【M14X1.5 6H】-055", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M14X1.5 6H.jpg", status: "valid" },
 { type: "公制内螺纹牙规", fileName: "M14X2 6H", instrumentNumber: "TSH_GZ_TG-【M14X2 6H】-056", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M14X2 6H.jpg", status: "valid" },
+{ type: "公制内螺纹牙规", fileName: "M15X0.35 6H", instrumentNumber: "TSH_GZ_TG-【M15X0.35 6H】-139", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M15X0.35 6H.jpg", status: "valid" },
 { type: "公制内螺纹牙规", fileName: "M15X0.5 4H", instrumentNumber: "TSH_GZ_TG-【M15X0.5 4H】-057", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M15X0.5 4H.jpg", status: "valid" },
 { type: "公制内螺纹牙规", fileName: "M15X0.5 6H", instrumentNumber: "TSH_GZ_TG-【M15X0.5 6H】-058", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M15X0.5 6H.jpg", status: "valid" },
 { type: "公制内螺纹牙规", fileName: "M15X1 6H", instrumentNumber: "TSH_GZ_TG-【M15X1 6H】-059", imagePath: "螺纹规清单/公制内螺纹牙规清单表/M15X1 6H.jpg", status: "valid" },

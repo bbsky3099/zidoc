@@ -740,7 +740,7 @@
     }
   },
   "公制内螺纹牙规清单表": {
-    "next_counter": 139,
+    "next_counter": 140,
     "entries": {
       "M1.1X0.25 6H": {
         "counter": 1,
@@ -1431,6 +1431,11 @@
         "counter": 138,
         "rel_path": "螺纹规清单/公制内螺纹牙规清单表/M95X2 6H.jpg",
         "file_hash": "8b0cf6e5db6c721e9fbe4b862c09e9be"
+      },
+      "M15X0.35 6H": {
+        "counter": 139,
+        "rel_path": "螺纹规清单/公制内螺纹牙规清单表/M15X0.35 6H.jpg",
+        "file_hash": "46237de5e41285cf652c1e2c600b0dd1"
       }
     }
   },
