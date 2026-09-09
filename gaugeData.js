@@ -455,6 +455,7 @@ const gaugeData = [
 { type: "公制外螺纹环规", fileName: "M14X1 6g", instrumentNumber: "TSH_GZ_TR-【M14X1 6g】-036", imagePath: "螺纹规清单/公制外螺纹环规清单表/M14X1 6g.jpg", status: "valid" },
 { type: "公制外螺纹环规", fileName: "M14X1.5 6g", instrumentNumber: "TSH_GZ_TR-【M14X1.5 6g】-037", imagePath: "螺纹规清单/公制外螺纹环规清单表/M14X1.5 6g.jpg", status: "valid" },
 { type: "公制外螺纹环规", fileName: "M14X2 6g", instrumentNumber: "TSH_GZ_TR-【M14X2 6g】-038", imagePath: "螺纹规清单/公制外螺纹环规清单表/M14X2 6g.jpg", status: "valid" },
+{ type: "公制外螺纹环规", fileName: "M15X0.35 6G", instrumentNumber: "TSH_GZ_TR-【M15X0.35 6G】-113", imagePath: "螺纹规清单/公制外螺纹环规清单表/M15X0.35 6G.jpg", status: "valid" },
 { type: "公制外螺纹环规", fileName: "M15X0.5 4h", instrumentNumber: "TSH_GZ_TR-【M15X0.5 4h】-039", imagePath: "螺纹规清单/公制外螺纹环规清单表/M15X0.5 4h.jpg", status: "valid" },
 { type: "公制外螺纹环规", fileName: "M15X0.5 6g", instrumentNumber: "TSH_GZ_TR-【M15X0.5 6g】-040", imagePath: "螺纹规清单/公制外螺纹环规清单表/M15X0.5 6g.png", status: "valid" },
 { type: "公制外螺纹环规", fileName: "M15X1 6g", instrumentNumber: "TSH_GZ_TR-【M15X1 6g】-041", imagePath: "螺纹规清单/公制外螺纹环规清单表/M15X1 6g.jpg", status: "valid" },

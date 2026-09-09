@@ -1440,7 +1440,7 @@
     }
   },
   "公制外螺纹环规清单表": {
-    "next_counter": 113,
+    "next_counter": 114,
     "entries": {
       "M1.4X0.3 6g": {
         "counter": 1,
@@ -2001,6 +2001,11 @@
         "counter": 112,
         "rel_path": "螺纹规清单/公制外螺纹环规清单表/M90X1 6g.jpg",
         "file_hash": "930e06d6a97e554ba8d6f5574ec9a233"
+      },
+      "M15X0.35 6G": {
+        "counter": 113,
+        "rel_path": "螺纹规清单/公制外螺纹环规清单表/M15X0.35 6G.jpg",
+        "file_hash": "383ced6dc84917688f6b3d7b0c255575"
       }
     }
   }
