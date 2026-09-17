@@ -740,7 +740,7 @@
     }
   },
   "公制内螺纹牙规清单表": {
-    "next_counter": 140,
+    "next_counter": 141,
     "entries": {
       "M1.1X0.25 6H": {
         "counter": 1,
@@ -1436,11 +1436,16 @@
         "counter": 139,
         "rel_path": "螺纹规清单/公制内螺纹牙规清单表/M15X0.35 6H.jpg",
         "file_hash": "46237de5e41285cf652c1e2c600b0dd1"
+      },
+      "M76X3 6H": {
+        "counter": 140,
+        "rel_path": "螺纹规清单/公制内螺纹牙规清单表/M76X3 6H.jpg",
+        "file_hash": "b586a43310ca70f071ad646fea353bae"
       }
     }
   },
   "公制外螺纹环规清单表": {
-    "next_counter": 114,
+    "next_counter": 117,
     "entries": {
       "M1.4X0.3 6g": {
         "counter": 1,
@@ -2006,6 +2011,21 @@
         "counter": 113,
         "rel_path": "螺纹规清单/公制外螺纹环规清单表/M15X0.35 6G.jpg",
         "file_hash": "383ced6dc84917688f6b3d7b0c255575"
+      },
+      "M8X1 LH 6g": {
+        "counter": 114,
+        "rel_path": "螺纹规清单/公制外螺纹环规清单表/M8X1 LH 6g.jpg",
+        "file_hash": "04d0c059fb054da7068b3314244212b0"
+      },
+      "M33X2 6g": {
+        "counter": 115,
+        "rel_path": "螺纹规清单/公制外螺纹环规清单表/M33X2  6g.jpg",
+        "file_hash": "eb17a32d75a20fbdec160b3449d8808b"
+      },
+      "M76X3 6g": {
+        "counter": 116,
+        "rel_path": "螺纹规清单/公制外螺纹环规清单表/M76X3 6g.jpg",
+        "file_hash": "9fb1a1631cc10453898c3074a518b1b0"
       }
     }
   }
