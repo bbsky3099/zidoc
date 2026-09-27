@@ -485,7 +485,7 @@
     }
   },
   "非公制外螺纹环规清单表": {
-    "next_counter": 51,
+    "next_counter": 52,
     "entries": {
       "0.305-32(8V1)": {
         "counter": 1,
@@ -736,6 +736,11 @@
         "counter": 50,
         "rel_path": "螺纹规清单/非公制外螺纹环规清单表/9”16-18 UNF 2A.jpg",
         "file_hash": "b8bc436430dab4e80c69db57f2970e8c"
+      },
+      "1-11.5(1-11-1/2)NPT": {
+        "counter": 51,
+        "rel_path": "螺纹规清单/非公制外螺纹环规清单表/1-11.5（1-11-1“2）NPT .jpg",
+        "file_hash": "3f105822a38adb6ee6bc45ef5189b753"
       }
     }
   },
@@ -1445,7 +1450,7 @@
     }
   },
   "公制外螺纹环规清单表": {
-    "next_counter": 117,
+    "next_counter": 118,
     "entries": {
       "M1.4X0.3 6g": {
         "counter": 1,
@@ -2026,6 +2031,11 @@
         "counter": 116,
         "rel_path": "螺纹规清单/公制外螺纹环规清单表/M76X3 6g.jpg",
         "file_hash": "9fb1a1631cc10453898c3074a518b1b0"
+      },
+      "M56.07X3 6g": {
+        "counter": 117,
+        "rel_path": "螺纹规清单/公制外螺纹环规清单表/M56.07X3 6g.jpg",
+        "file_hash": "276c40446e76af2aae15ffecc3cb3e1f"
       }
     }
   }
